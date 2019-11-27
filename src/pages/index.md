@@ -4,6 +4,7 @@ title: Why Kaldi Why Kaldi Why Kaldi
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
+textTest: textTest
 mainpitch:
   title: Why Kaldi
   description: >
