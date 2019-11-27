@@ -2,9 +2,9 @@
 templateKey: index-page
 title: Why Kaldi Why Kaldi Why Kaldi
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
+heading: Great coffee with a conscienc
 subheading: Support sustainable farming while enjoying a cup
-textTest: textTest
+textTest: textTest textTes ttextTest
 mainpitch:
   title: Why Kaldi
   description: >
