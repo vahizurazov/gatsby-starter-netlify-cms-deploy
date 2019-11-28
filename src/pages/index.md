@@ -1,8 +1,10 @@
 ---
 templateKey: index-page
-section_1_title: asdfasdfasdfasdf
 image: /img/blog-index.jpg
 subheading: Support sustainable farming while enjoying a cup
+section1Title: >-
+  section1Title
+  section1Titlesection1Titlesection1Titlesection1Titlesection1Title
 textTest: 'textTest textTes ttextTest '
 mainpitch:
   description: >
