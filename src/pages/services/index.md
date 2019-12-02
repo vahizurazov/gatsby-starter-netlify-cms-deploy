@@ -1,25 +1,29 @@
 ---
-templateKey: "services-page"
-path: /services
-title: Our services /services/services/services
+templateKey: services-page
+image: /img/wide.jpg
+heading: Services
+subheading: >-
+  We are a Salesforce Support Provider and work with clients around the world to
+  optimise their Salesforce solution, including implementation and maintainance.
 ---
+### Initial Setup
 
-### /services/services/services
+Setting up your Salesforce application for the first time can be daunting. We assist clients in the initial design thinking of what they want the application to deliver to the business. Based on the design we will provide an implementation plan to illustrate what will be installed, what resources are required and how long it might take – this allows our clients to plan for and manage the implementation process successfully from within.
 
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
+### 
 
-### /services/services/services/services
+### Integration
 
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+Integrating your Salesforce solution with other applications is necessary in order to realise the potential and benefit that this solution may bring. We are experts at API development to integrate with other platforms such as ERP and CRM, among others.
 
-### /services/services/services/services
+### 
 
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+### Further Development
 
-### Direct sourcing
+Our experts are able to further enhance your Salesforce solution by creating tailored features, unique to your business, to optimise the outcome. Low level Apex and Lightning Enterprise application development, for example, are some of the expertise we are able to provide.
 
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+### 
 
-### Reinvest profits
+### Maintenance
 
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+All software systems require maintenance from time to time, which could be time consuming and can distract you from your core tasks. We provide a bespoke maintenance service ensuring your Salesforce application continues to run smoothly, adding true value to your business activities.
