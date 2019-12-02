@@ -1,6 +1,6 @@
 ---
 templateKey: services-page
-image: /img/wide.jpg
+image_title: /img/wide.jpg
 heading: Services
 subheading: >-
   We are a Salesforce Support Provider and work with clients around the world to
