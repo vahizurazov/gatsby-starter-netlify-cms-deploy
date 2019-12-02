@@ -132,8 +132,12 @@ collections:
               widget: "hidden",
               default: "services-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
           - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
