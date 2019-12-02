@@ -8,9 +8,7 @@ const ServicesPagePreview = ({ entry, widgetFor }) => (
     heading={entry.getIn(["data", "heading"])}
     image={entry.getIn(["data", "image"])}
     subheading={entry.getIn(["data", "subheading"])}
-    heading={entry.getIn(["data", "heading"])}
     content={widgetFor("body")}
-    contentSectionTwo={widgetFor("body2")}
   />
 );
 
