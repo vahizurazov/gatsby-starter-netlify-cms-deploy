@@ -12,8 +12,6 @@ export const ServicesPageTemplate = ({
   image
 }) => {
   const ServicesContent = contentComponent || Content;
-  console.log("contentComponent", contentComponent);
-  console.log("content", content);
 
   return (
     <section className="section section--gradient">
@@ -21,14 +19,8 @@ export const ServicesPageTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <img
-                src={
-                  !!image.childImageSharp
-                    ? image.childImageSharp.fluid.src
-                    : image
-                }
-                alt=""
-              />
+              {/* <img src={image.childImageSharp.fluid.src} alt="" /> */}
+
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {heading}
               </h2>
@@ -49,7 +41,7 @@ ServicesPageTemplate.propTypes = {
 
 const ServicesPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log("post.image", post.image);
+  console.log("post", post);
 
   return (
     <Layout>
@@ -80,6 +72,7 @@ export const servicesPageQuery = graphql`
         title
         heading
         subheading
+        body2
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

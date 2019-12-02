@@ -5,7 +5,12 @@ import { ServicesPageTemplate } from "../../templates/services-page";
 const ServicesPagePreview = ({ entry, widgetFor }) => (
   <ServicesPageTemplate
     title={entry.getIn(["data", "title"])}
+    heading={entry.getIn(["data", "heading"])}
+    image={entry.getIn(["data", "image"])}
+    subheading={entry.getIn(["data", "subheading"])}
+    heading={entry.getIn(["data", "heading"])}
     content={widgetFor("body")}
+    contentSectionTwo={widgetFor("body2")}
   />
 );
 
