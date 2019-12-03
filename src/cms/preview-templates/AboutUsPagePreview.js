@@ -8,7 +8,6 @@ const AboutUsPagePreview = ({ entry, widgetFor }) => (
     heading={entry.getIn(["data", "heading"])}
     image={entry.getIn(["data", "image"])}
     subheading={entry.getIn(["data", "subheading"])}
-    content={widgetFor("body")}
   />
 );
 
