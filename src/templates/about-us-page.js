@@ -3,21 +3,57 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 
-export const AboutUsPageTemplate = ({ title }) => {
+export const AboutUsPageTemplate = ({
+  section_1_content,
+  section_1_title,
+  section_2_text,
+  section_3_text,
+  section_3_title
+}) => {
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
+    <main id="main">
+      <div className="page-about-us">
+        <div className="container">
+          <h1 className="h2 striped uppercase">{section_1_title}</h1>
+          {/* <div
+          dangerouslySetInnerHTML={{ __html: section_1_content }}
+        /> */}
+          <div className="main-visual">
+            {/* <Img
+            className="img-block"
+            fluid={
+              section_1_image.localFile.childImageSharp.fluid
+            }
+            objectFit="cover"
+            objectPosition="50% 50%"
+            alt="About Us"
+          /> */}
+          </div>
+        </div>
+        <div className="section-blue">
+          <div className="container-sm">
+            {/* <Img
+            className="visual img-rounded"
+            fixed={
+              section_2_image.localFile.childImageSharp.fixed
+            }
+            alt="About Us"
+          /> */}
+            <div className="content">
+              <p>{section_2_text}</p>
             </div>
+            <div className="circle circle-1" />
+            <div className="circle circle-2" />
+          </div>
+        </div>
+        <div className="container-sm">
+          <div className="content">
+            <h2>{section_3_title}</h2>
+            <p>{section_3_text}</p>
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 
@@ -32,12 +68,11 @@ const AboutUsPage = ({ data }) => {
   return (
     <Layout>
       <AboutUsPageTemplate
-        // section_1_title={post.frontmatter.section_1_title}
-        // section_1_content={post.frontmatter.section_1_content}
-        // section_2_text={post.frontmatter.section_2_text}
-        // section_3_title={post.frontmatter.section_3_title}
-        // section_3_text={post.frontmatter.section_3_text}
-        title={post.frontmatter.title}
+        section_1_title={post.frontmatter.section_1_title}
+        section_1_content={post.frontmatter.section_1_content}
+        section_2_text={post.frontmatter.section_2_text}
+        section_3_title={post.frontmatter.section_3_title}
+        section_3_text={post.frontmatter.section_3_text}
       />
     </Layout>
   );
@@ -53,7 +88,11 @@ export const aboutUsPageQuery = graphql`
   query AboutUsPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
+        section_1_content
+        section_1_title
+        section_2_text
+        section_3_text
+        section_3_title
       }
     }
   }
