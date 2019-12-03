@@ -134,9 +134,10 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - { label: "Body", name: "body", widget: "markdown" }
+
       - file: "src/pages/about-us/index.md"
         label: "About us"
-        name: "about-us"
+        name: "aboutUs"
         fields:
           - {
               label: "Template Key",
@@ -144,9 +145,19 @@ collections:
               widget: "hidden",
               default: "about-us-page",
             }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
+          - { label: section_1_title, name: section_1_title, widget: string }
+          - {
+              label: section_1_content,
+              name: section_1_content,
+              widget: string,
+            }
+          - { label: section_1_Image, name: section_1_image, widget: image }
+
+          - { label: section_2_text, name: section_2_text, widget: string }
+          - { label: section_2_image, name: section_2_image, widget: image }
+
+          - { label: section_3_title, name: section_3_title, widget: string }
+          - { label: section_3_text, name: section_3_text, widget: string }
 
       - file: "src/pages/about/index.md"
         label: "About"
