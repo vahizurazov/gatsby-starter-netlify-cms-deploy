@@ -2,43 +2,42 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Img from "gatsby-image/withIEPolyfill";
+
+import "./styles/about-us.scss";
 
 export const AboutUsPageTemplate = ({
   section_1_content,
   section_1_title,
   section_2_text,
   section_3_text,
-  section_3_title
+  section_3_title,
+  section_1_image,
+  section_2_image
 }) => {
   return (
     <main id="main">
       <div className="page-about-us">
         <div className="container">
           <h1 className="h2 striped uppercase">{section_1_title}</h1>
-          {/* <div
-          dangerouslySetInnerHTML={{ __html: section_1_content }}
-        /> */}
+          <div dangerouslySetInnerHTML={{ __html: section_1_content }} />
           <div className="main-visual">
-            {/* <Img
-            className="img-block"
-            fluid={
-              section_1_image.localFile.childImageSharp.fluid
-            }
-            objectFit="cover"
-            objectPosition="50% 50%"
-            alt="About Us"
-          /> */}
+            <Img
+              className="img-block"
+              fluid={section_1_image.childImageSharp.fluid}
+              objectFit="cover"
+              objectPosition="50% 50%"
+              alt="About Us"
+            />
           </div>
         </div>
-        <div className="section-blue">
+        <div className="section-blue container">
           <div className="container-sm">
-            {/* <Img
-            className="visual img-rounded"
-            fixed={
-              section_2_image.localFile.childImageSharp.fixed
-            }
-            alt="About Us"
-          /> */}
+            <Img
+              className="visual img-rounded"
+              fixed={section_2_image.childImageSharp.fixed}
+              alt="About Us"
+            />
             <div className="content">
               <p>{section_2_text}</p>
             </div>
@@ -46,7 +45,7 @@ export const AboutUsPageTemplate = ({
             <div className="circle circle-2" />
           </div>
         </div>
-        <div className="container-sm">
+        <div className="container-sm container">
           <div className="content">
             <h2>{section_3_title}</h2>
             <p>{section_3_text}</p>
@@ -63,7 +62,7 @@ AboutUsPageTemplate.propTypes = {
 
 const AboutUsPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log("data", data);
+  console.log("data", post);
 
   return (
     <Layout>
@@ -73,6 +72,8 @@ const AboutUsPage = ({ data }) => {
         section_2_text={post.frontmatter.section_2_text}
         section_3_title={post.frontmatter.section_3_title}
         section_3_text={post.frontmatter.section_3_text}
+        section_1_image={post.frontmatter.section_1_image}
+        section_2_image={post.frontmatter.section_2_image}
       />
     </Layout>
   );
@@ -90,7 +91,21 @@ export const aboutUsPageQuery = graphql`
       frontmatter {
         section_1_content
         section_1_title
+        section_1_image {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1200) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         section_2_text
+        section_2_image {
+          childImageSharp {
+            fixed(quality: 90, width: 240, height: 240) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         section_3_text
         section_3_title
       }
