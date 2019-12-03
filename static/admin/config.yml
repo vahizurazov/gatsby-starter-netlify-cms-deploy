@@ -137,7 +137,7 @@ collections:
 
       - file: "src/pages/about-us/index.md"
         label: "About us"
-        name: "aboutUs"
+        name: "about-us"
         fields:
           - {
               label: "Template Key",
