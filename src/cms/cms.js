@@ -8,6 +8,7 @@ import ProductPagePreview from "./preview-templates/ProductPagePreview";
 import IndexPagePreview from "./preview-templates/IndexPagePreview";
 
 import ServicesPagePreview from "./preview-templates/ServicesPagePreview";
+import AboutUsPagePreview from "./preview-templates/AboutUsPagePreview";
 
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
@@ -18,3 +19,4 @@ CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("blog", BlogPostPreview);
 
 CMS.registerPreviewTemplate("services", ServicesPagePreview);
+CMS.registerPreviewTemplate("about-us", AboutUsPagePreview);

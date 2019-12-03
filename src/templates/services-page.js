@@ -19,13 +19,11 @@ export const ServicesPageTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              {/* <img src={image.childImageSharp.fluid.src} alt="" /> */}
-
+              <img src={image.childImageSharp.fluid.src} alt="" />
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {heading}
               </h2>
               <h3>{subheading}</h3>
-
               <ServicesContent className="content" content={content} />
             </div>
           </div>

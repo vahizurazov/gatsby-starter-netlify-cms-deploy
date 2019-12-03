@@ -34,8 +34,6 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    # create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"
@@ -136,8 +134,19 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - { label: "Body", name: "body", widget: "markdown" }
-          # - { label: "Body section two", name: "body2", widget: "markdown" }
-          # - { label: "Body 3", name: "body3", widget: "markdown" }
+      - file: "src/pages/about-us/index.md"
+        label: "About-us"
+        name: "about-us"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-us-page",
+            }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
 
       - file: "src/pages/about/index.md"
         label: "About"
