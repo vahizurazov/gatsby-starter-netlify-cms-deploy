@@ -23,23 +23,30 @@ export const AboutUsPageTemplate = ({
           <h1 className="h2 striped uppercase">{section_1_title}</h1>
           <div dangerouslySetInnerHTML={{ __html: section_1_content }} />
           <div className="main-visual">
-            <Img
-              className="img-block"
-              fluid={section_1_image.childImageSharp.fluid}
-              objectFit="cover"
-              objectPosition="50% 50%"
-              alt="About Us"
-            />
-            {/* <PreviewCompatibleImage imageInfo={section_1_image} /> */}
+            {!!section_1_image.childImageSharp ? (
+              <Img
+                className="img-block"
+                fluid={section_1_image.childImageSharp.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt="About Us"
+              />
+            ) : (
+              <img src={section_1_image} alt="" />
+            )}
           </div>
         </div>
         <div className="section-blue ">
           <div className="container-sm">
-            <Img
-              className="visual img-rounded"
-              fixed={section_2_image.childImageSharp.fixed}
-              alt="About Us"
-            />
+            {!!section_2_image.childImageSharp ? (
+              <Img
+                className="visual img-rounded"
+                fixed={section_2_image.childImageSharp.fixed}
+                alt="About Us"
+              />
+            ) : (
+              <img src={section_2_image} alt="" />
+            )}
             <div className="content">
               <p>{section_2_text}</p>
             </div>

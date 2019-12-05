@@ -40,8 +40,6 @@ ServicesPageTemplate.propTypes = {
 
 const ServicesPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log("post", post);
-
   return (
     <Layout>
       <ServicesPageTemplate
