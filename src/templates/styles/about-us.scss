@@ -47,6 +47,13 @@
 }
 .page-about-us .section-blue .container-sm {
   position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.container-sm {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
 }
 .page-about-us .section-blue .visual {
   float: left;
@@ -62,7 +69,11 @@
   top: -200px;
   right: -155px;
 }
-@media screen and (max-width: 700px) {
+.page-about-us h1 {
+  font-size: 30px;
+  font-weight: normal;
+}
+@media screen and (max-width: 767px) {
   .page-about-us .section-blue .visual {
     float: unset;
   }
@@ -71,7 +82,7 @@
     display: block !important;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1023px) {
   .page-about-us {
     padding: 0 0 20px;
   }

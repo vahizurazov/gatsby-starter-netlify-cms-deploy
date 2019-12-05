@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Img from "gatsby-image/withIEPolyfill";
 
 import "./styles/about-us.scss";
+// import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const AboutUsPageTemplate = ({
   section_1_content,
@@ -29,9 +30,10 @@ export const AboutUsPageTemplate = ({
               objectPosition="50% 50%"
               alt="About Us"
             />
+            {/* <PreviewCompatibleImage imageInfo={section_1_image} /> */}
           </div>
         </div>
-        <div className="section-blue container">
+        <div className="section-blue ">
           <div className="container-sm">
             <Img
               className="visual img-rounded"
@@ -45,7 +47,7 @@ export const AboutUsPageTemplate = ({
             <div className="circle circle-2" />
           </div>
         </div>
-        <div className="container-sm container">
+        <div className="container-sm ">
           <div className="content">
             <h2>{section_3_title}</h2>
             <p>{section_3_text}</p>
@@ -62,7 +64,6 @@ AboutUsPageTemplate.propTypes = {
 
 const AboutUsPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log("data", post);
 
   return (
     <Layout>
@@ -94,7 +95,7 @@ export const aboutUsPageQuery = graphql`
         section_1_image {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
