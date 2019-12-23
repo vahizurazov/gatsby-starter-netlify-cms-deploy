@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Img from "gatsby-image/withIEPolyfill";
 
 export const ServicesPageTemplate = ({
   heading,
@@ -12,6 +13,7 @@ export const ServicesPageTemplate = ({
   image
 }) => {
   const ServicesContent = contentComponent || Content;
+  const imageStyle = { borderRadius: "5px", width: "100%", height: "200px" };
 
   return (
     <section className="section section--gradient">
@@ -19,7 +21,15 @@ export const ServicesPageTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
-              <img src={image.childImageSharp.fluid.src} alt="" />
+              {!!image.childImageSharp ? (
+                <Img
+                  className="visual img-rounded"
+                  fluid={image.childImageSharp.fluid}
+                  alt="About Us"
+                />
+              ) : (
+                <img src={image} alt="" style={imageStyle} />
+              )}
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {heading}
               </h2>
