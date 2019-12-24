@@ -12,7 +12,7 @@ description: >+
 
 
 featuredpost: true
-featuredimage: /img/products-full-width.jpg
+featuredimage: /img/about_us.jpg
 tags:
   - Blog collection
 ---
