@@ -70,6 +70,7 @@ AboutUsPageTemplate.propTypes = {
 };
 
 const AboutUsPage = ({ data }) => {
+  console.log("About us page", data);
   const { markdownRemark: post } = data;
 
   return (
