@@ -45,12 +45,15 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
+            # section 1 start
           - { label: Title, name: section_1_title, widget: string }
           - { label: Image, name: section_1_image, widget: image }
           - { label: BtnText, name: section_1_btn_text, widget: string }
           - { label: Subheading, name: section_1_subheading, widget: string }
           - { label: "Content", name: "body", widget: markdown }
+            # section 1 end
 
+            # section 2 start
           - { label: Title, name: section_2_title, widget: string }
           - { label: Image, name: section_2_1_image, widget: image }
           - {
@@ -74,6 +77,18 @@ collections:
               name: section_2_left_text,
               widget: string,
             }
+            # section 2 end
+
+            # section 3 start
+          - { label: Title 3, name: section_3_title, widget: string }
+          - { label: Section 3 text, name: section_3_text, widget: string }
+          - { label: Image mobile, name: section_3_image_mobile, widget: image }
+          - {
+              label: Image desktop,
+              name: section_3_image_desktop,
+              widget: image,
+            }
+            # section 3 end
           - {
               label: Mainpitch,
               name: mainpitch,
