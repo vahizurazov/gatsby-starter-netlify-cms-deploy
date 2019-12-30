@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+// import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Img from "gatsby-image/withIEPolyfill";
@@ -209,7 +210,6 @@ export const pageQuery = graphql`
         }
         section_1_btn_text
         section_1_subheading
-        section_1_content
       }
     }
   }

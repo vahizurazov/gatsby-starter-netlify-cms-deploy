@@ -49,7 +49,7 @@ collections:
           - { label: Image, name: section_1_image, widget: image }
           - { label: BtnText, name: section_1_btn_text, widget: string }
           - { label: Subheading, name: section_1_subheading, widget: string }
-          - { label: Content, name: "section_1_content", widget: markdown }
+          - { label: "Content", name: "body", widget: markdown }
           - {
               label: Mainpitch,
               name: mainpitch,

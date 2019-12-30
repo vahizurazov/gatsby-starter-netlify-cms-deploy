@@ -9,8 +9,7 @@ html {
 }
 
 body {
-  font: #{$base-font-size}/#{$base-line-height} "Montserrat", "Sans, Rokkitt",
-    Arial, Helvetica, sans-serif;
+  font: #{$base-font-size}/#{$base-line-height} "Montserrat", sans-serif;
   color: $color-main;
   letter-spacing: 0.44px;
   height: 100vh;
