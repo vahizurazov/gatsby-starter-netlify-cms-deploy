@@ -1,16 +1,17 @@
 ---
 templateKey: index-page
-section_1_title: Main title
-section_1_image: /img/blog-index.jpg
-section_1_btn_text: Heading
-section_1_subheading: Support sustainable farming while enjoying a cup
+section_1_title: EXPERT SOFTWARE DEVELOPMENT
+section_1_image: /img/greeter.jpg
+section_1_btn_text: SEND A REQUEST
+section_1_subheading: Driving the future of digital technology
+section_1_content: "Sparkybit is a leading Ukraine software development company, with a focus on fintech, open banking, banking technology, and SME IT planning.\r\n\n\n\nIt partners with small to mid-size enterprise to deliver software solutions and expertise to speed time to market, while also supporting the digital transformation journey. Sparkybit is also a Salesforce Support Provider, with an expert team of integration and implementation consultants who optimise value for corporate Salesforce investments."
 mainpitch:
-  title: Why Kaldi
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
     shouldn't just taste good, it should do good too. We source all of our beans
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
+  title: Why Kaldi
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -45,19 +46,19 @@ intro:
         space where you can hang out with fellow coffee lovers and learn about
         coffee making techniques. All of the artwork on display there is for
         sale. The full price you pay goes to the artist.
-  heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+  heading: What we offer
 main:
-  heading: Great coffee with no compromises
   description: >
     We hold our coffee to the highest standards from the shrub to the cup.
     That’s why we’re meticulous and transparent about each step of the coffee’s
     journey. We personally visit each farm to make sure the conditions are
     optimal for the plants, farmers and the local environment.
+  heading: Great coffee with no compromises
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
