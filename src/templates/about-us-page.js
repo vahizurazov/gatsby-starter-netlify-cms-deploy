@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Img from "gatsby-image/withIEPolyfill";
 
-import "./styles/about-us.scss";
+import "./styles/about_us/index.scss";
 // import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const AboutUsPageTemplate = ({

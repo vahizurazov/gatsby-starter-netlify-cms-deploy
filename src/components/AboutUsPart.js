@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery } from "gatsby";
 // import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Img from "gatsby-image/withIEPolyfill";
 
@@ -18,7 +18,7 @@ class AboutUsPart extends Component {
         <div className="container">
           {!!node.section_1_image.childImageSharp ? (
             <Img
-              className="visual img-rounded"
+              className="service-background"
               fluid={node.section_1_image.childImageSharp.fluid}
               alt="About Us"
             />

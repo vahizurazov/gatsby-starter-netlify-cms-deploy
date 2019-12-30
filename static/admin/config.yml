@@ -45,10 +45,11 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
+          - { label: Title, name: section_1_title, widget: string }
+          - { label: Image, name: section_1_image, widget: image }
+          - { label: BtnText, name: section_1_btn_text, widget: string }
+          - { label: Subheading, name: section_1_subheading, widget: string }
+          - { label: Content, name: section_1_content, widget: markdown }
           - {
               label: Mainpitch,
               name: mainpitch,
