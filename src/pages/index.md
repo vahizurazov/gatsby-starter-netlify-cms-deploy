@@ -17,6 +17,13 @@ section_2_left_text: >-
   being you end up with a solution which is entirely tailored to your needs. You
   will not be paying for unnecessary functionality or annual subscription fees
   and being at the behest of the supplier to provide enhancements or bug fixes.
+section_3_title: TECHNOLOGIES
+section_3_text: >-
+  Delivery of bespoke solutions requires technologies to be chosen carefully.
+  Our expertise and experience allows us to identify and select technologies
+  that will support and enhance your business objectives.
+section_3_image_mobile: /img/technologies-mobile.png
+section_3_image_desktop: /img/technologies.png
 mainpitch:
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
