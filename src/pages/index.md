@@ -4,7 +4,6 @@ section_1_title: EXPERT SOFTWARE DEVELOPMENT
 section_1_image: /img/greeter.jpg
 section_1_btn_text: SEND A REQUEST
 section_1_subheading: Driving the future of digital technology
-section_1_content: "Sparkybit is a leading Ukraine software development company, with a focus on fintech, open banking, banking technology, and SME IT planning.\r\n\n\n\nIt partners with small to mid-size enterprise to deliver software solutions and expertise to speed time to market, while also supporting the digital transformation journey. Sparkybit is also a Salesforce Support Provider, with an expert team of integration and implementation consultants who optimise value for corporate Salesforce investments."
 mainpitch:
   description: >
     Kaldi is the coffee store for everyone who believes that great coffee
@@ -69,4 +68,8 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+Sparkybit is a leading Ukraine software development company, with a focus on fintech, open banking, banking technology, and SME IT planning.
 
+
+
+It partners with small to mid-size enterprise to deliver software solutions and expertise to speed time to market, while also supporting the digital transformation journey. Sparkybit is also a Salesforce Support Provider, with an expert team of integration and implementation consultants who optimise value for corporate Salesforce investments.
