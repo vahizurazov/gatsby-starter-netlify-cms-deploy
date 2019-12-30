@@ -21,7 +21,11 @@ export const IndexPageTemplate = ({
   section_2_left_text,
   section_2_title,
   section_2_1_image,
-  section_2_2_image
+  section_2_2_image,
+  section_3_title,
+  section_3_text,
+  section_3_image_mobile,
+  section_3_image_desktop
 }) => {
   const MainPageContent = contentComponent || Content;
   return (
@@ -65,7 +69,7 @@ export const IndexPageTemplate = ({
             <div className="services">
               <div className="service salesforce">
                 <div className="circle circle-1">
-                  {/* {!!section_2_1_image.childImageSharp ? (
+                  {!!section_2_1_image.childImageSharp ? (
                     <Img
                       fixed={section_2_1_image.childImageSharp.fixed}
                       alt={section_2_right_subheading}
@@ -76,7 +80,7 @@ export const IndexPageTemplate = ({
                       src={section_2_1_image}
                       alt={section_2_right_subheading}
                     />
-                  )} */}
+                  )}
                 </div>
                 <div className="circle circle-2" />
                 <div className="content pull-right">
@@ -93,7 +97,7 @@ export const IndexPageTemplate = ({
               </div>
               <div className="service bespoke">
                 <div className="circle circle-1">
-                  {/* {!!section_2_2_image.childImageSharp ? (
+                  {!!section_2_2_image.childImageSharp ? (
                     <Img
                       fixed={section_2_2_image.childImageSharp.fixed}
                       alt={section_2_left_subheading}
@@ -104,7 +108,7 @@ export const IndexPageTemplate = ({
                       src={section_2_2_image}
                       alt={section_2_left_subheading}
                     />
-                  )} */}
+                  )}
                 </div>
                 <div className="content pull-left">
                   <h5 className="heading uppercase">
@@ -124,48 +128,23 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </section>
-        {/* <section className="container">
-      <div className="section-technologies">
-        <h1 className="striped uppercase">
-          {fields.section_3_title}
-        </h1>
-        <p>{fields.section_3_text}</p>
-        <div className="technologies">
-          <Picture
-            sources={[
-              {
-                type: "image/webp",
-                srcSet:
-                  fields.section_3_image_mobile.localFile
-                    .childImageSharp.fixed.srcSetWebp,
-                media: "(max-width: 767px)",
-              },
-              {
-                srcSet:
-                  fields.section_3_image_mobile.localFile
-                    .childImageSharp.fixed.srcSet,
-                media: "(max-width: 767px)",
-              },
-              {
-                type: "image/webp",
-                srcSet:
-                  fields.section_3_image_desktop.localFile
-                    .childImageSharp.fixed.srcSetWebp,
-              },
-              {
-                srcSet:
-                  fields.section_3_image_desktop.localFile
-                    .childImageSharp.fixed.srcSet,
-              },
-            ]}
-            src={
-              fields.section_3_image_desktop.localFile.childImageSharp
-                .fixed.src
-            }
-          />
-        </div>
-      </div>
-    </section> */}
+        <section className="container">
+          <div className="section-technologies">
+            <h1 className="striped uppercase">{section_3_title}</h1>
+            <p>{section_3_text}</p>
+            <div className="technologies">
+              {!!section_3_image_desktop.childImageSharp ? (
+                <Img
+                  fluid={section_3_image_desktop.childImageSharp.fluid}
+                  alt={section_3_title}
+                  fadeIn={true}
+                />
+              ) : (
+                <img src={section_3_image_desktop} alt={section_3_title} />
+              )}
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
@@ -198,6 +177,10 @@ const IndexPage = ({ data }) => {
         section_2_title={post.frontmatter.section_2_title}
         section_2_1_image={post.frontmatter.section_2_1_image}
         section_2_2_image={post.frontmatter.section_2_2_image}
+        section_3_title={post.frontmatter.section_3_title}
+        section_3_text={post.frontmatter.section_3_text}
+        section_3_image_desktop={post.frontmatter.section_3_image_desktop}
+        section_3_image_mobile={post.frontmatter.section_3_image_mobile}
       />
     </Layout>
   );
@@ -247,6 +230,22 @@ export const pageQuery = graphql`
         section_2_left_subheading
         section_2_left_text
         section_2_title
+        section_3_title
+        section_3_text
+        section_3_image_desktop {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        section_3_image_mobile {
+          childImageSharp {
+            fixed(quality: 60, width: 395, height: 1361) {
+              ...GatsbyImageSharpFixed_withWebp
+            }
+          }
+        }
       }
     }
   }
