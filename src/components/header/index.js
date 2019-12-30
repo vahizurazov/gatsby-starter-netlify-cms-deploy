@@ -43,61 +43,48 @@ export default props => {
             role="button"
             aria-controls="navigation"
             onClick={onNavClick}
+            onKeyDown={onNavClick}
           >
             <div className="hamburger-box">
               <div className="hamburger-inner" />
             </div>
           </div>
           <nav>
-            <Link activeClassName="active" partiallyActive={true} to="/about">
-              About
-            </Link>
             <Link
               activeClassName="active"
               partiallyActive={true}
               to="/services"
             >
-              Services
+              services
+            </Link>
+            <Link
+              activeClassName="active"
+              partiallyActive={true}
+              to="/blog"
+            >
+              blog
             </Link>
             <Link
               activeClassName="active"
               partiallyActive={true}
               to="/about-us"
             >
-              About us
+              about us
             </Link>
             <Link
               activeClassName="active"
               partiallyActive={true}
-              to="/products"
+              to="/careers"
             >
-              Products
-            </Link>
-            <Link activeClassName="active" partiallyActive={true} to="/blog">
-              Blog
-            </Link>
-            <Link activeClassName="active" partiallyActive={true} to="/contact">
-              Contact
+              careers
             </Link>
             <Link
               activeClassName="active"
               partiallyActive={true}
-              to="/contact/examples"
+              to="/contact-us"
             >
-              Form Examples
+              contact-us
             </Link>
-            {/* {data.wordpressWpApiMenusMenusItems.items.map(menuItem => {
-              return (
-                <Link
-                  key={menuItem.object_id}
-                  to={`/${menuItem.object_slug}`}
-                  activeClassName="active"
-                  partiallyActive={true}
-                >
-                  {menuItem.title}
-                </Link>
-              )
-            })} */}
           </nav>
         </div>
       </div>
