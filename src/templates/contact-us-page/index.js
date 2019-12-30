@@ -44,11 +44,11 @@ ContactUsPage.propTypes = {
 export default ContactUsPage;
 
 export const ContactUsPageQuery = graphql`
-  query ContactUsPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        section_1_title
+query ContactUsPageTemplate {
+  markdownRemark(frontmatter: { templateKey: { eq: "contact-us-page" } }) {
+    frontmatter {
+      section_1_title
+        }
       }
     }
-  }
 `;

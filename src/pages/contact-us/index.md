@@ -1,4 +1,4 @@
 ---
 templateKey: about-us-page
-section_1_title: Contact US
+section_1_title: Contact USA
 ---
