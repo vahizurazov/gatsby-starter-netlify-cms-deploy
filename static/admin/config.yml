@@ -50,6 +50,30 @@ collections:
           - { label: BtnText, name: section_1_btn_text, widget: string }
           - { label: Subheading, name: section_1_subheading, widget: string }
           - { label: "Content", name: "body", widget: markdown }
+
+          - { label: Title, name: section_2_title, widget: string }
+          - { label: Image, name: section_2_1_image, widget: image }
+          - {
+              label: Subheading right,
+              name: section_2_right_subheading,
+              widget: string,
+            }
+          - {
+              label: Subheading right text,
+              name: section_2_right_text,
+              widget: string,
+            }
+          - { label: Image, name: section_2_2_image, widget: image }
+          - {
+              label: Subheading left,
+              name: section_2_left_subheading,
+              widget: string,
+            }
+          - {
+              label: Subheading left text,
+              name: section_2_left_text,
+              widget: string,
+            }
           - {
               label: Mainpitch,
               name: mainpitch,

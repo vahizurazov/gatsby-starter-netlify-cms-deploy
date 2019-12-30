@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Img from "gatsby-image/withIEPolyfill";
-// import Content, { HTMLContent } from "../components/Content";
+import Content, { HTMLContent } from "../components/Content";
 
 import "./styles/section_greeter/index.scss";
 
@@ -13,9 +13,11 @@ export const IndexPageTemplate = ({
   section_1_image,
   section_1_title,
   section_1_btn_text,
-  section_1_subheading
+  section_1_subheading,
+  contentComponent,
+  content
 }) => {
-  // const MainPageContent = contentComponent || Content;
+  const MainPageContent = contentComponent || Content;
   return (
     <main id="main">
       <div className="page-main">
@@ -24,13 +26,7 @@ export const IndexPageTemplate = ({
             <div className="content">
               <h1 className="heading uppercase">{section_1_title}</h1>
               <h4 className="heading">{section_1_subheading}</h4>
-              {/* <div
-              className="description-wrap"
-              dangerouslySetInnerHTML={{
-                __html: section_1_content
-              }}
-            /> */}
-              {/* <MainPageContent content={content} /> */}
+              <MainPageContent className="description-wrap" content={content} />
               <div>
                 <button
                   className="btn btn-primary trigger"
@@ -171,16 +167,18 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
-  console.log("data Index page", data);
+  const { markdownRemark: post } = data;
+  console.log("data Index page", post);
 
   return (
     <Layout>
       <IndexPageTemplate
-        section_1_image={frontmatter.section_1_image}
-        section_1_title={frontmatter.section_1_title}
-        section_1_btn_text={frontmatter.section_1_btn_text}
-        section_1_subheading={frontmatter.section_1_subheading}
+        contentComponent={HTMLContent}
+        content={post.html}
+        section_1_image={post.frontmatter.section_1_image}
+        section_1_title={post.frontmatter.section_1_title}
+        section_1_btn_text={post.frontmatter.section_1_btn_text}
+        section_1_subheading={post.frontmatter.section_1_subheading}
       />
     </Layout>
   );
@@ -199,6 +197,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         section_1_title
         section_1_image {
