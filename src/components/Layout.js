@@ -19,10 +19,16 @@ const TemplateWrapper = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
 
-        <link
+        {/* <link
           rel="apple-touch-icon"
           sizes="180x180"
           href={`${withPrefix("/")}img/apple-touch-icon.png`}
+        /> */}
+        <link
+          rel="icon"
+          type="image/png"
+          href={`${withPrefix("/")}img/favicon-96x96.png`}
+          sizes="96x96"
         />
         <link
           rel="icon"
@@ -37,11 +43,11 @@ const TemplateWrapper = ({ children }) => {
           sizes="16x16"
         />
 
-        <link
+        {/* <link
           rel="mask-icon"
           href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
           color="#ff4400"
-        />
+        /> */}
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />

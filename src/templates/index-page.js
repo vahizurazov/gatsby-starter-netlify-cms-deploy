@@ -3,48 +3,60 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import Img from "gatsby-image/withIEPolyfill";
+// import Content, { HTMLContent } from "../components/Content";
+
+import "./styles/section_greeter/index.scss";
 
 export const IndexPageTemplate = ({
   section_1_image,
   section_1_title,
   section_1_btn_text,
   section_1_subheading
-}) => (
-  <main id="main">
-    <div className="page-main">
-      <section className="container">
-        <div className="section-greeter">
-          <div className="content">
-            <h1 className="heading uppercase">{section_1_title}</h1>
-            <h4 className="heading">{section_1_subheading}</h4>
-            {/* <div
-            className="description-wrap"
-            dangerouslySetInnerHTML={{
-              __html: section_1_content,
-            }}
-          /> */}
-            <div>
-              <button
-                className="btn btn-primary trigger"
-                // onClick={() => this.setModalState(true)}
-              >
-                {section_1_btn_text}
-              </button>
+}) => {
+  // const MainPageContent = contentComponent || Content;
+  return (
+    <main id="main">
+      <div className="page-main">
+        <section className="container">
+          <div className="section-greeter">
+            <div className="content">
+              <h1 className="heading uppercase">{section_1_title}</h1>
+              <h4 className="heading">{section_1_subheading}</h4>
+              {/* <div
+              className="description-wrap"
+              dangerouslySetInnerHTML={{
+                __html: section_1_content
+              }}
+            /> */}
+              {/* <MainPageContent content={content} /> */}
+              <div>
+                <button
+                  className="btn btn-primary trigger"
+                  // onClick={() => this.setModalState(true)}
+                >
+                  {section_1_btn_text}
+                </button>
+              </div>
             </div>
+            <div className="circle circle-1" />
+            <div className="circle circle-3" />
+            {!!section_1_image.childImageSharp ? (
+              <Img
+                className="main_background"
+                fluid={section_1_image.childImageSharp.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt="Greetings from Sparkybit team"
+              />
+            ) : (
+              <img src={section_1_image} alt="" className="main_background" />
+            )}
+
+            <div className="circle circle-7" />
           </div>
-          <div className="circle circle-1" />
-          <div className="circle circle-3" />
-          {/* <Img
-            className="main_background"
-            fluid={section_1_image.localFile.childImageSharp.fluid}
-            objectFit="cover"
-            objectPosition="50% 50%"
-            alt="Greetings from Sparkybit team"
-          /> */}
-          <div className="circle circle-7" />
-        </div>
-      </section>
-      {/* <section className="section-services">
+        </section>
+        {/* <section className="section-services">
       <div className="container">
         <h1 className="striped uppercase">
           {fields.section_2_title}
@@ -103,7 +115,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section> */}
-      {/* <section className="container">
+        {/* <section className="container">
       <div className="section-technologies">
         <h1 className="striped uppercase">
           {fields.section_3_title}
@@ -145,9 +157,10 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section> */}
-    </div>
-  </main>
-);
+      </div>
+    </main>
+  );
+};
 
 IndexPageTemplate.propTypes = {
   section_1_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -189,8 +202,8 @@ export const pageQuery = graphql`
         section_1_title
         section_1_image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+            fluid(quality: 90, maxWidth: 1280) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

@@ -60,8 +60,6 @@ const ServicesPage = ({ data }) => {
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
         image={post.frontmatter.image}
-        body2={post.frontmatter.body2}
-        body3={post.frontmatter.body3}
       />
     </Layout>
   );
@@ -81,8 +79,6 @@ export const servicesPageQuery = graphql`
         title
         heading
         subheading
-        body2
-        body3
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
