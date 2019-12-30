@@ -6,9 +6,8 @@ import PreviewCompatibleImage from "./PreviewCompatibleImage";
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props;
-    console.log("Data Blog Roll", data);
     const { edges: posts } = data.allMarkdownRemark;
-    console.log("posts", posts);
+
     return (
       <div className="columns is-multiline">
         {posts &&
@@ -87,13 +86,6 @@ export default () => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
-                featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
               }
             }
           }
