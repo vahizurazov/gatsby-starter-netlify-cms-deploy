@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Main title
-image: /img/blog-index.jpg
-heading: Heading
-subheading: Support sustainable farming while enjoying a cup
+section_1_title: Main title
+section_1_image: /img/blog-index.jpg
+section_1_btn_text: Heading
+section_1_subheading: Support sustainable farming while enjoying a cup
 mainpitch:
   title: Why Kaldi
   description: >
@@ -68,4 +68,3 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
-

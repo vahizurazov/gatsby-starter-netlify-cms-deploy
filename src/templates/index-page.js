@@ -15,12 +15,12 @@ export const IndexPageTemplate = ({
       <section className="container">
         <div className="section-greeter">
           <div className="content">
-            {/* <h1 className="heading uppercase">{fields.section_1_title}</h1> */}
-            {/* <h4 className="heading">{fields.section_1_subheading}</h4> */}
+            <h1 className="heading uppercase">{section_1_title}</h1>
+            <h4 className="heading">{section_1_subheading}</h4>
             {/* <div
             className="description-wrap"
             dangerouslySetInnerHTML={{
-              __html: fields.section_1_content,
+              __html: section_1_content,
             }}
           /> */}
             <div>
@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({
                 className="btn btn-primary trigger"
                 // onClick={() => this.setModalState(true)}
               >
-                {/* {fields.section_1_btn_text} */}
+                {section_1_btn_text}
               </button>
             </div>
           </div>
@@ -36,7 +36,7 @@ export const IndexPageTemplate = ({
           <div className="circle circle-3" />
           {/* <Img
             className="main_background"
-            fluid={fields.section_1_image.localFile.childImageSharp.fluid}
+            fluid={section_1_image.localFile.childImageSharp.fluid}
             objectFit="cover"
             objectPosition="50% 50%"
             alt="Greetings from Sparkybit team"
@@ -150,15 +150,10 @@ export const IndexPageTemplate = ({
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  section_1_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  section_1_title: PropTypes.string,
+  section_1_btn_text: PropTypes.string,
+  section_1_subheading: PropTypes.string
 };
 
 const IndexPage = ({ data }) => {
