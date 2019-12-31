@@ -45,6 +45,14 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
+          - {
+              label: Cities,
+              name: cities,
+              widget: "select",
+              multiple: true,
+              options: ["React", "Angular", "Vue", "Other"],
+              default: ["React"],
+            }
             # section 1 start
           - { label: Title, name: section_1_title, widget: string }
           - { label: Image, name: section_1_image, widget: image }
