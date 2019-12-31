@@ -42,7 +42,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "careers-page",
+          default: "careers-post",
         }
       - { label: "Vacancy name", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }

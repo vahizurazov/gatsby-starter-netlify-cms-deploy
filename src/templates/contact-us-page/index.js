@@ -25,7 +25,6 @@ ContactUsPageTemplate.propTypes = {
 };
 
 const ContactUsPage = ({ data }) => {
-  console.log("About us page", data);
   const { markdownRemark: post } = data;
 
   return (
