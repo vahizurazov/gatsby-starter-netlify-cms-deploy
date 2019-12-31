@@ -196,7 +196,7 @@ collections:
   - name: "settings"
     label: "Site Settings"
     files:
-      - file: "config/website.md"
+      - file: "src/config/website.md"
         label: "Settings"
         name: "settings"
         fields:
