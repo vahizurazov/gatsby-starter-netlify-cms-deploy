@@ -1,5 +1,9 @@
 ---
 templateKey: index-page
+cities:
+  - Angular
+  - Vue
+  - Other
 section_1_title: EXPERT SOFTWARE DEVELOPMENT
 section_1_image: /img/greeter.jpg
 section_1_btn_text: SEND A REQUEST
