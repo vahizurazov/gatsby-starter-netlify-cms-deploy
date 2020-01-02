@@ -112,10 +112,104 @@ collections:
               widget: "hidden",
               default: "services",
             }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: Background Image, name: background-image, widget: image }
+          - { label: Title, name: title, widget: string }
+          - { label: Section 1,
+              name: section-1,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  {
+                    label: Block 1,
+                    name: block-1,
+                    widget: object,
+                    fields:
+                    [
+                       { label: Subheading, name: subheading, widget: string },
+                       { label: Content, name: content, widget: markdown }
+                    ]
+                  },
+                  {
+                    label: Block 2,
+                    name: block-2,
+                    widget: object,
+                    fields:
+                    [
+                       { label: Subheading, name: subheading, widget: string },
+                       { label: Content, name: content, widget: markdown }
+                    ]
+                  },
+                  {
+                    label: Block 3,
+                    name: block-3,
+                    widget: object,
+                    fields:
+                    [
+                       { label: Subheading, name: subheading, widget: string },
+                       { label: Content, name: content, widget: markdown }
+                    ]
+                  },
+                  {
+                    label: Block 4,
+                    name: block-4,
+                    widget: object,
+                    fields:
+                    [
+                       { label: Subheading, name: subheading, widget: string },
+                       { label: Content, name: content, widget: markdown }
+                    ]
+                  }
+                ]
+            }
+          - { label: Section 2,
+              name: section-2,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  {
+                    label: Block 1,
+                    name: block-1,
+                    widget: object,
+                    fields:
+                    [
+                       { label: Subheading, name: subheading, widget: string },
+                       { label: Content, name: content, widget: markdown }
+                    ]
+                  },
+                  {
+                    label: Block 2,
+                    name: block-2,
+                    widget: object,
+                    fields:
+                    [
+                       { label: Subheading, name: subheading, widget: string },
+                       { label: Content, name: content, widget: markdown }
+                    ]
+                  },
+                  {
+                    label: Block 3,
+                    name: block-3,
+                    widget: object,
+                    fields:
+                    [
+                       { label: Subheading, name: subheading, widget: string },
+                       { label: Content, name: content, widget: markdown }
+                    ]
+                  },
+                  {
+                    label: Block 4,
+                    name: block-4,
+                    widget: object,
+                    fields:
+                    [
+                       { label: Subheading, name: subheading, widget: string },
+                       { label: Content, name: content, widget: markdown }
+                    ]
+                  }
+                ]
+            }
 
       - file: "src/pages/about-us/index.md"
         label: "About us"
@@ -127,19 +221,36 @@ collections:
               widget: "hidden",
               default: "about-us-page",
             }
-          - { label: section_1_title, name: section_1_title, widget: string }
-          - {
-              label: section_1_content,
-              name: section_1_content,
-              widget: string,
+          - { label: Title, name: title, widget: string }
+          - { label: Section 1,
+              name: section-1,
+              widget: object ,
+              fields:
+                [
+                  { label: Content, name: content, widget: markdown },
+                  { label: Background Image, name: backgroundImage, widget: image }
+                ]
             }
-          - { label: section_1_Image, name: section_1_image, widget: image }
+          - { label: Section 2,
+              name: section-2,
+              widget: object ,
+              fields:
+                [
+                  { label: Content, name: content, widget: markdown },
+                  { label: Background Image, name: backgroundImage, widget: image }
+                ]
+            }
+          - { label: Section 3,
+              name: section-3,
+              widget: object ,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Content, name: content, widget: markdown }
+                ]
+            }
 
-          - { label: section_2_text, name: section_2_text, widget: string }
-          - { label: section_2_image, name: section_2_image, widget: image }
 
-          - { label: section_3_title, name: section_3_title, widget: string }
-          - { label: section_3_text, name: section_3_text, widget: string }
       - file: "src/pages/contact-us/index.md"
         label: "Contact us"
         name: "contact-us"
@@ -150,12 +261,24 @@ collections:
               widget: "hidden",
               default: "contact-us-page",
             }
-          - { label: section_1_title, name: section_1_title, widget: string }
-          - {
-              label: section_1_content,
-              name: section_1_content,
-              widget: string,
+          - { label: Title, name: title, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Button Name, name: btn-name, widget: string }
+          - { label: Locations,
+              name: locations,
+              widget: object,
+              fields:
+                [
+                  { label: UK, name: uk, widget: string },
+                  { label: Germany, name: germany, widget: string },
+                  { label: Ukraine, name: ukraine, widget: string }
+                ]
             }
+          - {
+              label: Location Map, name: location-map, widget: map
+            }
+
   - name: "settings"
     label: "Site Settings"
     files:
