@@ -8,6 +8,9 @@ import IndexPagePreview from "./preview-templates/IndexPagePreview";
 import ServicesPagePreview from "./preview-templates/ServicesPagePreview";
 import AboutUsPagePreview from "./preview-templates/AboutUsPagePreview";
 
+import "./style/index.scss"
+
+
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
