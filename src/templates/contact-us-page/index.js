@@ -7,13 +7,13 @@ import "./styles/index.scss";
 // import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export const ContactUsPageTemplate = ({
-  section_1_title
+  title
 }) => {
   return (
     <main id="main">
-      <div className="page-contact-us">
+      <div className="page-contacts">
         <div className="container">
-          <h1 className="h2 striped uppercase">{section_1_title}</h1>
+          <h1 className="h2 striped uppercase">{title}</h1>
         </div>
       </div>
     </main>
@@ -21,33 +21,45 @@ export const ContactUsPageTemplate = ({
 };
 
 ContactUsPageTemplate.propTypes = {
-  section_1_title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired
 };
 
 const ContactUsPage = ({ data }) => {
-  const { markdownRemark: post } = data;
-
+  const { frontmatter } = data.markdownRemark;
   return (
     <Layout>
       <ContactUsPageTemplate
-        section_1_title={post.frontmatter.section_1_title}
+        title={frontmatter.title}
       />
     </Layout>
   );
 };
 
 ContactUsPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object
+    })
+  })
 };
 
 export default ContactUsPage;
 
 export const ContactUsPageQuery = graphql`
-query ContactUsPageTemplate {
-  markdownRemark(frontmatter: { templateKey: { eq: "contact-us-page" } }) {
-    frontmatter {
-      section_1_title
+  query ContactUsPageTemplate {
+    markdownRemark(frontmatter: {templateKey: {eq: "contact-us-page"}}) {
+      frontmatter {
+        title
+        email
+        btn_name
+        phone
+        locations {
+          germany
+          uk
+          ukraine
         }
+        location_map
       }
     }
+  }
 `;

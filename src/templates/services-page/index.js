@@ -12,9 +12,13 @@ export const ServicesPageTemplate = ({
 }) => {
   return (
     <main id="main">
-      <h1>
-        title
-      </h1>
+      <div className="page-services">
+        <div className="container">
+          <h1 className="h2 striped uppercase">{title}
+          </h1>
+        </div>
+      </div>
+
     </main>
   );
 };
@@ -24,27 +28,75 @@ ServicesPageTemplate.propTypes = {
 };
 
 const ServicesPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { frontmatter } = data.markdownRemark;
   return (
     <Layout>
       <ServicesPageTemplate
-        title={post.title}
+        title={frontmatter.title}
       />
     </Layout>
   );
 };
 
 ServicesPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object
+    })
+  })
 };
 
 export default ServicesPage;
 
 export const servicesPageQuery = graphql`
-  query ServicesPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query ServicesPageTemplate {
+    markdownRemark(frontmatter: {templateKey: {eq: "services-page"}}) {
       frontmatter {
         title
+        background_image {
+          childImageSharp {
+            fixed {
+              base64
+            }
+          }
+        }
+        section_1 {
+          block_1 {
+            content
+            subheading
+          }
+          block_2 {
+            content
+            subheading
+          }
+          block_3 {
+            content
+            subheading
+          }
+          block_4 {
+            content
+            subheading
+          }
+        }
+        section_2 {
+          block_1 {
+            content
+            subheading
+          }
+          block_2 {
+            content
+            subheading
+          }
+          block_4 {
+            content
+            subheading
+          }
+          block_3 {
+            content
+            subheading
+          }
+          heading
+        }
       }
     }
   }

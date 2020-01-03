@@ -6,14 +6,14 @@ import Layout from "../../components/Layout";
 import "./styles/index.scss";
 // import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-export const AboutUsPageTemplate = ({  
-  section_1_title
+export const AboutUsPageTemplate = ({
+  title
 }) => {
   return (
     <main id="main">
       <div className="page-about-us">
         <div className="container">
-          <h1 className="h2 striped uppercase">{section_1_title}</h1>
+          <h1 className="h2 striped uppercase">{title}</h1>
         </div>
       </div>
     </main>
@@ -21,33 +21,59 @@ export const AboutUsPageTemplate = ({
 };
 
 AboutUsPageTemplate.propTypes = {
-  section_1_title: PropTypes.string.isRequired
+   title: PropTypes.string
 };
 
 const AboutUsPage = ({ data }) => {
-  console.log("About us page", data);
-  const { markdownRemark: post } = data;
-
+  const { frontmatter } = data.markdownRemark;
   return (
     <Layout>
       <AboutUsPageTemplate
-        section_1_title={post.frontmatter.section_1_title}
+        title={frontmatter.title}
       />
     </Layout>
   );
 };
 
 AboutUsPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object
+    })
+  })
 };
 
 export default AboutUsPage;
 
 export const aboutUsPageQuery = graphql`
-  query AboutUsPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query AboutUsPageTemplate {
+    markdownRemark(frontmatter: {templateKey: {eq: "about-us-page"}}) {
       frontmatter {
-        section_1_title
+        title
+        section_1 {
+          backgroundImage {
+            childImageSharp {
+              fixed {
+                base64
+              }
+            }
+          }
+          content
+        }
+        section_2 {
+          backgroundImage {
+            childImageSharp {
+              fluid {
+                srcWebp
+              }
+            }
+          }
+          content
+        }
+        section_3 {
+          content
+          heading
+        }
       }
     }
   }
