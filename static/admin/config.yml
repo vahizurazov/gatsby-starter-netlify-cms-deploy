@@ -121,8 +121,8 @@ collections:
           - { label: Phone, name: contact_phone, widget: string }
           - { label: Button Name, name: btn_name, widget: string }
           - {
-              label: Locations,
-              name: countries,
+              label: LocationsC,
+              name: countries_s,
               widget: object,
               fields:
                 [
