@@ -11,6 +11,10 @@ import ServicesPagePreview from "./preview-templates/ServicesPagePreview";
 import AboutUsPagePreview from "./preview-templates/AboutUsPagePreview";
 import ContactsPagePreview from "./preview-templates/ContactsPagePreview";
 
+import styles from "!css-loader!sass-loader!../styles/index.scss";
+
+CMS.registerPreviewStyle(styles.toString(), { raw: true });
+
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 

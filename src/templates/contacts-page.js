@@ -6,32 +6,48 @@ import "./styles/contacts/index.scss";
 // import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export class ContactsPageTemplate extends Component {
+  constructor(props) {
+    super(props);
+    // console.log("props", this.props);
+    this.state = {
+      country: props.countries[0]
+    };
+  }
+
+  setCountry(event, country) {
+    event.preventDefault();
+    this.setState({ country });
+  }
+
   render() {
     const {
       contact_title,
       contact_email,
       contact_phone,
-      testimonials
+      btn_name,
+      countries
     } = this.props;
-    console.log("testimonials", testimonials);
+
     return (
       <main id="main">
         <div className="page-contacts container">
           <div className="content">
             <h1 className="h2 heading striped uppercase">{contact_title}</h1>
             <ul className="contact-list">
-              {/* {countries.map(c => {
+              {countries.map(c => {
                 return (
                   <li
-                    key={c.object_id}
+                    key={c.country}
                     className={
                       this.state.country.country === c.country ? "active" : ""
                     }
                   >
-                    <span onClick={e => this.setCountry(e, c)}>{c.country}</span>
+                    <span onClick={e => this.setCountry(e, c)}>
+                      {c.country}
+                    </span>
                   </li>
                 );
-              })} */}
+              })}
             </ul>
             <div className="contacts">
               <div className="email">
@@ -49,12 +65,12 @@ export class ContactsPageTemplate extends Component {
               </div>
             </div>
             <div className="follow">
-              {/* <button
+              <button
                 className="heading btn btn-primary trigger"
                 onClick={() => this.setModalState(true)}
               >
-                {fields.contacts_button}
-              </button> */}
+                {btn_name}
+              </button>
             </div>
           </div>
           <div className="map">
@@ -79,7 +95,8 @@ const ContactsPage = ({ data }) => {
         contact_title={post.frontmatter.contact_title}
         contact_email={post.frontmatter.contact_email}
         contact_phone={post.frontmatter.contact_phone}
-        testimonials={post.frontmatter.testimonials}
+        btn_name={post.frontmatter.btn_name}
+        countries={post.frontmatter.countries}
       />
     </Layout>
   );
@@ -99,7 +116,7 @@ export const ContactsPageQuery = graphql`
         contact_email
         contact_phone
         btn_name
-        testimonials {
+        countries {
           country
           latitude
           longitude
