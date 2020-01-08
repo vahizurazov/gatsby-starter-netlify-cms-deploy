@@ -127,6 +127,20 @@ collections:
               fields:
                 [
                   { label: UK, name: uk, widget: string },
+                  { label: Location Map, name: location_map, widget: map },
+                  { label: Germany, name: germany, widget: string },
+                  { label: Location Map, name: location_map, widget: map },
+                  { label: Ukraine, name: ukraine, widget: string },
+                  { label: Location Map, name: location_map, widget: map },
+                ],
+            }
+          - {
+              label: Locations,
+              name: countries,
+              widget: object,
+              fields:
+                [
+                  { label: UK, name: uk, widget: string },
                   { label: Germany, name: germany, widget: string },
                   { label: Ukraine, name: ukraine, widget: string },
                 ],
