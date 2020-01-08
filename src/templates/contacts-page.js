@@ -7,9 +7,8 @@ import "./styles/contacts/index.scss";
 
 export class ContactsPageTemplate extends Component {
   render() {
-    const { contact_title, contact_email, contact_phone, country } = this.props;
+    const { contact_title, contact_email, contact_phone } = this.props;
 
-    console.log(country);
     return (
       <main id="main">
         <div className="page-contacts container">
@@ -75,7 +74,7 @@ const ContactsPage = ({ data }) => {
         contact_title={post.frontmatter.contact_title}
         contact_email={post.frontmatter.contact_email}
         contact_phone={post.frontmatter.contact_phone}
-        country={post.frontmatter.countries}
+        // country={post.frontmatter.country}
       />
     </Layout>
   );
@@ -95,7 +94,6 @@ export const ContactsPageQuery = graphql`
         contact_email
         contact_phone
         btn_name
-        country
       }
     }
   }
