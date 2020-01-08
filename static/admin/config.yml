@@ -118,10 +118,10 @@ collections:
           - { label: Title, name: contact_title, widget: string }
           - { label: Email, name: contact_email, widget: string }
           - { label: Phone, name: contact_phone, widget: string }
-          - { label: Button Name, name: btn-name, widget: string }
+          - { label: Button Name, name: btn_name, widget: string }
           - {
               label: Locations,
-              name: locations,
+              name: countries,
               widget: object,
               fields:
                 [
@@ -130,7 +130,7 @@ collections:
                   { label: Ukraine, name: ukraine, widget: string },
                 ],
             }
-          - { label: Location Map, name: location-map, widget: map }
+          - { label: Location Map, name: location_map, widget: map }
 
       - file: "src/pages/about-us/index.md"
         label: "About us"

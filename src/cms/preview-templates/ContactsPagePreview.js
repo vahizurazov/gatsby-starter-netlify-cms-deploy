@@ -4,7 +4,7 @@ import { ContactsPageTemplate } from "../../templates/contacts-page";
 
 const ContactsPagePreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(["data"]).toJS();
-  return <ContactsPageTemplate section_1_title={data.section_1_title} />;
+  return <ContactsPageTemplate contact_title={data.contact_title} />;
 };
 
 ContactsPagePreview.propTypes = {
