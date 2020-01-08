@@ -115,10 +115,22 @@ collections:
               widget: "hidden",
               default: "contacts-page",
             }
-          - { label: TEST contacts, name: section_1_title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
+          - { label: Title, name: contact_title, widget: string }
+          - { label: Email, name: contact_email, widget: string }
+          - { label: Phone, name: contact_phone, widget: string }
+          - { label: Button Name, name: btn-name, widget: string }
+          - {
+              label: Locations,
+              name: locations,
+              widget: object,
+              fields:
+                [
+                  { label: UK, name: uk, widget: string },
+                  { label: Germany, name: germany, widget: string },
+                  { label: Ukraine, name: ukraine, widget: string },
+                ],
+            }
+          - { label: Location Map, name: location-map, widget: map }
 
       - file: "src/pages/about-us/index.md"
         label: "About us"

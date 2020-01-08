@@ -33,8 +33,8 @@ ContactsPage.propTypes = {
 export default ContactsPage;
 
 export const ContactsPageQuery = graphql`
-  query ContactsPage {
-    markdownRemark {
+  query ContactsPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter {
         section_1_title
       }
