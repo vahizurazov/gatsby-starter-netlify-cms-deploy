@@ -121,31 +121,67 @@ collections:
           - { label: Phone, name: contact_phone, widget: string }
           - { label: Button Name, name: btn_name, widget: string }
           - {
-              label: LocationsC,
-              name: countries_s,
+              label: LocationsCountries,
+              name: country,
               widget: object,
               fields:
                 [
-                  { label: UK, name: uk, widget: string },
-                  { label: Location Map, name: location_map, widget: map },
-                  { label: Germany, name: germany, widget: string },
-                  { label: Location Map, name: location_map, widget: map },
-                  { label: Ukraine, name: ukraine, widget: string },
-                  { label: Location Map, name: location_map, widget: map },
+                  {
+                    label: UK,
+                    name: uk,
+                    widget: object,
+                    fields:
+                      [
+                        { label: UK, name: uk, widget: string },
+                        {
+                          label: Location Map,
+                          name: location_map_uk,
+                          widget: map,
+                        },
+                      ],
+                  },
+                  {
+                    label: Germany,
+                    name: germany,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Germany, name: germany, widget: string },
+                        {
+                          label: Location Map,
+                          name: location_map_gm,
+                          widget: map,
+                        },
+                      ],
+                  },
+                  {
+                    label: Ukraine,
+                    name: ukraine,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Ukraine, name: ukraine, widget: string },
+                        {
+                          label: Location Map,
+                          name: location_map_ukr,
+                          widget: map,
+                        },
+                      ],
+                  },
                 ],
             }
-          - {
-              label: Locations,
-              name: countries,
-              widget: object,
-              fields:
-                [
-                  { label: UK, name: uk, widget: string },
-                  { label: Germany, name: germany, widget: string },
-                  { label: Ukraine, name: ukraine, widget: string },
-                ],
-            }
-          - { label: Location Map, name: location_map, widget: map }
+          # - {
+          #     label: Locations,
+          #     name: countries,
+          #     widget: object,
+          #     fields:
+          #       [
+          #         { label: UK, name: uk, widget: string },
+          #         { label: Germany, name: germany, widget: string },
+          #         { label: Ukraine, name: ukraine, widget: string },
+          #       ],
+          #   }
+          # - { label: Location Map, name: location_map, widget: map }
 
       - file: "src/pages/about-us/index.md"
         label: "About us"
