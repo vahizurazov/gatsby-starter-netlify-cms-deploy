@@ -92,8 +92,7 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
 Sparkybit is a leading Ukraine software development company, with a focus on fintech, open banking, banking technology, and SME IT planning.
-
-
 
 It partners with small to mid-size enterprise to deliver software solutions and expertise to speed time to market, while also supporting the digital transformation journey. Sparkybit is also a Salesforce Support Provider, with an expert team of integration and implementation consultants who optimise value for corporate Salesforce investments.

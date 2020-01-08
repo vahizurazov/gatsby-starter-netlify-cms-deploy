@@ -45,81 +45,51 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
+            # section 1 start
+          - { label: Title, name: section_1_title, widget: string }
+          - { label: Image, name: section_1_image, widget: image }
+          - { label: BtnText, name: section_1_btn_text, widget: string }
+          - { label: Subheading, name: section_1_subheading, widget: string }
+          - { label: "Content", name: "body", widget: markdown }
+            # section 1 end
+
+            # section 2 start
+          - { label: Title, name: section_2_title, widget: string }
+          - { label: Image, name: section_2_1_image, widget: image }
           - {
-              label: Mainpitch,
-              name: mainpitch,
-              widget: object,
-              fields:
-                [
-                  { label: Title, name: title, widget: string },
-                  { label: Description, name: description, widget: text },
-                ],
-            }
-          - { label: Description, name: description, widget: string }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Blurbs,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text },
-                      ],
-                  },
-                ],
+              label: Subheading right,
+              name: section_2_right_subheading,
+              widget: string,
             }
           - {
-              label: Main,
-              name: main,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image1,
-                    name: image1,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image2,
-                    name: image2,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image3,
-                    name: image3,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                ],
+              label: Subheading right text,
+              name: section_2_right_text,
+              widget: string,
             }
+          - { label: Image, name: section_2_2_image, widget: image }
+          - {
+              label: Subheading left,
+              name: section_2_left_subheading,
+              widget: string,
+            }
+          - {
+              label: Subheading left text,
+              name: section_2_left_text,
+              widget: string,
+            }
+            # section 2 end
+
+            # section 3 start
+          - { label: Title 3, name: section_3_title, widget: string }
+          - { label: Section 3 text, name: section_3_text, widget: string }
+          - { label: Image mobile, name: section_3_image_mobile, widget: image }
+          - {
+              label: Image desktop,
+              name: section_3_image_desktop,
+              widget: image,
+            }
+            # section 3 end
+
       - file: "src/pages/services/index.md"
         label: "Services"
         name: "services"
@@ -134,6 +104,21 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/pages/contacts/index.md"
+        label: "Contacts"
+        name: "contacts"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contacts-page",
+            }
+          - { label: TEST contacts, name: section_1_title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
 
       - file: "src/pages/about-us/index.md"
         label: "About us"
@@ -171,6 +156,7 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"

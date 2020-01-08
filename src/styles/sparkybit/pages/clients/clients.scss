@@ -1,0 +1,114 @@
+.page-clients {
+  position: relative;
+  .clients-list-holder {
+    .clients-list {
+      .client {
+        display: flex;
+        margin: 0 0 50px;
+
+        .visual {
+          display: block;
+          width: 40%;
+          flex-basis: 40%;
+          margin: 0 50px 0 0;
+          text-align: center;
+
+          .photo {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 0 5px;
+          }
+        }
+
+        .description {
+          flex-basis: 100%;
+          width: 100%;
+          font-size: 22px;
+          line-height: 25px;
+
+          q {
+            display: block;
+            margin: 0 0 15px;
+          }
+
+          .author {
+            text-align: right;
+
+            .name {
+              &:before {
+                content: "– ";
+              }
+              font-weight: bold;
+            }
+          }
+        }
+
+        &:nth-child(2n + 2) {
+          .visual {
+            order: 1;
+            margin: 0 0 0 50px;
+          }
+        }
+      }
+    }
+  }
+
+  .circle {
+    position: absolute;
+    z-index: -1;
+    &.circle-1 {
+      top: 380px;
+      left: 225px;
+      @include color-circle($gradient-blue-biege, 100px);
+      transform: rotate(180deg);
+    }
+    &.circle-2 {
+      top: 127px;
+      right: 100px;
+      @include color-circle($gradient-lightblue-transparent, 38px);
+      opacity: 0.8;
+    }
+
+    &.circle-3 {
+      bottom: -45px;
+      left: 28%;
+      @include color-circle($gradient-green-blue, 280px);
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile-max) {
+    .clients-list-holder {
+      .clients-list {
+        .client {
+          flex-direction: column;
+
+          .visual {
+            width: 100%;
+            margin: 0 0 20px;
+
+            .photo {
+              display: block;
+              max-width: 100%;
+              height: auto;
+              margin: 0 0 5px;
+            }
+          }
+
+          .description {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+          }
+
+          &:nth-child(2n + 2) {
+            .visual {
+              order: 0;
+              margin: 0 0 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

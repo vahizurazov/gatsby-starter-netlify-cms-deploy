@@ -1,0 +1,145 @@
+.page-people {
+  position: relative;
+  margin: 0 0 66px;
+
+  .main-container,
+  #main {
+    margin: 0;
+  }
+
+  .people-list-holder {
+    position: relative;
+    padding: 70px 0 0;
+    margin: 0 0 130px;
+
+    .people-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .person {
+        flex-basis: 300px;
+        width: 300px;
+        margin: 0 0 70px;
+        filter: none;
+        filter: grayscale(0%);
+        opacity: 1;
+        transition: filter 0.4s ease, opacity 0.4s ease;
+
+        .photo {
+          display: block;
+          height: auto;
+          max-width: 100%;
+          margin: 0 0 26px;
+          border-radius: 3px;
+        }
+
+        .name {
+          display: block;
+          font: 700 20px/24px $font-secondary;
+          margin: 0 0 8px;
+        }
+
+        .position {
+          display: block;
+          margin: 0 0 30px;
+          font: 400 16px/20px $font-secondary;
+        }
+
+        .bio {
+          //display: none;
+          max-height: 0;
+          opacity: 0;
+          float: left;
+          width: 100vw;
+          max-width: $container-width;
+          transition: max-height 400ms ease, opacity 400ms ease-out;
+        }
+
+        &.faded {
+          filter: grayscale(100%);
+          filter: gray;
+          opacity: 0.5;
+        }
+
+        &.active {
+          .bio {
+            max-height: 1000px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+
+    .circle {
+      position: absolute;
+      z-index: -1;
+
+      &.circle-1 {
+        @include color-circle($gradient-green-blue, 424px);
+        top: -30px;
+        right: 100px;
+      }
+
+      &.circle-2 {
+        @include color-circle($gradient-green-pink, 72px);
+        top: 500px;
+        left: -114px;
+      }
+
+      &.circle-3 {
+        @include color-circle($gradient-gray-white, 288px);
+        bottom: -155px;
+        left: -144px;
+      }
+    }
+  }
+
+  .photos {
+    margin: 0 auto;
+
+    .grid-sizer {
+      width: 50%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      margin: 0 auto 23px;
+    }
+  }
+
+
+  @media screen and (max-width: $breakpoint-tablet-max) {
+    .people-list-holder {
+      .people-list {
+        .person {
+          margin: 0 auto 40px;
+
+          .bio {
+            text-align: justify;
+            max-width: $container-sm-width;
+            padding: 0 40px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile-max) {
+    .people-list-holder {
+      .people-list {
+        .person {
+          .bio {
+            max-width: none;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+}

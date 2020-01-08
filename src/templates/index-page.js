@@ -3,152 +3,184 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
-import AboutUsPart from "../components/AboutUsPart";
+import Img from "gatsby-image/withIEPolyfill";
+import Content, { HTMLContent } from "../components/Content";
+
+import "./styles/section_greeter/index.scss";
 
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro
-}) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column"
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-            backgroundColor: "rgb(255, 68, 0)",
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em"
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-            backgroundColor: "rgb(255, 68, 0)",
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em"
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
+  section_1_image,
+  section_1_title,
+  section_1_btn_text,
+  section_1_subheading,
+  contentComponent,
+  content,
+  section_2_right_subheading,
+  section_2_right_text,
+  section_2_left_subheading,
+  section_2_left_text,
+  section_2_title,
+  section_2_1_image,
+  section_2_2_image,
+  section_3_title,
+  section_3_text,
+  section_3_image_mobile,
+  section_3_image_desktop
+}) => {
+  const MainPageContent = contentComponent || Content;
+  return (
+    <main id="main">
+      <div className="page-main">
+        <section className="container">
+          <div className="section-greeter">
+            <div className="content">
+              <h1 className="heading uppercase">{section_1_title}</h1>
+              <h4 className="heading">{section_1_subheading}</h4>
+              <MainPageContent className="description-wrap" content={content} />
+              <div>
+                <button
+                  className="btn btn-primary trigger"
+                  // onClick={() => this.setModalState(true)}
+                >
+                  {section_1_btn_text}
+                </button>
+              </div>
+            </div>
+            <div className="circle circle-1" />
+            <div className="circle circle-3" />
+            {!!section_1_image.childImageSharp ? (
+              <Img
+                className="main_background"
+                fluid={section_1_image.childImageSharp.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                alt="Greetings from Sparkybit team"
+              />
+            ) : (
+              <img src={section_1_image} alt="" className="main_background" />
+            )}
+
+            <div className="circle circle-7" />
+          </div>
+        </section>
+        <section className="section-services">
+          <div className="container">
+            <h1 className="striped uppercase">{section_2_title}</h1>
+            <div className="services">
+              <div className="service salesforce">
+                <div className="circle circle-1">
+                  {!!section_2_1_image.childImageSharp ? (
+                    <Img
+                      fixed={section_2_1_image.childImageSharp.fixed}
+                      alt={section_2_right_subheading}
+                      fadeIn={true}
+                    />
+                  ) : (
+                    <img
+                      src={section_2_1_image}
+                      alt={section_2_right_subheading}
+                    />
+                  )}
                 </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
+                <div className="circle circle-2" />
+                <div className="content pull-right">
+                  <h5 className="heading uppercase">
+                    {section_2_right_subheading}
+                  </h5>
+                  <p>{section_2_right_text}</p>
+                  <div className="more-holder">
+                    <Link to="/services" className="link-more pull-right">
+                      Learn more
                     </Link>
                   </div>
                 </div>
-                <AboutUsPart />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/about-us">
-                      About us
-                    </Link>
-                  </div>
+              </div>
+              <div className="service bespoke">
+                <div className="circle circle-1">
+                  {!!section_2_2_image.childImageSharp ? (
+                    <Img
+                      fixed={section_2_2_image.childImageSharp.fixed}
+                      alt={section_2_left_subheading}
+                      fadeIn={false}
+                    />
+                  ) : (
+                    <img
+                      src={section_2_2_image}
+                      alt={section_2_left_subheading}
+                    />
+                  )}
                 </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
+                <div className="content pull-left">
+                  <h5 className="heading uppercase">
+                    {section_2_left_subheading}
+                  </h5>
+                  <p>{section_2_left_text}</p>
+                  <div className="more-holder">
+                    <Link
+                      to="/services#bespoke"
+                      className="link-more pull-right"
+                    >
+                      Learn more
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        <section className="container">
+          <div className="section-technologies">
+            <h1 className="striped uppercase">{section_3_title}</h1>
+            <p>{section_3_text}</p>
+            <div className="technologies">
+              {!!section_3_image_desktop.childImageSharp ? (
+                <Img
+                  fluid={section_3_image_desktop.childImageSharp.fluid}
+                  alt={section_3_title}
+                  fadeIn={true}
+                />
+              ) : (
+                <img src={section_3_image_desktop} alt={section_3_title} />
+              )}
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-  </div>
-);
+    </main>
+  );
+};
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  })
+  section_1_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  section_1_title: PropTypes.string,
+  section_1_btn_text: PropTypes.string,
+  section_1_subheading: PropTypes.string
 };
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
-  console.log("data Index page", data);
+  const { markdownRemark: post } = data;
+  console.log("data Index page", post);
 
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        contentComponent={HTMLContent}
+        content={post.html}
+        section_1_image={post.frontmatter.section_1_image}
+        section_1_title={post.frontmatter.section_1_title}
+        section_1_btn_text={post.frontmatter.section_1_btn_text}
+        section_1_subheading={post.frontmatter.section_1_subheading}
+        section_2_right_subheading={post.frontmatter.section_2_right_subheading}
+        section_2_right_text={post.frontmatter.section_2_right_text}
+        section_2_left_subheading={post.frontmatter.section_2_left_subheading}
+        section_2_left_text={post.frontmatter.section_2_left_text}
+        section_2_title={post.frontmatter.section_2_title}
+        section_2_1_image={post.frontmatter.section_2_1_image}
+        section_2_2_image={post.frontmatter.section_2_2_image}
+        section_3_title={post.frontmatter.section_3_title}
+        section_3_text={post.frontmatter.section_3_text}
+        section_3_image_desktop={post.frontmatter.section_3_image_desktop}
+        section_3_image_mobile={post.frontmatter.section_3_image_mobile}
       />
     </Layout>
   );
@@ -167,35 +199,52 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
-        title
-        image {
+        section_1_title
+        section_1_image {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1280) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        section_1_btn_text
+        section_1_subheading
+        section_2_1_image {
+          childImageSharp {
+            fixed(quality: 90, width: 300, height: 300) {
+              ...GatsbyImageSharpFixed_noBase64
+            }
+          }
+        }
+        section_2_2_image {
+          childImageSharp {
+            fixed(quality: 90, width: 465, height: 465) {
+              ...GatsbyImageSharpFixed_noBase64
+            }
+          }
+        }
+        section_2_right_subheading
+        section_2_right_text
+        section_2_left_subheading
+        section_2_left_text
+        section_2_title
+        section_3_title
+        section_3_text
+        section_3_image_desktop {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+        section_3_image_mobile {
+          childImageSharp {
+            fixed(quality: 60, width: 395, height: 1361) {
+              ...GatsbyImageSharpFixed_withWebp
             }
-            text
           }
-          heading
-          description
         }
       }
     }

@@ -5,6 +5,8 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Img from "gatsby-image/withIEPolyfill";
 
+import "./styles/services/index.scss";
+
 export const ServicesPageTemplate = ({
   heading,
   content,
@@ -13,33 +15,33 @@ export const ServicesPageTemplate = ({
   image
 }) => {
   const ServicesContent = contentComponent || Content;
+
   const imageStyle = { borderRadius: "5px", width: "100%", height: "200px" };
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              {!!image.childImageSharp ? (
-                <Img
-                  className="visual img-rounded"
-                  fluid={image.childImageSharp.fluid}
-                  alt="About Us"
-                />
-              ) : (
-                <img src={image} alt="" style={imageStyle} />
-              )}
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {heading}
-              </h2>
-              <h3>{subheading}</h3>
-              <ServicesContent className="content" content={content} />
-            </div>
-          </div>
+    <main id="main">
+      {!!image.childImageSharp ? (
+        <Img
+          className="service-background"
+          fluid={image.childImageSharp.fluid}
+          objectFit="contain"
+          objectPosition="50% 50%"
+          alt="Services"
+        />
+      ) : (
+        <img src={image} alt="" style={imageStyle} />
+      )}
+      <div className="page-services">
+        <div className="container">
+          <h1 className="h2 striped">{heading}</h1>
+          <h3>{subheading}</h3>
+          <ServicesContent content={content} />
         </div>
+        <div className="circle circle-1" />
+        <div className="circle circle-2" />
+        <div className="circle circle-3" />
       </div>
-    </section>
+    </main>
   );
 };
 
@@ -58,8 +60,6 @@ const ServicesPage = ({ data }) => {
         heading={post.frontmatter.heading}
         subheading={post.frontmatter.subheading}
         image={post.frontmatter.image}
-        body2={post.frontmatter.body2}
-        body3={post.frontmatter.body3}
       />
     </Layout>
   );
@@ -79,8 +79,6 @@ export const servicesPageQuery = graphql`
         title
         heading
         subheading
-        body2
-        body3
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
