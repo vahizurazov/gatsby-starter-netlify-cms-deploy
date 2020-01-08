@@ -1,69 +1,74 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import "./styles/contacts/index.scss";
 // import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-export const ContactsPageTemplate = ({
-  contact_title,
-  contact_email,
-  contact_phone,
-  countries
-}) => {
-  return (
-    <main id="main">
-      <div className="page-contacts container">
-        <div className="content">
-          <h1 className="h2 heading striped uppercase">{contact_title}</h1>
-          {/* <ul className="contact-list">
-            {countries.map(c => {
-              return (
-                <li
-                  key={c.object_id}
-                  className={
-                    this.state.country.country === c.country ? "active" : ""
-                  }
-                >
-                  <span onClick={e => this.setCountry(e, c)}>{c.country}</span>
-                </li>
-              );
-            })}
-          </ul> */}
-          <div className="contacts">
-            <div className="email">
-              {/* <img src={IconEnvelope} alt="contact email" /> */}
-              {/* eslint-disable */}
-              <a>
-                <span onClick={() => this.setModalState(true)}>
-                  {contact_title}
-                </span>
-              </a>
+export class ContactsPageTemplate extends Component {
+  render() {
+    const {
+      contact_title,
+      contact_email,
+      contact_phone,
+      countries
+    } = this.props;
+
+    console.log(countries);
+    return (
+      <main id="main">
+        <div className="page-contacts container">
+          <div className="content">
+            <h1 className="h2 heading striped uppercase">{contact_title}</h1>
+            <ul className="contact-list">
+              {/* {countries.map(c => {
+                return (
+                  <li
+                    key={c.object_id}
+                    className={
+                      this.state.country.country === c.country ? "active" : ""
+                    }
+                  >
+                    <span onClick={e => this.setCountry(e, c)}>{c.country}</span>
+                  </li>
+                );
+              })} */}
+            </ul>
+            <div className="contacts">
+              <div className="email">
+                {/* <img src={IconEnvelope} alt="contact email" /> */}
+                {/* eslint-disable */}
+                <a>
+                  <span onClick={() => this.setModalState(true)}>
+                    {contact_email}
+                  </span>
+                </a>
+              </div>
+              <div className="tel">
+                {/* <img src={IconTel} alt="phone number" /> */}
+                <a href={`tel:${contact_phone}`}>{contact_phone}</a>
+              </div>
             </div>
-            <div className="tel">
-              {/* <img src={IconTel} alt="phone number" /> */}
-              <a href={`tel:${contact_phone}`}>{contact_phone}</a>
+            <div className="follow">
+              {/* <button
+                className="heading btn btn-primary trigger"
+                onClick={() => this.setModalState(true)}
+              >
+                {fields.contacts_button}
+              </button> */}
             </div>
           </div>
-          <div className="follow">
-            {/* <button
-              className="heading btn btn-primary trigger"
-              onClick={() => this.setModalState(true)}
-            >
-              {fields.contacts_button}
-            </button> */}
+          <div className="map">
+            {/* <LeafletMap country={this.state.country} offices={offices.items} /> */}
           </div>
+          <div className="circle circle-1" />
+          <div className="circle circle-2" />
+          <div className="circle circle-3" />
         </div>
-        <div className="map">
-          {/* <LeafletMap country={this.state.country} offices={offices.items} /> */}
-        </div>
-        <div className="circle circle-1" />
-        <div className="circle circle-2" />
-        <div className="circle circle-3" />
-      </div>
-    </main>
-  );
-};
+      </main>
+    );
+  }
+}
 
 const ContactsPage = ({ data }) => {
   console.log("Contacts page", data);
