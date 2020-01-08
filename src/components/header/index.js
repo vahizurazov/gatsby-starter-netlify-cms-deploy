@@ -55,6 +55,13 @@ export default props => {
             <Link
               activeClassName="active"
               partiallyActive={true}
+              to="/contacts"
+            >
+              Contacts
+            </Link>
+            <Link
+              activeClassName="active"
+              partiallyActive={true}
               to="/services"
             >
               Services
