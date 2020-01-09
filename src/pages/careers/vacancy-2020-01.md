@@ -22,7 +22,7 @@ skills:
   - WINDOWS8
 date: 2020-01-09T10:40:30.681Z
 description: |-
-  eate mode 100644 src/templates/careers-post.js
+  Short DESCRIPTION eate mode 100644 src/templates/careers-post.js
   PS D:\dev\gatsby-starter-netlify-cms-deploy> git push
   Enumerating objects: 21, done.
   Counting objects: 100% (21/21), done.
@@ -35,7 +35,7 @@ description: |-
 featuredpost: true
 featuredimage: /img/jumbotron.jpg
 ---
-eate mode 100644 src/templates/careers-post.js
+LONG DSCRIPTION eate mode 100644 src/templates/careers-post.js
 
 PS D:\dev\gatsby-starter-netlify-cms-deploy> git push
 
