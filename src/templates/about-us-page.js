@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Img from "gatsby-image/withIEPolyfill";
@@ -65,10 +65,6 @@ export const AboutUsPageTemplate = ({
   );
 };
 
-AboutUsPageTemplate.propTypes = {
-  section_1_title: PropTypes.string.isRequired
-};
-
 const AboutUsPage = ({ data }) => {
   console.log("About us page", data);
   const { markdownRemark: post } = data;
@@ -86,10 +82,6 @@ const AboutUsPage = ({ data }) => {
       />
     </Layout>
   );
-};
-
-AboutUsPage.propTypes = {
-  data: PropTypes.object.isRequired
 };
 
 export default AboutUsPage;

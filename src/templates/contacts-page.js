@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import "./styles/contacts/index.scss";
@@ -9,9 +9,9 @@ export class ContactsPageTemplate extends Component {
   constructor(props) {
     super(props);
     // console.log("props", this.props);
-    this.state = {
-      country: props.countries[0]
-    };
+    // this.state = {
+    //   country: props.countries[0]
+    // };
   }
 
   setCountry(event, country) {
@@ -24,8 +24,8 @@ export class ContactsPageTemplate extends Component {
       contact_title,
       contact_email,
       contact_phone,
-      btn_name,
-      countries
+      btn_name
+      // countries
     } = this.props;
 
     return (
@@ -34,7 +34,7 @@ export class ContactsPageTemplate extends Component {
           <div className="content">
             <h1 className="h2 heading striped uppercase">{contact_title}</h1>
             <ul className="contact-list">
-              {countries.map(c => {
+              {/* {countries.map(c => {
                 return (
                   <li
                     key={c.country}
@@ -47,7 +47,7 @@ export class ContactsPageTemplate extends Component {
                     </span>
                   </li>
                 );
-              })}
+              })} */}
             </ul>
             <div className="contacts">
               <div className="email">
@@ -96,14 +96,10 @@ const ContactsPage = ({ data }) => {
         contact_email={post.frontmatter.contact_email}
         contact_phone={post.frontmatter.contact_phone}
         btn_name={post.frontmatter.btn_name}
-        countries={post.frontmatter.countries}
+        // countries={post.frontmatter.countries}
       />
     </Layout>
   );
-};
-
-ContactsPage.propTypes = {
-  data: PropTypes.object.isRequired
 };
 
 export default ContactsPage;
