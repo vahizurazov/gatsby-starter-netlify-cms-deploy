@@ -48,16 +48,32 @@ export default props => {
                 </a>
               )
             })} */}
-            <a target="__blank" href={"google.com"} className="fb">
+            <a
+              target="__blank"
+              href={"https://www.facebook.com/Sparkybit-232812654328307/"}
+              className="fb"
+            >
               Facebook
             </a>
-            <a target="__blank" href={"google.com"} className="tw">
+            <a
+              target="__blank"
+              href={"https://twitter.com/sparkybit"}
+              className="tw"
+            >
               Twitter
             </a>
-            <a target="__blank" href={"google.com"} className="in">
+            <a
+              target="__blank"
+              href={"https://www.instagram.com/sparkybit_official/"}
+              className="in"
+            >
               Instagram
             </a>
-            <a target="__blank" href={"google.com"} className="ln">
+            <a
+              target="__blank"
+              href={"https://www.linkedin.com/company/sparkybit/"}
+              className="ln"
+            >
               LinkedIn
             </a>
           </div>

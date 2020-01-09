@@ -2,30 +2,17 @@ import React, { Component } from "react";
 
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Countries from "../components/Countries";
 import "./styles/contacts/index.scss";
-// import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 export class ContactsPageTemplate extends Component {
-  constructor(props) {
-    super(props);
-    // console.log("props", this.props);
-    // this.state = {
-    //   country: props.countries[0]
-    // };
-  }
-
-  setCountry(event, country) {
-    event.preventDefault();
-    this.setState({ country });
-  }
-
   render() {
     const {
       contact_title,
       contact_email,
       contact_phone,
-      btn_name
-      // countries
+      btn_name,
+      countries
     } = this.props;
 
     return (
@@ -33,22 +20,7 @@ export class ContactsPageTemplate extends Component {
         <div className="page-contacts container">
           <div className="content">
             <h1 className="h2 heading striped uppercase">{contact_title}</h1>
-            <ul className="contact-list">
-              {/* {countries.map(c => {
-                return (
-                  <li
-                    key={c.country}
-                    className={
-                      this.state.country.country === c.country ? "active" : ""
-                    }
-                  >
-                    <span onClick={e => this.setCountry(e, c)}>
-                      {c.country}
-                    </span>
-                  </li>
-                );
-              })} */}
-            </ul>
+            <Countries countries={countries} />
             <div className="contacts">
               <div className="email">
                 {/* <img src={IconEnvelope} alt="contact email" /> */}
@@ -96,7 +68,7 @@ const ContactsPage = ({ data }) => {
         contact_email={post.frontmatter.contact_email}
         contact_phone={post.frontmatter.contact_phone}
         btn_name={post.frontmatter.btn_name}
-        // countries={post.frontmatter.countries}
+        countries={post.frontmatter.countries}
       />
     </Layout>
   );
