@@ -15,6 +15,8 @@ description: |-
   To https://github.com/vahizurazov/gats
 featuredpost: true
 featuredimage: /img/jumbotron.jpg
+cities:
+  - Kharkiv
 ---
 eate mode 100644 src/templates/careers-post.js
 
