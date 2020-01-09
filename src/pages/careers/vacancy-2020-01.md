@@ -1,6 +1,9 @@
 ---
 templateKey: careers-post
 title: test vacancy name
+cities:
+  - Kharkiv
+language: CPLUS
 date: 2020-01-09T10:40:30.681Z
 description: |-
   eate mode 100644 src/templates/careers-post.js
@@ -15,8 +18,6 @@ description: |-
   To https://github.com/vahizurazov/gats
 featuredpost: true
 featuredimage: /img/jumbotron.jpg
-cities:
-  - Kharkiv
 ---
 eate mode 100644 src/templates/careers-post.js
 
