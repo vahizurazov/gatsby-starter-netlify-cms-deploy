@@ -13,6 +13,26 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "careers"
+    label: "Careers"
+    folder: "src/pages/careers"
+    create: true
+    identifier_field: "career ident"
+    slug: "vacancy-{{year}}-{{month}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "careers-post",
+        }
+      - { label: "Vacancy name", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
