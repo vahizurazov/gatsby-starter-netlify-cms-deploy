@@ -1,13 +1,13 @@
 import React from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
-// import { DEVICON, SKILLS } from "./icon/constants";
-// import Icon from "./icon";
+import { DEVICON, SKILLS } from "./icon/constants";
+import Icon from "./icon";
 
 class CareerRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: careers } = data.allMarkdownRemark;
-    console.log("this.props data CareerRoll", careers);
+    console.log("DATA CareerRoll", data);
 
     return (
       <div id="main">
@@ -26,11 +26,11 @@ class CareerRoll extends React.Component {
                   <div className="content-block">
                     <div className="vacancy-list">
                       <div className="vacancy-image">
-                        {/* <Icon
-                        className="preview"
-                        icon={DEVICON[`${node.acf.vacancy.language.value}`]}
-                        size="144"
-                        /> */}
+                        <Icon
+                          className="preview"
+                          icon={DEVICON[`${career.frontmatter.language}`]}
+                          size="144"
+                        />
                       </div>
                       <div className="vacancy-wrap-right">
                         <div className="vacancy-wrap-title">
@@ -50,14 +50,14 @@ class CareerRoll extends React.Component {
                           </div>
                         </div>
                         <div className="vacancy-skills">
-                          {/* {node.acf.vacancy.skills.map(el => (
-                           <Icon
-                             className="icon-skills"
-                             key={el.value}
-                             icon={SKILLS[`${el.value}`]}
-                             size="20"
-                           />
-                         ))} */}
+                          {career.frontmatter.skills.map(el => (
+                            <Icon
+                              className="icon-skills"
+                              key={el}
+                              icon={SKILLS[`${el}`]}
+                              size="20"
+                            />
+                          ))}
                         </div>
                         <div className="about-project">
                           <h4 className="vacancy-about-title">About project</h4>
