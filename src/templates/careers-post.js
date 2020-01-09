@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/Layout";
+import Layout from "../components/Layout";
 
-import "./styles/index.scss";
+import "./styles/careers/index.scss";
 
 export const CareerPostTemplate = ({ description, title }) => {
   return (
