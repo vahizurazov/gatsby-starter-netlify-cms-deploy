@@ -154,6 +154,8 @@ export default () => (
                 featuredpost
                 description
                 cities
+                skills
+                language
               }
               html
               htmlAst
