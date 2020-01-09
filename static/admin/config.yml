@@ -27,11 +27,6 @@ collections:
           default: "careers-post",
         }
       - { label: "Vacancy name", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
       - {
           label: Cities vacancy,
           name: cities,
@@ -39,6 +34,74 @@ collections:
           multiple: true,
           options: ["Dnepr", "Kharkiv"],
         }
+      - {
+          label: Language,
+          name: language,
+          widget: select,
+          options:
+            [
+              "C",
+              "CPLUS",
+              "CSHARP",
+              "DEV",
+              "JAVASCRIPT",
+              "PYTHON",
+              "RUBY",
+              "TYPESCRIPT",
+              "SALEFORCE",
+              "GO",
+              "PHP",
+            ],
+        }
+      - {
+          label: Skills,
+          name: skills,
+          widget: inline-select,
+          multiple: true,
+          options:
+            [
+              "GIT_HUB",
+              "AMAZON",
+              "ANDROID",
+              "APPLE",
+              "ANGULAR",
+              "APACHE",
+              "ATOM",
+              "BABEL",
+              "BACKBONEJS",
+              "BOOTSTRAP",
+              "CHROME",
+              "CONFLUENCE",
+              "CSS3",
+              "GIT",
+              "GIT_LAB",
+              "GULP",
+              "HTML5",
+              "ILLUSTRATOR",
+              "JQUERY",
+              "LARAVEL",
+              "LESS",
+              "LINUX",
+              "MYSQL",
+              "PHOTOSHOP",
+              "PHP",
+              "REACT",
+              "SAAS",
+              "WORDPRESS",
+              "WINDOWS8",
+              "WEBPACK",
+              "VUEJS",
+              "UBUNTU",
+              "SWIFT",
+              "SLACK",
+              "GOOGLE",
+            ],
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   # default: ["Design"]
   - name: "blog"

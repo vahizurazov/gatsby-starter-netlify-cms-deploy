@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
+// import { DEVICON, SKILLS } from "./icon/constants";
+// import Icon from "./icon";
 
 class CareerRoll extends React.Component {
   render() {
@@ -38,13 +40,13 @@ class CareerRoll extends React.Component {
                             </h3>
                           </Link>
                           <div className="vacancy-location">
-                            {/* {node.acf.vacancy.location.map(el => {
-                             return (
-                               <span className="vacancy-city" key={el}>
-                                 {el}
-                               </span>
-                             )
-                           })} */}
+                            {career.frontmatter.cities.map(city => {
+                              return (
+                                <span className="vacancy-city" key={city}>
+                                  {city}
+                                </span>
+                              );
+                            })}
                           </div>
                         </div>
                         <div className="vacancy-skills">
