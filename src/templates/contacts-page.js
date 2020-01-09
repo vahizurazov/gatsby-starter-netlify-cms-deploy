@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Countries from "../components/Countries";
+
+import IconEnvelope from "../../src/img/images/icon-message.svg";
+import IconTel from "../../src/img/images/icon-tel.svg";
+
 import "./styles/contacts/index.scss";
 
 export class ContactsPageTemplate extends Component {
@@ -23,7 +27,7 @@ export class ContactsPageTemplate extends Component {
             <Countries countries={countries} />
             <div className="contacts">
               <div className="email">
-                {/* <img src={IconEnvelope} alt="contact email" /> */}
+                <img src={IconEnvelope} alt="contact email" />
                 {/* eslint-disable */}
                 <a>
                   <span onClick={() => this.setModalState(true)}>
@@ -32,7 +36,7 @@ export class ContactsPageTemplate extends Component {
                 </a>
               </div>
               <div className="tel">
-                {/* <img src={IconTel} alt="phone number" /> */}
+                <img src={IconTel} alt="phone number" />
                 <a href={`tel:${contact_phone}`}>{contact_phone}</a>
               </div>
             </div>
