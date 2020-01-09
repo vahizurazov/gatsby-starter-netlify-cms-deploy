@@ -4,6 +4,22 @@ title: test vacancy name
 cities:
   - Kharkiv
 language: CPLUS
+skills:
+  - GULP
+  - GIT_LAB
+  - GIT
+  - BACKBONEJS
+  - BOOTSTRAP
+  - HTML5
+  - ILLUSTRATOR
+  - JQUERY
+  - LARAVEL
+  - WORDPRESS
+  - SAAS
+  - REACT
+  - PHP
+  - PHOTOSHOP
+  - WINDOWS8
 date: 2020-01-09T10:40:30.681Z
 description: |-
   eate mode 100644 src/templates/careers-post.js
