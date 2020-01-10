@@ -14,11 +14,19 @@ class CareerRoll extends React.Component {
         <div className="page-vacancy">
           <div className="container">
             <h1 className="h2 striped uppercase">
-              {/* {titleVacancy.title} */}
-              Title
+              Careers
               <span className="vacancy-count">{careers.length}</span>
             </h1>
-            {/* <AstRenderer ast={description} /> */}
+            <div>
+              <p>
+                Sparkybit is a leading Ukrainian software development company,
+                with a focus on fintech, open banking, banking technology, and
+                SME IT planning. It partners with small to mid-size enterprise
+                to deliver software solutions and expertise to speed time to
+                market, while also supporting the digital transformation
+                journey.
+              </p>
+            </div>
             <hr />
             {careers &&
               careers.map(({ node: career }) => (

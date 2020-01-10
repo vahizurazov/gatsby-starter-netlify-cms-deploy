@@ -5,6 +5,8 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
+import "./styles/blog/index.scss";
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -46,6 +48,7 @@ export const BlogPostTemplate = ({
 };
 
 const BlogPost = ({ data }) => {
+  console.log("BlogPostTemplate data", data);
   const { markdownRemark: post } = data;
 
   return (
