@@ -1,11 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import IconEnvelope from "../../src/img/images/icon-message.svg";
-import { SKILLS } from "../components/icon/constants";
-import Icon from "../components/icon";
+import { SKILLS } from "../../components/icon/constants";
+import Icon from "../../components/icon";
 
-import "./styles/careers/index.scss";
+import "./styles/index.scss";
 
 export const CareerPostTemplate = ({ description, title, skills }) => {
   return (

@@ -1,11 +1,10 @@
 import React from "react";
-
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import Layout from "../../components/Layout";
+import Content, { HTMLContent } from "../../components/Content";
 import Img from "gatsby-image/withIEPolyfill";
 
-import "./styles/services/index.scss";
+import "./styles/index.scss";
 
 export const ServicesPageTemplate = ({
   heading,

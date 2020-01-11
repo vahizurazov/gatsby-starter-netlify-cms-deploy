@@ -1,12 +1,10 @@
 import React from "react";
-
 import { Link, graphql } from "gatsby";
-
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import Img from "gatsby-image/withIEPolyfill";
-import Content, { HTMLContent } from "../components/Content";
+import Content, { HTMLContent } from "../../components/Content";
 
-import "./styles/section_greeter/index.scss";
+import "./styles/index.scss";
 
 export const IndexPageTemplate = ({
   section_1_image,

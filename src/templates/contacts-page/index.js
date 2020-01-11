@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Countries from "../components/Countries";
+import Layout from "../../components/Layout";
+import Countries from "../../components/Countries";
 
 import IconEnvelope from "../../src/img/images/icon-message.svg";
 import IconTel from "../../src/img/images/icon-tel.svg";
 
-import "./styles/contacts/index.scss";
+import "./styles/index.scss";
 
 export class ContactsPageTemplate extends Component {
   render() {
