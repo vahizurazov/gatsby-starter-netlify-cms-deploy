@@ -10,6 +10,18 @@ import IconTel from "../../src/img/images/icon-tel.svg";
 import "./styles/contacts/index.scss";
 
 export class ContactsPageTemplate extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { country: "" };
+  }
+
+  setCountry(country) {
+    // event.preventDefault();
+    console.log(country);
+    this.setState({ country });
+  }
+
   render() {
     const {
       contact_title,
@@ -24,7 +36,7 @@ export class ContactsPageTemplate extends Component {
         <div className="page-contacts container">
           <div className="content">
             <h1 className="h2 heading striped uppercase">{contact_title}</h1>
-            <Countries countries={countries} />
+            <Countries countries={countries} setCountry={this.setCountry} />
             <div className="contacts">
               <div className="email">
                 <img src={IconEnvelope} alt="contact email" />

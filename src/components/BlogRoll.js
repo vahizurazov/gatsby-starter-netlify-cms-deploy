@@ -6,18 +6,10 @@ import Img from "gatsby-image/withIEPolyfill";
 import { kebabCase } from "lodash";
 
 class BlogRoll extends React.Component {
-  // getCategory = categoryName => {
-  //   return categoryName
-  //     .toLowerCase()
-  //     .split(" ")
-  //     .join("-");
-  // };
   render() {
-    const { data, count } = this.props;
-    console.log("tagData Blog Roll", count);
+    const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    console.log("posts", posts);
-
+    console.log("DATA BLOGROLL", data);
     return (
       <div id="main">
         <div className="page-blog">
@@ -107,6 +99,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={data => <BlogRoll data={data} />}
   />
 );
