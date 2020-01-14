@@ -7,7 +7,7 @@ export default class BlogIndexPage extends Component {
   render() {
     return (
       <Layout>
-        <BlogRoll />
+        <BlogRoll pageTitle="Related blog posts" />
       </Layout>
     );
   }
