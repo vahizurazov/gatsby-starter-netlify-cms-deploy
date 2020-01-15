@@ -1,61 +1,84 @@
-import React, { Component } from "react"
-import { isBrowser } from "../../utils/helpers"
+import React, { Component } from "react";
+import { Map, Marker, Popup, TileLayer } from "react-leaflet";
+
+import { isBrowser } from "../../utils/helpers";
+
+// -------------------работает но костыль-------------------------------------
+// import L from "leaflet";
+// import icon from "./marker-icon-2x.png";
+// import iconShadow from "./marker-icon-2x.png";
+// let DefaultIcon = L.icon({
+//   iconUrl: icon
+//   // shadowUrl: iconShadow
+// });
+// L.Marker.prototype.options.icon = DefaultIcon;
+// L.Icon.Default.prototype.options.iconUrl = "./marker-icon-2x.png";
+// -------------------------------------------------------
+
+// import DefaultIcon from "../leaflet-map/Icon";
 
 if (isBrowser()) {
-  import("!!style-loader/url!file-loader!sass-loader!leaflet/dist/leaflet.css")
+  import("!!style-loader/url!file-loader!sass-loader!leaflet/dist/leaflet.css");
 }
 
 export default class LeafletMap extends Component {
   constructor(props) {
-    super(props)
-    this.mapEl = null
+    super(props);
+    this.mapEl = null;
   }
 
   componentDidMount() {
-    // if(this.mapEl && this.mapEl.leafletElement) {
-    //   this.mapEl.leafletElement.invalidateSize()
+    // if (this.mapEl && this.mapEl.leafletElement) {
+    //   this.mapEl.leafletElement.invalidateSize();
     // }
+  }
+
+  getCoords(countries) {
+    return [Number(countries.latitude), Number(countries.longitude)];
   }
 
   render() {
     if (isBrowser()) {
-      const { Map, Marker, Popup, TileLayer } = require("react-leaflet")
-      const { countries, offices } = this.props
+      const { countries } = this.props;
       return (
-
-
-        // <Map
-        //   ref={mapEl => (this.mapEl = mapEl)}
-        //   center={country.coords.split(", ")}
-        //   zoom={Number(country.zoom) || 6}
-        // >
-        //   <TileLayer
-        //     url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}"
-        //     id="mapbox.streets"
-        //     accessToken={`${process.env.GATSBY_MAPBOX_API_KEY || null}`}
-        //   />
-        //   {offices.map(o => {
-        //     return (
-        //       <Marker
-        //         key={o.object_id}
-        //         position={[
-        //           o.city_marker.city_latitude,
-        //           o.city_marker.city_longitude,
-        //         ]}
-        //       >
-        //         <Popup>
-        //           <div
-        //             dangerouslySetInnerHTML={{
-        //               __html: o.city_marker.city_description,
-        //             }}
-        //           />
-        //         </Popup>
-        //       </Marker>
-        //     )
-        //   })}
-        // </Map>
-      )
+        <Map
+          ref={mapEl => (this.mapEl = mapEl)}
+          // center={this.getCoords(countries)}
+          center={[countries.latitude, countries.longitude]}
+          zoom={13}
+        >
+          <TileLayer
+            url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}"
+            id="mapbox.streets"
+            accessToken={`${process.env.GATSBY_MAPBOX_API_KEY || null}`}
+          />
+          {/* {offices.map(o => {
+            return (
+              <Marker
+                key={o.object_id}
+                position={[
+                  o.city_marker.city_latitude,
+                  o.city_marker.city_longitude,
+                ]}
+              >
+                <Popup>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: o.city_marker.city_description,
+                    }}
+                  />
+                </Popup>
+              </Marker>
+            )
+          })} */}
+          <Marker position={[countries.latitude, countries.longitude]}>
+            <Popup>
+              <div>Popup testing marker</div>
+            </Popup>
+          </Marker>
+        </Map>
+      );
     }
-    return null
+    return null;
   }
 }

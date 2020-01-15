@@ -9,8 +9,11 @@ export default class Countries extends Component {
       country: props.countries[0]
     };
   }
-
+  componentDidMount() {
+    this.props.getCountry(this.state.country);
+  }
   setCountry(event, country) {
+    this.props.getCountry(country);
     event.preventDefault();
     this.setState({ country });
   }
@@ -21,7 +24,6 @@ export default class Countries extends Component {
         {countries.map(c => {
           return (
             <li
-              // key={c.country}
               key={v4()}
               className={
                 this.state.country.country === c.country ? "active" : ""
