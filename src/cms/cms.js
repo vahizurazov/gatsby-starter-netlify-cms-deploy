@@ -7,9 +7,7 @@ import {
   InlineSelectPreview
 } from "netlify-cms-widget-inline-select";
 
-import AboutPagePreview from "./preview-templates/AboutPagePreview";
 import BlogPostPreview from "./preview-templates/BlogPostPreview";
-import ProductPagePreview from "./preview-templates/ProductPagePreview";
 import IndexPagePreview from "./preview-templates/IndexPagePreview";
 import ServicesPagePreview from "./preview-templates/ServicesPagePreview";
 import AboutUsPagePreview from "./preview-templates/AboutUsPagePreview";
@@ -28,8 +26,6 @@ CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerWidget("inline-select", InlineSelectControl, InlineSelectPreview);
 
-CMS.registerPreviewTemplate("about", AboutPagePreview);
-CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("blog", BlogPostPreview);
 CMS.registerPreviewTemplate("index", IndexPagePreview);
 CMS.registerPreviewTemplate("services", ServicesPagePreview);
