@@ -55,7 +55,6 @@ export const CareerPostTemplate = ({
 };
 
 const CareerPost = ({ data }) => {
-  console.log("careers-post.js", data);
   const { markdownRemark: career } = data;
   return (
     <Layout>

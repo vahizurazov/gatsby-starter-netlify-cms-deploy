@@ -71,7 +71,6 @@ export class ContactsPageTemplate extends Component {
 }
 
 const ContactsPage = ({ data }) => {
-  console.log("Contacts page", data);
   const { markdownRemark: post } = data;
 
   return (
@@ -104,8 +103,6 @@ export const ContactsPageQuery = graphql`
             latitude_office
             longitude_office
           }
-          latitude
-          longitude
         }
       }
     }

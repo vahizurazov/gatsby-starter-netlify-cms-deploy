@@ -152,7 +152,6 @@ export const IndexPageTemplate = ({
 
 const IndexPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log("data Index page", post);
 
   return (
     <Layout>

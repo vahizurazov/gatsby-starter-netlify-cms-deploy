@@ -4,7 +4,6 @@ import { v4 } from "uuid";
 export default class Countries extends Component {
   constructor(props) {
     super(props);
-    console.log("props", this.props);
     this.state = {
       country: props.countries[0]
     };
