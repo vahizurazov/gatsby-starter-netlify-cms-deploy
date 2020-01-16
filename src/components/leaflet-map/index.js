@@ -19,21 +19,6 @@ if (isBrowser()) {
 }
 
 export default class LeafletMap extends Component {
-  constructor(props) {
-    super(props);
-    this.mapEl = null;
-  }
-
-  componentDidMount() {
-    // if (this.mapEl && this.mapEl.leafletElement) {
-    //   this.mapEl.leafletElement.invalidateSize();
-    // }
-  }
-
-  getCoords(countries) {
-    return [Number(countries.latitude), Number(countries.longitude)];
-  }
-
   render() {
     if (isBrowser()) {
       const { countries } = this.props;
@@ -41,7 +26,6 @@ export default class LeafletMap extends Component {
       return (
         <Map
           ref={mapEl => (this.mapEl = mapEl)}
-          // center={this.getCoords(countries)}
           center={[coordOffice.latitude_office, coordOffice.longitude_office]}
           zoom={countries.lenght > 2 ? 13 : 6}
         >
@@ -55,7 +39,6 @@ export default class LeafletMap extends Component {
               <Marker
                 key={o.office}
                 position={[o.latitude_office, o.longitude_office]}
-                // icon={DefaultIcon}
               >
                 <Popup>Hello from {o.office}!</Popup>
               </Marker>
