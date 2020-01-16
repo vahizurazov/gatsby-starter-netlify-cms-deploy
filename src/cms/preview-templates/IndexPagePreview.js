@@ -3,7 +3,6 @@ import { IndexPageTemplate } from "../../templates/index-page";
 
 const IndexPagePreview = ({ entry, getAsset, widgetFor }) => {
   const data = entry.getIn(["data"]).toJS();
-  console.log("data indexpage", data);
   if (data) {
     return (
       <IndexPageTemplate

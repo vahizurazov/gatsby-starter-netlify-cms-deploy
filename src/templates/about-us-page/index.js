@@ -65,9 +65,7 @@ export const AboutUsPageTemplate = ({
 };
 
 const AboutUsPage = ({ data }) => {
-  console.log("About us page", data);
   const { markdownRemark: post } = data;
-
   return (
     <Layout>
       <AboutUsPageTemplate

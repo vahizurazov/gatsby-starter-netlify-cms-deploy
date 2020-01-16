@@ -7,8 +7,7 @@ class CareerRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: careers } = data.allMarkdownRemark;
-    console.log("DATA CareerRoll", data);
-
+    
     return (
       <div id="main">
         <div className="page-vacancy">
@@ -138,7 +137,7 @@ export default () => (
       query CareerRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "careers-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "career-post" } } }
         ) {
           edges {
             node {
