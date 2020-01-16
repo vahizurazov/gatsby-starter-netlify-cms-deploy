@@ -16,7 +16,11 @@ countries:
     latitude: '49.994584'
     longitude: '36.231751'
     offices:
-      - office: Kharkiv
-      - office: Dnipro
+      - latitude_office: '49.994584'
+        longitude_office: '36.231751'
+        office: Kharkiv
+      - latitude_office: '48.465842'
+        longitude_office: '35.046443'
+        office: Dnipro
 ---
 
