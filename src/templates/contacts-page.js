@@ -52,7 +52,7 @@ export class ContactsPageTemplate extends Component {
             <div className="follow">
               <button
                 className="heading btn btn-primary trigger"
-                onClick={() => this.setModalState(true)}
+                // onClick={() => this.setModalState(true)}
               >
                 {btn_name}
               </button>
