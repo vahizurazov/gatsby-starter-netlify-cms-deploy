@@ -40,7 +40,7 @@ export default class LeafletMap extends Component {
   render() {
     if (isBrowser()) {
       const { countries } = this.props;
-      console.log("!!!countries", !countries.offices);
+      console.log("!!!countries", countries.offices);
       return (
         <Map
           ref={mapEl => (this.mapEl = mapEl)}

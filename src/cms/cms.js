@@ -18,7 +18,6 @@ import CareerPostPreview from "./preview-templates/CareerPostPreview";
 
 import allStyles from "!css-loader!sass-loader!../styles/index.scss";
 import contacts from "!css-loader!sass-loader!../templates/styles/contacts/index.scss";
-import leaflet from "!!style-loader/url!file-loader!sass-loader!leaflet/dist/leaflet.css";
 import services from "!css-loader!sass-loader!../templates/styles/services/index.scss";
 import about_us from "!css-loader!sass-loader!../templates/styles/about_us/index.scss";
 import section_greeter from "!css-loader!sass-loader!../templates/styles/section_greeter/index.scss";
