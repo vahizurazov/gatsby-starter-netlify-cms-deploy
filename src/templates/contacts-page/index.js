@@ -62,9 +62,7 @@ export class ContactsPageTemplate extends Component {
 }
 
 const ContactsPage = ({ data }) => {
-  console.log("Contacts page", data);
   const { markdownRemark: post } = data;
-
   return (
     <Layout>
       <ContactsPageTemplate
