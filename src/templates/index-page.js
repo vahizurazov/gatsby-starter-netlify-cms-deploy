@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -150,16 +150,8 @@ export const IndexPageTemplate = ({
   );
 };
 
-IndexPageTemplate.propTypes = {
-  section_1_image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  section_1_title: PropTypes.string,
-  section_1_btn_text: PropTypes.string,
-  section_1_subheading: PropTypes.string
-};
-
 const IndexPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log("data Index page", post);
 
   return (
     <Layout>
@@ -184,14 +176,6 @@ const IndexPage = ({ data }) => {
       />
     </Layout>
   );
-};
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
 };
 
 export default IndexPage;

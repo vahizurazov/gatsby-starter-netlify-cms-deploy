@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  # branch: dev
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
@@ -12,11 +13,102 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "careers"
+    label: "Careers"
+    folder: "src/pages/careers"
+    create: true
+    identifier_field: "career ident"
+    slug: "vacancy-{{year}}-{{month}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "careers-post",
+        }
+      - { label: "Vacancy name", name: "title", widget: "string" }
+      - {
+          label: Cities vacancy,
+          name: cities,
+          widget: select,
+          multiple: true,
+          options: ["Dnepr", "Kharkiv"],
+        }
+      - {
+          label: Language,
+          name: language,
+          widget: select,
+          options:
+            [
+              "C",
+              "CPLUS",
+              "CSHARP",
+              "DEV",
+              "JAVASCRIPT",
+              "PYTHON",
+              "RUBY",
+              "TYPESCRIPT",
+              "SALEFORCE",
+              "GO",
+              "PHP",
+            ],
+        }
+      - {
+          label: Skills,
+          name: skills,
+          widget: inline-select,
+          multiple: true,
+          options:
+            [
+              "GIT_HUB",
+              "AMAZON",
+              "ANDROID",
+              "APPLE",
+              "ANGULAR",
+              "APACHE",
+              "ATOM",
+              "BABEL",
+              "BACKBONEJS",
+              "BOOTSTRAP",
+              "CHROME",
+              "CONFLUENCE",
+              "CSS3",
+              "GIT",
+              "GIT_LAB",
+              "GULP",
+              "HTML5",
+              "ILLUSTRATOR",
+              "JQUERY",
+              "LARAVEL",
+              "LESS",
+              "LINUX",
+              "MYSQL",
+              "PHOTOSHOP",
+              "PHP",
+              "REACT",
+              "SAAS",
+              "WORDPRESS",
+              "WINDOWS8",
+              "WEBPACK",
+              "VUEJS",
+              "UBUNTU",
+              "SWIFT",
+              "SLACK",
+              "GOOGLE",
+            ],
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # default: ["Design"]
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "blog-{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
           label: "Template Key",
@@ -115,11 +207,39 @@ collections:
               widget: "hidden",
               default: "contacts-page",
             }
-          - { label: TEST contacts, name: section_1_title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
-
+          - { label: Title, name: contact_title, widget: string }
+          - { label: Email, name: contact_email, widget: string }
+          - { label: Phone, name: contact_phone, widget: string }
+          - { label: Button Name, name: btn_name, widget: string }
+          - {
+              label: Countries,
+              name: countries,
+              widget: list,
+              fields:
+                [
+                  { label: Country, name: country, widget: string },
+                  {
+                    label: Offices,
+                    name: offices,
+                    widget: list,
+                    required: false,
+                    fields:
+                      [
+                        { label: Offices Name, name: office, widget: string },
+                        {
+                          label: Latitude Office,
+                          name: latitude_office,
+                          widget: string,
+                        },
+                        {
+                          label: Longitude Office,
+                          name: longitude_office,
+                          widget: string,
+                        },
+                      ],
+                  },
+                ],
+            }
       - file: "src/pages/about-us/index.md"
         label: "About us"
         name: "about-us"
