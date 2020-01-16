@@ -11,5 +11,8 @@ countries:
   - country: Germany
     latitude: '49.994584'
     longitude: '11.231751'
+    offices:
+      - office: asdf
+      - office: asdf
 ---
 
