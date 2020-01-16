@@ -40,6 +40,7 @@ export default class LeafletMap extends Component {
   render() {
     if (isBrowser()) {
       const { countries } = this.props;
+      console.log("countries", countries.offices);
       return (
         <Map
           ref={mapEl => (this.mapEl = mapEl)}
@@ -52,10 +53,10 @@ export default class LeafletMap extends Component {
             id="mapbox.streets"
             accessToken={`${process.env.GATSBY_MAPBOX_API_KEY || null}`}
           />
-          {/* {offices.map(o => {
+          {/* {countries.offices.map(o => {
             return (
               <Marker
-                key={o.object_id}
+                key={o.office}
                 position={[
                   o.city_marker.city_latitude,
                   o.city_marker.city_longitude,

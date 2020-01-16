@@ -224,7 +224,19 @@ collections:
                     widget: list,
                     required: false,
                     fields:
-                      [{ label: officesName, name: office, widget: string }],
+                      [
+                        { label: officesName, name: office, widget: string },
+                        {
+                          label: Latitude Office,
+                          name: latitude_office,
+                          widget: string,
+                        },
+                        {
+                          label: Longitude Office,
+                          name: longitude_office,
+                          widget: string,
+                        },
+                      ],
                   },
                   { label: Latitude, name: latitude, widget: string },
                   { label: Longitude, name: longitude, widget: string },

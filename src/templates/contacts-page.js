@@ -99,6 +99,9 @@ export const ContactsPageQuery = graphql`
         btn_name
         countries {
           country
+          offices {
+            office
+          }
           latitude
           longitude
         }
