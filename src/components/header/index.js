@@ -4,19 +4,7 @@ import { Link } from "gatsby";
 import classNames from "classnames";
 
 export default props => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     wordpressWpApiMenusMenusItems(slug: { eq: "global-navigation" }) {
-  //       id
-  //       items {
-  //         title
-  //         object_id
-  //         object_slug
-  //       }
-  //     }
-  //   }
-  // `)
-
+  
   const [navClassName, setNavClassName] = useState("");
   const [navHamburgerClassName, setNavHamburgerClassName] = useState("");
 
@@ -43,28 +31,24 @@ export default props => {
             role="button"
             aria-controls="navigation"
             onClick={onNavClick}
+            onKeyDown={onNavClick}
           >
             <div className="hamburger-box">
               <div className="hamburger-inner" />
             </div>
           </div>
           <nav>
-            <Link activeClassName="active" partiallyActive={true} to="/about">
-              About
-            </Link>
-            <Link
-              activeClassName="active"
-              partiallyActive={true}
-              to="/contacts"
-            >
-              Contacts
-            </Link>
             <Link
               activeClassName="active"
               partiallyActive={true}
               to="/services"
             >
               Services
+            </Link>
+            <Link activeClassName="active"
+              partiallyActive={true}
+              to="/blog">
+              Blog
             </Link>
             <Link
               activeClassName="active"
@@ -73,41 +57,18 @@ export default props => {
             >
               About us
             </Link>
-            <Link
-              activeClassName="active"
+            <Link activeClassName="active"
               partiallyActive={true}
-              to="/products"
-            >
-              Products
-            </Link>
-            <Link activeClassName="active" partiallyActive={true} to="/blog">
-              Blog
-            </Link>
-            <Link activeClassName="active" partiallyActive={true} to="/careers">
+              to="/careers">
               Careers
             </Link>
-            <Link activeClassName="active" partiallyActive={true} to="/contact">
-              Contact
-            </Link>
             <Link
               activeClassName="active"
               partiallyActive={true}
-              to="/contact/examples"
+              to="/contacts"
             >
-              Form Examples
+              Contacts
             </Link>
-            {/* {data.wordpressWpApiMenusMenusItems.items.map(menuItem => {
-              return (
-                <Link
-                  key={menuItem.object_id}
-                  to={`/${menuItem.object_slug}`}
-                  activeClassName="active"
-                  partiallyActive={true}
-                >
-                  {menuItem.title}
-                </Link>
-              )
-            })} */}
           </nav>
         </div>
       </div>

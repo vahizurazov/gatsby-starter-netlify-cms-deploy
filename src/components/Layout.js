@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-// import Navbar from "../components/Navbar";
 import Header from "../components/header/";
 import Footer from "../components/footer/";
 
@@ -17,12 +16,6 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
-        {/* <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href={`${withPrefix("/")}img/apple-touch-icon.png`}
-        /> */}
         <link
           rel="icon"
           type="image/png"
@@ -41,14 +34,7 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix("/")}img/favicon-16x16.png`}
           sizes="16x16"
         />
-
-        {/* <link
-          rel="mask-icon"
-          href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
-          color="#ff4400"
-        /> */}
         <meta name="theme-color" content="#fff" />
-
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
@@ -57,7 +43,6 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      {/* <Navbar /> */}
       <div className="w1">
         <div className="w2">
           <Header />

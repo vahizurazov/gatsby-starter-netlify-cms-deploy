@@ -1,7 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
-import IconEnvelope from "../../src/img/images/icon-message.svg";
+
+import IconEnvelope from "../../../src/img/icon-message.svg";
 import { SKILLS } from "../../components/icon/constants";
 import Icon from "../../components/icon";
 

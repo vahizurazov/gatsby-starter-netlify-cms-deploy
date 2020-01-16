@@ -4,8 +4,8 @@ import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Countries from "../../components/Countries";
 
-import IconEnvelope from "../../src/img/images/icon-message.svg";
-import IconTel from "../../src/img/images/icon-tel.svg";
+import IconEnvelope from "../../../src/img/icon-message.svg";
+import IconTel from "../../../src/img/icon-tel.svg";
 
 import "./styles/index.scss";
 
