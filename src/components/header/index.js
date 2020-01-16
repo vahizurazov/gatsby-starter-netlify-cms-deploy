@@ -57,13 +57,6 @@ export default props => {
             >
               About us
             </Link>
-            <Link
-              activeClassName="active"
-              partiallyActive={true}
-              to="/products"
-            >
-              Products
-            </Link>
             <Link activeClassName="active" partiallyActive={true} to="/blog">
               Blog
             </Link>
