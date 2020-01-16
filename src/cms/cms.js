@@ -2,8 +2,6 @@ import CMS from "netlify-cms-app";
 import uploadcare from "netlify-cms-media-library-uploadcare";
 import cloudinary from "netlify-cms-media-library-cloudinary";
 
-import "./style/index.scss"
-
 /* import {
   InlineSelectControl,
   InlineSelectPreview
@@ -16,6 +14,7 @@ import IndexPagePreview from "./preview-templates/IndexPagePreview";
 import ServicesPagePreview from "./preview-templates/ServicesPagePreview";
 import AboutUsPagePreview from "./preview-templates/AboutUsPagePreview";
 import ContactsPagePreview from "./preview-templates/ContactsPagePreview";
+import CareerPostPreview from "./preview-templates/CareerPostPreview";
 
 /* import allStyles from "!css-loader!sass-loader!../styles/index.scss";
 import contacts from "!css-loader!sass-loader!../templates/styles/contacts/index.scss";
@@ -35,6 +34,7 @@ CMS.registerPreviewTemplate("index", IndexPagePreview);
 CMS.registerPreviewTemplate("services", ServicesPagePreview);
 CMS.registerPreviewTemplate("about-us", AboutUsPagePreview);
 CMS.registerPreviewTemplate("contacts", ContactsPagePreview);
+CMS.registerPreviewTemplate("careers", CareerPostPreview);
 
 /* CMS.registerPreviewStyle(allStyles.toString(), { raw: true }); */
 /* CMS.registerPreviewStyle(section_greeter.toString(), { raw: true });
