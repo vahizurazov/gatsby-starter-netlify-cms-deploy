@@ -101,6 +101,8 @@ export const ContactsPageQuery = graphql`
           country
           offices {
             office
+            latitude_office
+            longitude_office
           }
           latitude
           longitude
