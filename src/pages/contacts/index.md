@@ -22,5 +22,8 @@ countries:
       - latitude_office: '48.465842'
         longitude_office: '35.046443'
         office: Dnipro
+  - country: asdfasdfasdf
+    latitude: '12.34'
+    longitude: '12.34'
 ---
 
