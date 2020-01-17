@@ -1,6 +1,23 @@
 import React from "react";
+// import { useStaticQuery, graphql } from "gatsby";
+// import ModalContact from "../../components/modal-contact";
 
 export default props => {
+  //   const setModal = () => {
+  //     props.setModalState(true);
+  //   };
+  //   const data = useStaticQuery(graphql`
+  //     query {
+  //       wordpressWpApiMenusMenusItems(slug: { eq: "social-links" }) {
+  //         items {
+  //           title
+  //           object_id
+  //           url
+  //           classes
+  //         }
+  //       }
+  //     }
+  //   `);
   const year = new Date().getFullYear();
   return (
     <footer id="footer">

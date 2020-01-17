@@ -4,6 +4,19 @@ import { Link } from "gatsby";
 import classNames from "classnames";
 
 export default props => {
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     wordpressWpApiMenusMenusItems(slug: { eq: "global-navigation" }) {
+  //       id
+  //       items {
+  //         title
+  //         object_id
+  //         object_slug
+  //       }
+  //     }
+  //   }
+  // `)
+
   const [navClassName, setNavClassName] = useState("");
   const [navHamburgerClassName, setNavHamburgerClassName] = useState("");
 
@@ -36,6 +49,9 @@ export default props => {
             </div>
           </div>
           <nav>
+            <Link activeClassName="active" partiallyActive={true} to="/about">
+              About
+            </Link>
             <Link
               activeClassName="active"
               partiallyActive={true}
@@ -56,6 +72,13 @@ export default props => {
               to="/about-us"
             >
               About us
+            </Link>
+            <Link
+              activeClassName="active"
+              partiallyActive={true}
+              to="/products"
+            >
+              Products
             </Link>
             <Link activeClassName="active" partiallyActive={true} to="/blog">
               Blog
