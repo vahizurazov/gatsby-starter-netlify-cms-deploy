@@ -6,8 +6,8 @@ import Countries from "../../components/Countries";
 
 import IconEnvelope from "../../../src/img/icon-message.svg";
 import IconTel from "../../../src/img/icon-tel.svg";
-import LeafletMap from "../../components/leaflet-map/index.js";
-
+/* import LeafletMap from "../../components/leaflet-map/index.js";
+ */
 import "./styles/index.scss";
 
 export class ContactsPageTemplate extends Component {
@@ -59,7 +59,7 @@ export class ContactsPageTemplate extends Component {
             </div>
           </div>
           <div className="map">
-            <LeafletMap countries={this.state.country} />
+            {/*  <LeafletMap countries={this.state.country} /> */}
           </div>
           <div className="circle circle-1" />
           <div className="circle circle-2" />
