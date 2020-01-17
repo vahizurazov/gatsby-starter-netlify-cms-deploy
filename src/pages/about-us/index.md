@@ -26,3 +26,4 @@ section_3_text: >-
   open and honest communication, team spirit and an acceptance of
   accountability. The best work is teamwork.
 ---
+
