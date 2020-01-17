@@ -24,7 +24,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "career-post",
+          default: "careers-post",
         }
       - { label: "Vacancy name", name: "title", widget: "string" }
       - {

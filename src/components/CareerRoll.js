@@ -137,7 +137,7 @@ export default () => (
       query CareerRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "career-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "careers-post" } } }
         ) {
           edges {
             node {
