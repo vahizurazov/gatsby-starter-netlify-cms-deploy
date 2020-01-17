@@ -1,57 +1,64 @@
 import React from "react";
 
 import { Link, graphql, StaticQuery } from "gatsby";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import PostPreviewImg from "../img/blog/default-preview.jpg";
+import Img from "gatsby-image/withIEPolyfill";
+import { kebabCase } from "lodash";
 
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
     return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? "is-featured" : ""
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`
-                        }}
+      <div id="main">
+        <div className="page-blog">
+          <div className="container">
+            <h1 className="h2 striped uppercase">page Title</h1>
+            <hr />
+            {posts &&
+              posts.map(({ node: post }) => (
+                <div key={post.id} className="post-block">
+                  <div className="preview-block">
+                    {post.frontmatter.featuredimage ? (
+                      <Img
+                        className="preview"
+                        fluid={
+                          post.frontmatter.featuredimage.childImageSharp.fluid
+                        }
+                        alt="Post preview"
                       />
+                    ) : (
+                      <img
+                        className="preview"
+                        src={PostPreviewImg}
+                        alt="default-preview"
+                      />
+                    )}
+                    <span className="text">{post.frontmatter.date}</span>
+                  </div>
+                  <div className="content-block">
+                    <div className="category-list">
+                      {post.frontmatter.tags.map((category, index) => (
+                        <Link
+                          key={category + `-${index}`}
+                          to={`/tags/${kebabCase(category)}`}
+                        >
+                          <span className="post-category">{category}</span>
+                        </Link>
+                      ))}
                     </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
+                    <Link to={post.fields.slug}>
+                      <h3 className="post-title">{post.frontmatter.title}</h3>
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
-          ))}
+                    <div className="post-excerpt">{post.excerpt}</div>
+                  </div>
+                </div>
+              ))}
+            <div className="circle circle-1" />
+            <div className="circle circle-2" />
+            <div className="circle circle-3" />
+          </div>
+        </div>
       </div>
     );
   }
@@ -73,16 +80,24 @@ export default () => (
                 slug
               }
               frontmatter {
+                tags
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 120, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={data => <BlogRoll data={data} />}
   />
 );
