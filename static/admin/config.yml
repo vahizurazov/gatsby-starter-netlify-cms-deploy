@@ -34,81 +34,17 @@ collections:
           multiple: true,
           options: ["Dnepr", "Kharkiv"],
         }
-      - {
-          label: Language,
-          name: language,
-          widget: select,
-          options:
-            [
-              "C",
-              "CPLUS",
-              "CSHARP",
-              "DEV",
-              "JAVASCRIPT",
-              "PYTHON",
-              "RUBY",
-              "TYPESCRIPT",
-              "SALEFORCE",
-              "GO",
-              "PHP",
-            ],
-        }
-      - {
-          label: Skills,
-          name: skills,
-          widget: inline-select,
-          multiple: true,
-          options:
-            [
-              "GIT_HUB",
-              "AMAZON",
-              "ANDROID",
-              "APPLE",
-              "ANGULAR",
-              "APACHE",
-              "ATOM",
-              "BABEL",
-              "BACKBONEJS",
-              "BOOTSTRAP",
-              "CHROME",
-              "CONFLUENCE",
-              "CSS3",
-              "GIT",
-              "GIT_LAB",
-              "GULP",
-              "HTML5",
-              "ILLUSTRATOR",
-              "JQUERY",
-              "LARAVEL",
-              "LESS",
-              "LINUX",
-              "MYSQL",
-              "PHOTOSHOP",
-              "PHP",
-              "REACT",
-              "SAAS",
-              "WORDPRESS",
-              "WINDOWS8",
-              "WEBPACK",
-              "VUEJS",
-              "UBUNTU",
-              "SWIFT",
-              "SLACK",
-              "GOOGLE",
-            ],
-        }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  # default: ["Design"]
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "blog-{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
           label: "Template Key",
@@ -218,8 +154,26 @@ collections:
               fields:
                 [
                   { label: Country, name: country, widget: string },
-                  { label: Latitude, name: latitude, widget: string },
-                  { label: Longitude, name: longitude, widget: string },
+                  {
+                    label: Offices,
+                    name: offices,
+                    widget: list,
+                    required: false,
+                    fields:
+                      [
+                        { label: Offices Name, name: office, widget: string },
+                        {
+                          label: Latitude Office,
+                          name: latitude_office,
+                          widget: string,
+                        },
+                        {
+                          label: Longitude Office,
+                          name: longitude_office,
+                          widget: string,
+                        },
+                      ],
+                  },
                 ],
             }
       - file: "src/pages/about-us/index.md"
