@@ -1,36 +1,34 @@
 import React from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
-import { DEVICON, SKILLS } from "./icon/constants";
-import Icon from "./icon";
 
 class CareerRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: careers } = data.allMarkdownRemark;
-    
     return (
       <div id="main">
         <div className="page-vacancy">
           <div className="container">
             <h1 className="h2 striped uppercase">
-              {/* {titleVacancy.title} */}
-              Title
+              Careers
               <span className="vacancy-count">{careers.length}</span>
             </h1>
-            {/* <AstRenderer ast={description} /> */}
+            <div>
+              <p>
+                Sparkybit is a leading Ukrainian software development company,
+                with a focus on fintech, open banking, banking technology, and
+                SME IT planning. It partners with small to mid-size enterprise
+                to deliver software solutions and expertise to speed time to
+                market, while also supporting the digital transformation
+                journey.
+              </p>
+            </div>
             <hr />
             {careers &&
               careers.map(({ node: career }) => (
                 <div className="vacancy-block" key={career.id}>
                   <div className="content-block">
                     <div className="vacancy-list">
-                      <div className="vacancy-image">
-                        <Icon
-                          className="preview"
-                          icon={DEVICON[`${career.frontmatter.language}`]}
-                          size="144"
-                        />
-                      </div>
                       <div className="vacancy-wrap-right">
                         <div className="vacancy-wrap-title">
                           <Link to={career.fields.slug}>
@@ -48,25 +46,9 @@ class CareerRoll extends React.Component {
                             })}
                           </div>
                         </div>
-                        <div className="vacancy-skills">
-                          {career.frontmatter.skills.map(el => (
-                            <Icon
-                              className="icon-skills"
-                              key={el}
-                              icon={SKILLS[`${el}`]}
-                              size="20"
-                            />
-                          ))}
-                        </div>
                         <div className="about-project">
                           <h4 className="vacancy-about-title">About project</h4>
-                          {/* <div
-                           className="vacancy-about"
-                           dangerouslySetInnerHTML={{
-                             __html: node.acf.vacancy.about_project,
-                           }}
-                         /> */}
-                          {career.excerpt}
+                          {career.frontmatter.description}
                         </div>
                         <Link className="button" to={career.fields.slug}>
                           Keep Reading →
@@ -82,51 +64,6 @@ class CareerRoll extends React.Component {
           </div>
         </div>
       </div>
-      // <main id="main">
-      //   <div className="page-main">
-      //     <div className="section-greeter">
-      //       <div className="content"></div>
-      //       <div className="columns is-multiline">
-      //         {careers &&
-      //           careers.map(({ node: career }) => (
-      //             <div className="is-parent column is-6" key={career.id}>
-      //               <article
-      //                 className={`blog-list-item tile is-child box notification ${
-      //                   career.frontmatter.featuredpost ? "is-featured" : ""
-      //                 }`}
-      //               >
-      //                 <header>
-      //                   {career.frontmatter.featuredimage ? (
-      //                     <div className="featured-thumbnail">/></div>
-      //                   ) : null}
-      //                   <p className="career-meta">
-      //                     <Link
-      //                       className="title has-text-primary is-size-4"
-      //                       to={career.fields.slug}
-      //                     >
-      //                       {career.frontmatter.title}
-      //                     </Link>
-      //                     <span> &bull; </span>
-      //                     <span className="subtitle is-size-5 is-block">
-      //                       {career.frontmatter.date}
-      //                     </span>
-      //                   </p>
-      //                 </header>
-      //                 <p>
-      //                   {career.excerpt}
-      //                   <br />
-      //                   <br />
-      //                   <Link className="button" to={career.fields.slug}>
-      //                     Keep Reading →
-      //                   </Link>
-      //                 </p>
-      //               </article>
-      //             </div>
-      //           ))}
-      //       </div>
-      //     </div>
-      //   </div>
-      // </main>
     );
   }
 }
@@ -153,8 +90,6 @@ export default () => (
                 featuredpost
                 description
                 cities
-                skills
-                language
               }
               html
               htmlAst
