@@ -1,5 +1,5 @@
 ---
-templateKey: career-post
+templateKey: careers-post
 title: test vacancy name
 cities:
   - Kharkiv
