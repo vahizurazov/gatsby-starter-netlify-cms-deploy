@@ -11,7 +11,7 @@ export default class RootModal extends Component {
     document.body.appendChild(script)
   }
   render() {
-    const { classNames: modalClasses, styles, ...restProps } = this.props
+    const { classNames: modalClasses, ...restProps } = this.props
     return (
       <Modal
         classNames={{

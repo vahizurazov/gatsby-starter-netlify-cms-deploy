@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import { isBrowser } from "../../utils/helpers";
 
-// if (isBrowser()) {
-//   import("!!style-loader/url!file-loader!sass-loader!leaflet/dist/leaflet.css");
-// }
-
 export default class LeafletMap extends Component {
   render() {
     if (isBrowser()) {
