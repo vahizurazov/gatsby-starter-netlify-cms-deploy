@@ -36,8 +36,7 @@ export class ContactsPageTemplate extends Component {
             <Countries countries={countries} getCountry={this.getCountry} />
             <div className="contacts">
               <div className="email">
-                <img src={IconEnvelope} alt="contact email" />
-                {/* eslint-disable */}
+                <img src={IconEnvelope} alt="contact email" />           
                 <a>
                   <span onClick={() => this.setModalState(true)}>
                     {contact_email}

@@ -5,6 +5,15 @@ import formikEnhancer from "./validation/schemeFormik"
 import { contactForm } from "./form-contact"
 
 export default class ModalContact extends Component {
+  /* state = {
+    open: true
+  }
+  onOpenModal = () => {
+    this.setState({ open: true });
+  }
+  onCloseModal = () => {
+    this.setState({ open: false });
+  } */
   render() {
     const { isModalOpen, setModalState, handleFormSubmit } = this.props
     let EnhancedForm = formikEnhancer(contactForm)
