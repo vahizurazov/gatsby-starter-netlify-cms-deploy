@@ -1,6 +1,6 @@
 ---
 templateKey: career-post
-title: SALESFORCE TRAINEE
+title: 'SALESFORCE TRAINEE '
 cities:
   - Dnepr
 date: 2020-01-09T10:40:30.681Z
