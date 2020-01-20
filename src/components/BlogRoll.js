@@ -13,7 +13,7 @@ class BlogRoll extends React.Component {
       <div id="main">
         <div className="page-blog">
           <div className="container">
-            <h1 className="h2 striped uppercase">page Title</h1>
+            <h1 className="h2 striped uppercase">RELATED BLOG POSTS </h1>
             <hr />
             {posts &&
               posts.map(({ node: post }) => (
