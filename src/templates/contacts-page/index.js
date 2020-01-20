@@ -36,7 +36,7 @@ export class ContactsPageTemplate extends Component {
             <Countries countries={countries} getCountry={this.getCountry} />
             <div className="contacts">
               <div className="email">
-                <img src={IconEnvelope} alt="contact email" />           
+                <img src={IconEnvelope} alt="contact email" />
                 <a>
                   <span onClick={() => this.setModalState(true)}>
                     {contact_email}
@@ -58,7 +58,10 @@ export class ContactsPageTemplate extends Component {
             </div>
           </div>
           <div className="map">
-             <LeafletMap countries={this.state.country} />
+            <LeafletMap
+              countries={this.state.country}
+              getCountry={this.getCountry}
+            />
           </div>
           <div className="circle circle-1" />
           <div className="circle circle-2" />
