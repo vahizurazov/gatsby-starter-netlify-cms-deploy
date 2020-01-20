@@ -34,6 +34,7 @@ export const ServicesPageTemplate = ({
         <div className="container">
           <h1 className="h2 striped">{heading}</h1>
           <h3>{subheading}</h3>
+          <hr />
           <ServicesContent content={content} />
         </div>
         <div className="circle circle-1" />

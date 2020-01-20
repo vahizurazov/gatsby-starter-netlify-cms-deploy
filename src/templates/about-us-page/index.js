@@ -5,7 +5,6 @@ import Img from "gatsby-image/withIEPolyfill";
 
 import "./styles/index.scss";
 
-
 export const AboutUsPageTemplate = ({
   section_1_content,
   section_1_title,
