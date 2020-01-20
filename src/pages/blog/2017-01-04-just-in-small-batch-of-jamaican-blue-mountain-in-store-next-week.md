@@ -1,35 +1,65 @@
 ---
 templateKey: blog-post
-title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
+title: 'Adapt to Survive: What’s Next for Open Banking?'
 date: 2017-01-04T15:04:10.000Z
 description: >-
-  We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
-  Mountain coffee beans in our store next week.
+  By Alexey Nayda, CEO and Founder, Sparkybit
+
+
+  It’s likely that you’ve heard the term ‘open banking’ in recent months.
+  Similar to blockchain, open banking has become the UK’s latest buzzword, with
+  many jumping on the hype but not truly understanding what it entails.
+
+
+  Since the UK has been implementing open banking in the last couple of years,
+  many of the major banks in the UK have started this process much sooner than
+  the EU. However, with the new open banking European Directive, PSD2 (Revised
+  Payment Service Directive) coming on March 14th, the pressure will be on
+  beyond Britain. The UK will likely be much further ahead in the adoption
+  process, and the EU might use the UK’s open banking framework as an example
+  for the rest of the EU.
 featuredpost: true
-featuredimage: /img/wide.jpg
+featuredimage: /img/open-banking.jpg
 tags:
   - jamaica
   - green beans
   - flavor
   - tasting
 ---
+<!--StartFragment-->
 
-We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
+With[over 9,000 financial institutions in Europe](https://www.finextra.com/blogposting/15699/will-fis-be-ready-by-march-14-2019-for-psd2-open-banking), PSD2 will undoubtedly create an overhaul in the market.[As described in Evry](https://www.evry.com/en/news/articles/psd2-the-directive-that-will-change-banking-as-we-know-it/), the new open banking European Directive, PSD2, “enables bank customers, both consumers and businesses, to use third-party providers to manage their finances.”
 
-Blue Mountain Peak is the highest mountain in Jamaica and one of the highest peaks in the Caribbean at 7,402 ft. It is the home of Blue Mountain coffee and their famous tours. It is located on the border of the Portland and Saint Thomas parishes of Jamaica.
+**The challenges of open banking**
 
-## A little history
+However, when it comes to taking the first steps to implement open banking, there is a hugely complicated process to undertake. Organisations require FCA approval, which is a long-winded process that can take 6-12 months. Unsurprisingly, this is a lot of work and is very costly for small companies. These organisations must work with lawyers and a range of consultancies to get approval, and are unable to get started with the open banking process until their organisation has received the green light.
 
-The Blue Mountains are considered by many to be a hiker's and camper's paradise. The traditional Blue Mountain trek is a 7-mile hike to the peak and consists of a 3,000-foot increase in elevation. Jamaicans prefer to reach the peak at sunrise, thus the 3–4 hour hike is usually undertaken in darkness. Since the sky is usually very clear in the mornings, Cuba can be seen in the distance.
+With the new PSD2 directive, EU banks and financial institutions must open their internal data and functionality to EU companies and anyone on the market who is authorised to use this service.
 
->Some of the plants found on the Blue Mountain cannot be found anywhere else in the world and they are often of a dwarfed sort.
+Like GDPR, those who do not comply with the new regulation will face considerable fines. And, when it comes to security, a single breach will have catastrophic effects. Those who implement open banking should have military grade security, as the banking and financial industry has the most sensitive of customer data. One data breach could ultimately lead to the extinction of a business.
 
-This is mainly due to the cold climate which inhibits growth. The small coffee farming communities of Claverty Cottage and Hagley Gap are located near the peak.
+So, if the process is challenging, why do organisations implement open banking?
 
-## What you need to know before trying
+**The open banking opportunity**
 
-Jamaican Blue Mountain Coffee or Jamaica Blue Mountain Coffee is a classification of coffee grown in the Blue Mountains of Jamaica. The best lots of Blue Mountain coffee are noted for their mild flavor and lack of bitterness. Over the past few decades, this coffee has developed a reputation that has made it one of the most expensive and sought-after coffees in the world. Over 80% of all Jamaican Blue Mountain Coffee is exported to Japan. In addition to its use for brewed coffee, the beans are the flavor base of Tia Maria coffee liqueur.
+Open banking opens the market to smaller players in the financial services and banking industry. By introducing competition into the market, customers will have increased choice and will no longer need to accept using the big players just because they are recognised names.
 
-Jamaican Blue Mountain Coffee is a globally protected certification mark, meaning only coffee certified by the Coffee Industry Board of Jamaica can be labeled as such. It comes from a recognized growing region in the Blue Mountain region of Jamaica, and its cultivation is monitored by the Coffee Industry Board of Jamaica.
+Accessibility and ease of use also improves with open banking. In the modern world, successful products and services are driven by customers and not dictated by companies as it was in the past. Open banking brings open competition onto the financial services market and by doing it, it enables new, small and agile players to deliver customer-first approach. If the traditional banks and financial service providers don’t evolve and modernise to address the new game rules on the market, then,[as outlined in Verdict](https://www.verdict.co.uk/what-is-open-banking-in-business/)those who “adopt a compliance-only approach risk losing customers and being downgraded to the status of commodities”
 
-The Blue Mountains are generally located between Kingston to the south and Port Antonio to the north. Rising 7,402 ft, they are some of the highest mountains in the Caribbean. The climate of the region is cool and misty with high rainfall. The soil is rich, with excellent drainage. This combination of climate and soil is considered ideal for coffee.
+**Accelerating the journey**
+
+So, will organisations around Europe be ready by the 14th March deadline? Many have questioned the preparedness of financial institutions,[asking whether](https://www.finextra.com/blogposting/15699/will-fis-be-ready-by-march-14-2019-for-psd2-open-banking)“many will achieve this deadline with so few companies currently in the market offering solutions.”
+
+Alongside the difficulty of implementing open banking, for small businesses, sourcing the right talent to build a secure open banking infrastructure can be difficult. This is only intensified by the current skills shortage in the IT and technology industry in the UK. And, when new and innovative technology like open banking is introduced, there are even less people who are well-equipped or experienced to create and manage the implementation process.
+
+Open banking “[creates the opportunity to develop an entirely new market for financial products](https://www.finextra.com/blogposting/16461/open-banking-an-opportunity-to-develop-an-entirely-new-market-for-financial-products)”, and this new market needs experts to build it. With the speed that the open banking market is growing, it’s important for organisations to have teams with the right expertise and knowledge, or they risk a failed project and regulatory non-compliance.
+
+**What’s next?**
+
+As open banking extends into Europe, it’s likely that we’ll see major players in the open banking market start to emerge. Some European companies will take the UK model as inspiration or as their official framework, whereas others will create local initiatives and models. Brexit will also play a big part in the next few years, with changes to the UK’s financial industry and regulations impacting the progression of open banking, adding to the complexities of implementation.
+
+With open banking empowering small businesses to challenge larger players in the market, and new EU regulations opening up the technology into new regions, it’s an exciting initiative which will drive huge changes in the way consumers and banks interact.
+
+Open banking might be a daunting process, but the benefits to both financial institutions and consumers outweigh the challenges. With the right talent and technology in place, the months it takes to implement open banking can be considerably reduced, and organisations will have peace of mind that they are complying with the imminent PSD2 directive.
+
+<!--EndFragment-->

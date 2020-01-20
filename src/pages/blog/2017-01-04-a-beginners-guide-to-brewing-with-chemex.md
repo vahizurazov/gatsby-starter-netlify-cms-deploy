@@ -1,32 +1,50 @@
 ---
 templateKey: blog-post
-title: A beginners’ guide to brewing with Chemex
+title: 'Pay-as-you-go CTO: What should SMEs consider when IT planning?'
 date: 2017-01-04T15:04:10.000Z
 description: >-
-  Brewing with a Chemex probably seems like a complicated, time-consuming
-  ordeal, but once you get used to the process, it becomes a soothing ritual
-  that's worth the effort every time.
+  by Alexey Nayda, CEO and founder of Sparkybit
+
+  When kicking off operations, many start-ups and SMEs tend to focus on the
+  smaller objectives rather than looking at the bigger picture. This results in
+  a few bumps in the road as the business grows – especially when it comes to IT
+  planning. Across the SME landscape a common challenge encountered by many is
+  the lack of ability to deliver a technical strategy that aligns with the
+  business strategy as a whole.
+
+
+  As business becomes increasingly digital, SMEs realise that they need to
+  embrace technology, but aren’t necessarily sure why. It can be obvious what
+  needs to be done in order to fulfil the crucial business objectives, but
+  knowing how to do it with technology is a different matter. So, what should
+  SMEs consider when it comes to IT planning?
 featuredpost: false
-featuredimage: /img/greeter.jpg
+featuredimage: /img/pay-as-you-go.jpg
 tags:
-  - brewing
-  - chemex
+  - Uncategorized
 ---
-![chemex](/img/greeter.jpg)
+![Uncategorized](/img/greeter.jpg)
 
-This week we’ll **take** a look at all the steps required to make astonishing coffee with a Chemex at home. The Chemex Coffeemaker is a manual, pour-over style glass-container coffeemaker that Peter Schlumbohm invented in 1941, and which continues to be manufactured by the Chemex Corporation in Chicopee, Massachusetts.
+<!--StartFragment-->
 
-In 1958, designers at the [Illinois Institute of Technology](https://www.spacefarm.digital) said that the Chemex Coffeemaker is *"one of the best-designed products of modern times"*, and so is included in the collection of the Museum of Modern Art in New York City.
+#### Employing a Pay-as-you-go CTO:
 
-## The little secrets of Chemex brewing
+When they are starting out, most businesses may look to implement technology as part of their digital transformation strategy, but this doesn’t necessarily mean that they require a full time CTO. For many SMEs, the ROI would not warrant the creation of this role.
 
-The Chemex Coffeemaker consists of an hourglass-shaped glass flask with a conical funnel-like neck (rather than the cylindrical neck of an Erlenmeyer flask) and uses proprietary filters, made of bonded paper (thicker-gauge paper than the standard paper filters for a drip-method coffeemaker) that removes most of the coffee oils, brewing coffee with a taste that is different than coffee brewed in other coffee-making systems; also, the thicker paper of the Chemex coffee filters may assist in removing cafestol, a cholesterol-containing compound found in coffee oils. Here’s three important tips newbies forget about:
+However, looking to outsourcing companies can be the perfect balance between blindly implementing a digital transformation strategy and hiring a costly full-time member of the c-suite. A well-placed outsourcing company can become an SME’s “fractional CTO” instead. Working on a consultancy basis, this enables the SME to address the key issues at hand in a cost and time-efficient manner.
 
-1. Always buy dedicated Chemex filters.
-2. Use a scale, don’t try to eyeball it.
-3. Never skip preheating the glass.
-4. Timing is key, don’t forget the clock.
+It isn’t a requirement for businesses to have someone all the time to make sure everything is running efficiently, but bringing in a pay-as-you-go CTO can ensure that things are heading in the right direction. Often SMEs don’t necessarily see the issues that confront their business and believe that all of their tools are working efficiently – instead it requires an outside perspective to shine a light on the areas that need improving so the problems can be realised and then fixed. An outsourcing company with both business and IT expertise will know how to introduce new methods and processes in a way that ensures employees across the business won’t resist them – when new processes are introduced gradually, they’re more likely to be embraced.
 
-The most visually distinctive feature of the Chemex is the heatproof wooden collar around the neck, allowing it to be handled and poured when full of hot water. This is turned, then split in two to allow it to fit around the glass neck. The two pieces are held loosely in place by a tied leather thong. The pieces are not tied tightly and can still move slightly, retained by the shape of the conical glass.
+#### How can Outsourcing help?
 
-For a design piece that became popular post-war at a time of Modernism and precision manufacture, this juxtaposition of natural wood and the organic nature of a hand-tied knot with the laboratory nature of glassware was a distinctive feature of its appearance.
+The outsourcing company can be viewed as the adviser, helping to improve processes, communication and technological issues as these can be one and the same. Inviting in an experienced outsider to the business can iron out these issues and ease the introduction of technologies by an expert that has this expertise.
+
+Sometimes separate teams within an organisation can be like different companies within themselves, lacking connection and with misaligned visions. Implementing the outsourcing expert as a business translator can pull the teams together, align their insights and ensure that they speak the same language that unites their business goals for the benefit of the organisation as a whole. Finding this common ground leads to better performance and happier customers and clients – many issues within a business can be simply traced back to misaligned communication.
+
+With all departments on the same page and working for the same goals, it is easy to see where technology can be slotted into the business to improve performance and efficiency to an even greater level. With the support from a fractional CTO to guide the business in the right direction, SMEs can work with these technologies, realising the best way that they can be employed within their specific operations and develop a technology strategy that complements and supports the business strategy, rather than distracting from it.
+
+—
+
+It’s vital that SMEs are agile as they grow. They must be open to change at all levels: rather than being afraid of mistakes, departments should be able to see that change and mistakes can be beneficial for operational efficiency. If employees are afraid to adapt their current methods, it often damages their business operations. It is entrepreneurial to be open to risk and try something new: without trying something new you can’t have a process for evolution and the business could be stuck spinning in circles without moving forward. It is often the case that the pay-as-you-go CTO can provide the stepping stone that businesses need to readdress their IT and organizational issues.
+
+<!--EndFragment-->

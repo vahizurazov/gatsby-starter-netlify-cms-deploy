@@ -1,35 +1,48 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel
+title: Three Reasons Organisations Should Look to Ukraine for Outsourcing Expertise
 date: 2016-12-17T15:04:10.000Z
 description: >-
-  The Coffee Taster’s Flavor Wheel, the official resource used by coffee
-  tasters, has been revised for the first time this year.
+  As technology advances in this digital age, with exciting developments coming
+  thick and fast, many associate the forefront of innovation with Silicon Valley
+  and the tech giants that dominate the global headlines. There are innovations
+  happening around the world, but, when it comes to outsourcing, many of these
+  hubs are overlooked.
+
+  One such tech ecosystem is Ukraine. Making $3.6bn worth of IT exports in 2017
+  (that’s a significant 3.4% of its GDP), it’s a global tech hub that is,
+  however, sometimes overlooked for some of the larger tech hubs around the
+  world. With 4,000 thriving tech companies in Ukraine, there are many reasons
+  that organisations should consider Ukraine for outsourcing expertise.
 featuredpost: false
-featuredimage: /img/about_us.jpg
+featuredimage: /img/outsourcing.jpg
 tags:
-  - flavor
-  - tasting
+  - Uncategorized
 ---
-![flavor wheel](/img/about_us.jpg)
+![outsourcing](/img/about_us.jpg)
 
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
+<!--StartFragment-->
 
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
+#### 1/ A Trusted Choice
 
-## What the updates mean to you
+Ukraine is already proving a popular choice for many organisations looking to tap into this rapidly expanding tech hub. For European companies looking to outsource, Ukraine is a strong contender as shared cultures and similar time zones make it easier to work on a project, arrange meetings, and visit offices.
 
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
+Ukraine is currently the number one place in Europe in terms of the volume of IT service exports and over 100 Fortune 500 companies—such as Samsung, HP and Google—have already looked to the Ukraine’s 184,700 software developers for outsourcing expertise.
 
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
+With some of the largest companies in the world selecting Ukrainian IT services, the country’s best talent is already empowering significant organisations around the world.
 
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
+#### 2/ Great companies thriving in great environments
 
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
+In recent years the Ukrainian tech ecosystem has thrived. Between 2016 and 2017, exit numbers in Ukraine grew by 237% from 8 to 19, and the number of IT service companies has increased by 180% in the five years to 2017. It seems that Ukraine has a glowing future in its tech and innovation ecosystem.
 
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.
+With this growing demand for IT services and Ukrainian tech expertise, there are many cutting edge companies scaling up in the country. As more and more innovators tap into the ecosystem, the country provides the perfect environment for technological revolution. Accelerators and incubators for the latest innovations are spreading across the country: currently there are over 50 coworking spaces and hubs and 30 industry communities in which ideas are quickly becoming reality.
+
+#### 3/ Technology exports are only predicted to grow
+
+Hearing of these ecosystems at the forefront of technological innovation, it’s easy to see why Ukraine is set to become one of the go-to locations for organisations looking for top outsourcing expertise. Although the country is already enjoying incredible success, this is only set to grow in the future as the number of tech companies and innovations increases.
+
+2018 saw $290m in start-up investments and Ukraine is currently ranked 43rdout of 126 countries on the Global Innovation Index. The talent in the country is indisputably the reason behind this, as the software and technology specialists in training begin to open cutting edge start-ups that thrive in Ukraine.
+
+With some of the top tech institutions in the world, such as the National Technical University of Ukraine in Kyiv,[National University of Ukraine in Dnipro](http://www.dnu.dp.ua/en)and[in Kharkov](http://www.univer.kharkov.ua/en), providing a supply of 40,000 specialists across the country each year, now is the time for organisations to tap into that supply chain. Ukraine is no longer a country to be overlooked – it deserves recognition as one of the centres of outsourcing expertise and companies around the globe must start utilising that top tech talent.
+
+<!--EndFragment-->
