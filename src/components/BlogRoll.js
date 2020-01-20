@@ -9,6 +9,8 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
+
+    console.log("POSTS", posts);
     return (
       <div id="main">
         <div className="page-blog">

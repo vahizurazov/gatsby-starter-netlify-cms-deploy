@@ -18,7 +18,7 @@ export const BlogPostTemplate = ({
       <div className="page-post">
         <div className="container wp-container">
           <h1 className="striped uppercase">{title}</h1>
-          <p>{description}</p>
+          {/* <p>{description}</p> */}
           <PostContent content={content} />
         </div>
       </div>
