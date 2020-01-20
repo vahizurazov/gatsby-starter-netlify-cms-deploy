@@ -32,7 +32,7 @@ collections:
           name: cities,
           widget: select,
           multiple: true,
-          options: ["Dnepr", "Kharkiv"],
+          options: ["Dnipro", "Kharkiv"],
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }

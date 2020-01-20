@@ -6,20 +6,15 @@ import Content, { HTMLContent } from "../../components/Content";
 
 import "./styles/index.scss";
 
-export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  title
-}) => {
+export const BlogPostTemplate = ({ content, contentComponent, title }) => {
   const PostContent = contentComponent || Content;
   return (
     <main id="main">
       <div className="page-post">
         <div className="container wp-container">
           <h1 className="striped uppercase">{title}</h1>
-          {/* <p>{description}</p> */}
           <PostContent content={content} />
+          <hr />
         </div>
       </div>
     </main>
@@ -34,7 +29,6 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
@@ -52,7 +46,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         tags
       }
     }

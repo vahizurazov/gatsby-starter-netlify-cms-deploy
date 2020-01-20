@@ -56,7 +56,7 @@ class TagRoute extends Component {
                       <Link to={post.fields.slug}>
                         <h3 className="post-title">{post.frontmatter.title}</h3>
                       </Link>
-                      <div className="post-excerpt">{post.excerpt}</div>
+                      <p className="post-excerpt">{post.excerpt}</p>
                     </div>
                   </div>
                 ))}
