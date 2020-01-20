@@ -18,8 +18,8 @@ export const CareerPostTemplate = ({
       <div className="post-vacancy">
         <div className="container ">
           <h1 className="h1 striped uppercase">{title}</h1>
+          <p>{description}</p>
           <hr />
-          <div>{description}</div>
           <CareersContent content={content} />
           <div className="feedback">
             <button
