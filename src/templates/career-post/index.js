@@ -31,7 +31,7 @@ export const CareerPostTemplate = ({
                 src={IconEnvelope}
                 alt="contact email"
               />
-              <span className="feedback-title">feedback</span>
+              <span className="feedback-title">APPLY</span>
             </button>
           </div>
         </div>

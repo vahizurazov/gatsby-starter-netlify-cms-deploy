@@ -50,9 +50,9 @@ class CareerRoll extends React.Component {
                           <h4 className="vacancy-about-title">About project</h4>
                           {career.frontmatter.description}
                         </div>
-                        <Link className="button" to={career.fields.slug}>
+                        {/* <Link className="button" to={career.fields.slug}>
                           Keep Reading →
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </div>
