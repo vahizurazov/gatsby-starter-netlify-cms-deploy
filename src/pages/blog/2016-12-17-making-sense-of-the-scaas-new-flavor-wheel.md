@@ -19,7 +19,7 @@ featuredimage: /img/outsourcing.jpg
 tags:
   - Uncategorized
 ---
-![outsourcing](/img/about_us.jpg)
+![]()
 
 <!--StartFragment-->
 

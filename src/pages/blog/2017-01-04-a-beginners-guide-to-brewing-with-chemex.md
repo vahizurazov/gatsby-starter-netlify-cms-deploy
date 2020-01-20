@@ -23,7 +23,7 @@ featuredimage: /img/pay-as-you-go.jpg
 tags:
   - Uncategorized
 ---
-![Uncategorized](/img/greeter.jpg)
+![]()
 
 <!--StartFragment-->
 

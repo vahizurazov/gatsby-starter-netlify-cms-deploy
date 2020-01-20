@@ -21,10 +21,7 @@ description: >-
 featuredpost: true
 featuredimage: /img/open-banking.jpg
 tags:
-  - jamaica
-  - green beans
-  - flavor
-  - tasting
+  - Uncategorized
 ---
 <!--StartFragment-->
 
