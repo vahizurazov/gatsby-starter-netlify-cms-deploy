@@ -2,22 +2,6 @@
 templateKey: blog-post
 title: 'Adapt to Survive: What’s Next for Open Banking?'
 date: 2017-01-04T15:04:10.000Z
-description: >-
-  By Alexey Nayda, CEO and Founder, Sparkybit
-
-
-  It’s likely that you’ve heard the term ‘open banking’ in recent months.
-  Similar to blockchain, open banking has become the UK’s latest buzzword, with
-  many jumping on the hype but not truly understanding what it entails.
-
-
-  Since the UK has been implementing open banking in the last couple of years,
-  many of the major banks in the UK have started this process much sooner than
-  the EU. However, with the new open banking European Directive, PSD2 (Revised
-  Payment Service Directive) coming on March 14th, the pressure will be on
-  beyond Britain. The UK will likely be much further ahead in the adoption
-  process, and the EU might use the UK’s open banking framework as an example
-  for the rest of the EU.
 featuredpost: true
 featuredimage: /img/open-banking.jpg
 tags:
@@ -25,7 +9,13 @@ tags:
 ---
 <!--StartFragment-->
 
-With[over 9,000 financial institutions in Europe](https://www.finextra.com/blogposting/15699/will-fis-be-ready-by-march-14-2019-for-psd2-open-banking), PSD2 will undoubtedly create an overhaul in the market.[As described in Evry](https://www.evry.com/en/news/articles/psd2-the-directive-that-will-change-banking-as-we-know-it/), the new open banking European Directive, PSD2, “enables bank customers, both consumers and businesses, to use third-party providers to manage their finances.”
+*By Alexey Nayda, CEO and Founder, [Sparkybit](https://sparkybit.com/)*
+
+It’s likely that you’ve heard the term ‘open banking’ in recent months. Similar to blockchain, open banking has become the UK’s latest buzzword, with many jumping on the hype but not truly understanding what it entails.
+
+Since the UK has been implementing open banking in the last couple of years, many of the major banks in the UK have started this process much sooner than the EU. However, with the new open banking European Directive, PSD2 (Revised Payment Service Directive) coming on March 14th, the pressure will be on beyond Britain. The UK will likely be much further ahead in the adoption process, and the EU might use the UK’s open banking framework as an example for the rest of the EU.
+
+With over 9,000 financial institutions in Europe, PSD2 will undoubtedly create an overhaul in the market.As described in Evry, the new open banking European Directive, PSD2, “enables bank customers, both consumers and businesses, to use third-party providers to manage their finances.”
 
 **The challenges of open banking**
 
@@ -41,15 +31,15 @@ So, if the process is challenging, why do organisations implement open banking?
 
 Open banking opens the market to smaller players in the financial services and banking industry. By introducing competition into the market, customers will have increased choice and will no longer need to accept using the big players just because they are recognised names.
 
-Accessibility and ease of use also improves with open banking. In the modern world, successful products and services are driven by customers and not dictated by companies as it was in the past. Open banking brings open competition onto the financial services market and by doing it, it enables new, small and agile players to deliver customer-first approach. If the traditional banks and financial service providers don’t evolve and modernise to address the new game rules on the market, then,[as outlined in Verdict](https://www.verdict.co.uk/what-is-open-banking-in-business/)those who “adopt a compliance-only approach risk losing customers and being downgraded to the status of commodities”
+Accessibility and ease of use also improves with open banking. In the modern world, successful products and services are driven by customers and not dictated by companies as it was in the past. Open banking brings open competition onto the financial services market and by doing it, it enables new, small and agile players to deliver customer-first approach. If the traditional banks and financial service providers don’t evolve and modernise to address the new game rules on the market, then,as outlined in Verdict those who “adopt a compliance-only approach risk losing customers and being downgraded to the status of commodities”
 
 **Accelerating the journey**
 
-So, will organisations around Europe be ready by the 14th March deadline? Many have questioned the preparedness of financial institutions,[asking whether](https://www.finextra.com/blogposting/15699/will-fis-be-ready-by-march-14-2019-for-psd2-open-banking)“many will achieve this deadline with so few companies currently in the market offering solutions.”
+So, will organisations around Europe be ready by the 14th March deadline? Many have questioned the preparedness of financial institutions,asking whether“many will achieve this deadline with so few companies currently in the market offering solutions.”
 
 Alongside the difficulty of implementing open banking, for small businesses, sourcing the right talent to build a secure open banking infrastructure can be difficult. This is only intensified by the current skills shortage in the IT and technology industry in the UK. And, when new and innovative technology like open banking is introduced, there are even less people who are well-equipped or experienced to create and manage the implementation process.
 
-Open banking “[creates the opportunity to develop an entirely new market for financial products](https://www.finextra.com/blogposting/16461/open-banking-an-opportunity-to-develop-an-entirely-new-market-for-financial-products)”, and this new market needs experts to build it. With the speed that the open banking market is growing, it’s important for organisations to have teams with the right expertise and knowledge, or they risk a failed project and regulatory non-compliance.
+Open banking “creates the opportunity to develop an entirely new market for financial products”, and this new market needs experts to build it. With the speed that the open banking market is growing, it’s important for organisations to have teams with the right expertise and knowledge, or they risk a failed project and regulatory non-compliance.
 
 **What’s next?**
 

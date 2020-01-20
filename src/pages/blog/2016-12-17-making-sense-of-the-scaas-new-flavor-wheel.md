@@ -2,18 +2,6 @@
 templateKey: blog-post
 title: Three Reasons Organisations Should Look to Ukraine for Outsourcing Expertise
 date: 2016-12-17T15:04:10.000Z
-description: >-
-  As technology advances in this digital age, with exciting developments coming
-  thick and fast, many associate the forefront of innovation with Silicon Valley
-  and the tech giants that dominate the global headlines. There are innovations
-  happening around the world, but, when it comes to outsourcing, many of these
-  hubs are overlooked.
-
-  One such tech ecosystem is Ukraine. Making $3.6bn worth of IT exports in 2017
-  (that’s a significant 3.4% of its GDP), it’s a global tech hub that is,
-  however, sometimes overlooked for some of the larger tech hubs around the
-  world. With 4,000 thriving tech companies in Ukraine, there are many reasons
-  that organisations should consider Ukraine for outsourcing expertise.
 featuredpost: false
 featuredimage: /img/outsourcing.jpg
 tags:
@@ -22,6 +10,10 @@ tags:
 ![]()
 
 <!--StartFragment-->
+
+As technology advances in this digital age, with exciting developments coming thick and fast, many associate the forefront of innovation with Silicon Valley and the tech giants that dominate the global headlines. There are innovations happening around the world, but, when it comes to outsourcing, many of these hubs are overlooked.
+
+One such[tech ecosystem is Ukraine](http://data.unit.city/tech-guide/Tech_Ecosystem_Guide_To_Ukraine_En.pdf). Making $3.6bn worth of IT exports in 2017 (that’s a significant 3.4% of its GDP), it’s a global tech hub that is, however, sometimes overlooked for some of the larger tech hubs around the world. With 4,000 thriving tech companies in Ukraine, there are many reasons that organisations should consider Ukraine for outsourcing expertise.
 
 #### 1/ A Trusted Choice
 

@@ -2,22 +2,6 @@
 templateKey: blog-post
 title: 'Pay-as-you-go CTO: What should SMEs consider when IT planning?'
 date: 2017-01-04T15:04:10.000Z
-description: >-
-  by Alexey Nayda, CEO and founder of Sparkybit
-
-  When kicking off operations, many start-ups and SMEs tend to focus on the
-  smaller objectives rather than looking at the bigger picture. This results in
-  a few bumps in the road as the business grows – especially when it comes to IT
-  planning. Across the SME landscape a common challenge encountered by many is
-  the lack of ability to deliver a technical strategy that aligns with the
-  business strategy as a whole.
-
-
-  As business becomes increasingly digital, SMEs realise that they need to
-  embrace technology, but aren’t necessarily sure why. It can be obvious what
-  needs to be done in order to fulfil the crucial business objectives, but
-  knowing how to do it with technology is a different matter. So, what should
-  SMEs consider when it comes to IT planning?
 featuredpost: false
 featuredimage: /img/pay-as-you-go.jpg
 tags:
@@ -26,6 +10,14 @@ tags:
 ![]()
 
 <!--StartFragment-->
+
+
+
+###### *by Alexey Nayda, CEO and founder of [Sparkybit](https://sparkybit.com/)*
+
+When kicking off operations, many start-ups and SMEs tend to focus on the smaller objectives rather than looking at the bigger picture. This results in a few bumps in the road as the business grows – especially when it comes to IT planning. Across the SME landscape a common challenge encountered by many is the lack of ability to deliver a technical strategy that aligns with the business strategy as a whole.
+
+As business becomes increasingly digital, SMEs realise that they need to embrace technology, but aren’t necessarily sure why. It can be obvious what needs to be done in order to fulfil the crucial business objectives, but knowing how to do it with technology is a different matter. So, what should SMEs consider when it comes to IT planning?
 
 #### Employing a Pay-as-you-go CTO:
 
