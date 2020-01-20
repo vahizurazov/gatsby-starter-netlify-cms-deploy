@@ -44,7 +44,10 @@
           // margin-bottom: 20px;
           .vacancy-title {
             margin: 0 40px 0 0px;
-            color: #12c3cc;
+            color: #000;
+            &:hover {
+              color: #12c3cc;
+            }
           }
         }
         .vacancy-skills {
@@ -72,31 +75,20 @@
       flex: 1 1;
       margin: 0 0 25px 0;
       .vacancy-city {
-        position: relative;
-        width: auto;
-        height: 30px;
-        background-color: #12c3cc;
+        cursor: default;
         padding: 5px 10px;
-        margin: 0 40px 0 0;
-        color: #fff;
+        color: #12c3cc;
         font-size: 12px;
-      }
-      .vacancy-city::after {
-        content: "";
-        width: 25px;
-        height: 23px;
-        background-color: #12c3cc;
-        position: absolute;
-        top: -6px;
-        right: -26px;
-        -webkit-transform: rotate(90deg) skew(30deg);
-        transform: rotate(90deg) skew(30deg);
+        font-weight: 700;
       }
       .about-project {
         margin: 0 0 20px 0;
         .vacancy-about-title {
-          margin: 0;
-          margin-bottom: 15px;
+          font-size: 16px;
+          opacity: 0.6;
+          letter-spacing: 0;
+          padding: 10px 0 5px;
+          font-weight: 700;
         }
       }
     }

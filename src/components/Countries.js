@@ -12,6 +12,7 @@ export default class Countries extends Component {
   setCountry(event, country) {
     event.preventDefault();
     this.setState({ country });
+    this.props.getCountry(country);
   }
   render() {
     const { countries } = this.props;
@@ -26,7 +27,14 @@ export default class Countries extends Component {
                 this.state.country.country === c.country ? "active" : ""
               }
             >
-              <span role = "button"  tabIndex={0} onClick={e => this.setCountry(e, c)} onKeyDown={e => this.setCountry(e, c)}>{c.country}</span>
+              <span
+                role="button"
+                tabIndex={0}
+                onClick={e => this.setCountry(e, c)}
+                onKeyDown={e => this.setCountry(e, c)}
+              >
+                {c.country}
+              </span>
             </li>
           );
         })}

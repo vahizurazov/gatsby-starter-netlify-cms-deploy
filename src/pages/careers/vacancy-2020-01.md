@@ -1,17 +1,15 @@
 ---
 templateKey: career-post
-title: 'SALESFORCE TRAINEE '
+title: Salesforce trainee
 cities:
   - Dnepr
-date: 2020-01-09T10:40:30.681Z
+date: 2020-01-20T10:53:12.751Z
 description: >-
-  Sparkybit is a leading Ukrainian software development company, with a focus on
-  fintech, open banking, banking technology, and SME IT planning. It partners
-  with small to mid-size enterprise to deliver software solutions and expertise
-  to speed time to market, while also supporting the digital transformation
-  journey.
-featuredpost: true
-featuredimage: /img/jumbotron.jpg
+  Sparkybit has a separate team of Salesforce developers, who also came to us
+  from other technologies and received training. All of them are already working
+  on real projects. Every Salesforce dev passes certifications and constantly
+  continues to develop in the new areas that Salesforce platform and the
+  technologies used there give.
 ---
 
 
