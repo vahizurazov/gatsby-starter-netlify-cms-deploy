@@ -20,6 +20,7 @@ export const AboutUsPageTemplate = ({
         <div className="container">
           <h1 className="h2 striped uppercase">{section_1_title}</h1>
           <div dangerouslySetInnerHTML={{ __html: section_1_content }} />
+          <hr />
           <div className="main-visual">
             {!!section_1_image.childImageSharp ? (
               <Img
