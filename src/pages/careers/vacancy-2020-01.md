@@ -2,7 +2,7 @@
 templateKey: career-post
 title: Salesforce trainee
 cities:
-  - Dnepr
+  - Dnipro
 date: 2020-01-20T10:53:12.751Z
 description: >-
   Sparkybit has a separate team of Salesforce developers, who also came to us
