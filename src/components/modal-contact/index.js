@@ -1,23 +1,13 @@
-import React, { Component } from "react"
-import Modal from "../root-modal"
-import formikEnhancer from "./validation/schemeFormik"
+import React, { Component } from "react";
+import Modal from "../root-modal";
+import formikEnhancer from "./validation/schemeFormik";
 
-import { contactForm } from "./form-contact"
+import { contactForm } from "./form-contact";
 
 export default class ModalContact extends Component {
-  /* state = {
-    open: true
-  }
-  onOpenModal = () => {
-    this.setState({ open: true });
-  }
-  onCloseModal = () => {
-    this.setState({ open: false });
-  } */
   render() {
-    const { isModalOpen, setModalState, handleFormSubmit } = this.props
-    let EnhancedForm = formikEnhancer(contactForm)
-
+    const { isModalOpen, setModalState, handleFormSubmit } = this.props;
+    let EnhancedForm = formikEnhancer(contactForm);
     return (
       <Modal
         classNames={{ modal: "modal-contact-form" }}
@@ -33,13 +23,13 @@ export default class ModalContact extends Component {
               name: "",
               phone: "",
               message: "",
-              /* recaptcha: "", */
-              closeHandler: null,
+              // recaptcha: "",
+              closeHandler: null
             }}
             actionSubmit={handleFormSubmit}
           />
         }
       </Modal>
-    )
+    );
   }
 }

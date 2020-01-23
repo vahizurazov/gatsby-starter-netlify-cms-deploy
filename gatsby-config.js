@@ -6,9 +6,12 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",  
     {
-      resolve: 'gatsby-plugin-react-leaflet',
+      resolve: `gatsby-plugin-recaptcha`
+    },
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-react-leaflet",
       options: {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }

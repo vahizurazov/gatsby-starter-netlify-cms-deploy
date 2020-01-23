@@ -305,12 +305,6 @@
     flex-direction: column;
   }
 
-  // .modal-recaptcha {
-  //   //transform: scale(1);
-  //   //tratransform-origin: 0 0;
-  //   margin: 0 0 10px 0;
-  // }
-
   .field-input {
     //width: 45%;
     display: flex;
@@ -339,18 +333,23 @@
       0 0 0 3px rgba(0, 126, 255, 0.1);
     outline: none;
   }
+  .modal-recaptcha {
+    //transform: scale(1);
+    //tratransform-origin: 0 0;
+    margin: 0 0 10px 0;
+  }
 
-  // .modal-recaptcha {
-  //   display: flex;
-  //   justify-content: center;
-  //   flex-direction: column;
-  //   text-align: center;
-  // }
+  .modal-recaptcha {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
 
-  // #g-recaptcha {
-  //   display: flex;
-  //   justify-content: center;
-  // }
+  #g-recaptcha {
+    display: flex;
+    justify-content: center;
+  }
 
   .modal-control {
     display: flex;

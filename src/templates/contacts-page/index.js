@@ -10,17 +10,33 @@ import LeafletMap from "../../components/leaflet-map/index.js";
 
 import "./styles/index.scss";
 
+import ModalContact from "../../components/modal-contact";
+
 export class ContactsPageTemplate extends Component {
   constructor(props) {
     super(props);
-    this.state = { country: this.props.countries[0] };
+    this.state = { country: this.props.countries[0], isModalOpen: false };
+    this.setModalState = this._setModalState.bind(this);
+    this.handleFormSubmit = this._handleFormSubmit.bind(this);
   }
 
   getCountry = value => {
     this.setState({ country: value });
   };
 
+  _setModalState = state => {
+    if (this.state.isModalOpen !== state) {
+      return this.setState({ isModalOpen: state });
+    }
+  };
+
+  _handleFormSubmit() {
+    this.setModalState(false);
+  }
+
   render() {
+    const { isModalOpen } = this.state;
+    const { setModalState, handleFormSubmit } = this;
     const {
       contact_title,
       contact_email,
@@ -51,7 +67,7 @@ export class ContactsPageTemplate extends Component {
             <div className="follow">
               <button
                 className="heading btn btn-primary trigger"
-                // onClick={() => this.setModalState(true)}
+                onClick={() => this.setModalState(true)}
               >
                 {btn_name}
               </button>
@@ -67,6 +83,11 @@ export class ContactsPageTemplate extends Component {
           <div className="circle circle-2" />
           <div className="circle circle-3" />
         </div>
+        <ModalContact
+          isModalOpen={isModalOpen}
+          setModalState={setModalState}
+          handleFormSubmit={handleFormSubmit}
+        />
       </main>
     );
   }
@@ -109,3 +130,4 @@ export const ContactsPageQuery = graphql`
     }
   }
 `;
+/* eslint-disable */

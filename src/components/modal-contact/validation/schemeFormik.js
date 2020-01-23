@@ -1,18 +1,18 @@
-import * as Yup from "yup"
-import { withFormik } from "formik"
+import * as Yup from "yup";
+import { withFormik } from "formik";
 //import { changeKeyName } from "../../../utils/helpers" //piperdrive
-const axios = require("axios")
-const protocol = `http://`
+const axios = require("axios");
+const protocol = `http://`;
 //const host = process.env.GATSBY_TRIGGER || null
-const host = `loalhst`
-const endpoint = `/mailto`
-const hostport = process.env.WEBHOOK_SERVER_PORT || 5454
-const url = `${protocol}${host}:${hostport}${endpoint}`
-const authToken = process.env.GATSBY_AUTHORIZATION_KEY || null
+const host = `loalhst`;
+const endpoint = `/mailto`;
+const hostport = process.env.WEBHOOK_SERVER_PORT || 5454;
+const url = `${protocol}${host}:${hostport}${endpoint}`;
+const authToken = process.env.GATSBY_AUTHORIZATION_KEY || null;
 
 //validation schemes
-const phoneRegExp = /([+(\d]{1})(([\d+() -.]){5,16})([+(\d]{1})/
-const wordRegExp = /\D/
+const phoneRegExp = /([+(\d]{1})(([\d+() -.]){5,16})([+(\d]{1})/;
+const wordRegExp = /\D/;
 
 //init validate scheme
 const formikEnhancer = withFormik({
@@ -27,18 +27,17 @@ const formikEnhancer = withFormik({
       .required("Phone number is required!"),
     email: Yup.string()
       .email("*Invalid email address")
-      .required("*Email is required!"),
-    //recaptcha: Yup.string().required("*recaptcha is a required field"),
+      .required("*Email is required!")
+    // recaptcha: Yup.string().required("*recaptcha is a required field")
   }),
-
   mapPropsToValues: ({ contactFields }) => ({
-    ...contactFields,
+    ...contactFields
   }),
 
   //submit for mailgun
   handleSubmit: (payload, { setSubmitting }) => {
-    const { closeHandler } = payload
-    let data = /* JSON.stringify */ payload
+    const { closeHandler } = payload;
+    let data = /* JSON.stringify */ payload;
     if (data) {
       axios({
         method: "POST", //you can set what request you want to be
@@ -46,16 +45,16 @@ const formikEnhancer = withFormik({
         data: data,
         headers: {
           Authorization: authToken,
-          "Content-Type": "application/json",
-        },
-      })
+          "Content-Type": "application/json"
+        }
+      });
     }
 
-    closeHandler()
+    closeHandler();
   },
-  displayName: "contactForm",
-})
-export default formikEnhancer
+  displayName: "contactForm"
+});
+export default formikEnhancer;
 
 //pipedrive environment
 /* const tokenAPI = process.env.GATSBY_PIPEDRIVE_TOKEN || null

@@ -32,10 +32,11 @@
     "parcel-bundler": "^1.9.4",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-google-recaptcha": "^2.0.1",
     "react-helmet": "^5.2.0",
+    "react-leaflet": "^2.6.1",
     "react-recaptcha": "^2.3.10",
     "react-responsive-modal": "^4.0.1",
-    "react-leaflet": "^2.6.1",
     "uuid": "^3.4.0",
     "yup": "^0.28.0"
   },
@@ -54,6 +55,7 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
+    "gatsby-plugin-recaptcha": "^1.0.5",
     "prettier": "^1.15.3"
   }
 }

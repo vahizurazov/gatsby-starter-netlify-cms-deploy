@@ -3,7 +3,7 @@ import React from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
 import PostPreviewImg from "../img/blog/default-preview.jpg";
 import Img from "gatsby-image/withIEPolyfill";
-import { kebabCase } from "lodash";
+// import { kebabCase } from "lodash";
 
 class BlogRoll extends React.Component {
   render() {

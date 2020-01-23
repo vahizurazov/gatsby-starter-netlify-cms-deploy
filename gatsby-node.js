@@ -12,7 +12,6 @@ console.log(`Using environment config: '${activeEnv}'`);
 require("dotenv").config({
   path: `.env.${activeEnv}`
 });
-
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 

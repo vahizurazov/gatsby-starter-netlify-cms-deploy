@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 import {
   TextInput,
   TextAreaInput,
-  ReCaptcha,
-} from "./validation/form-contactElement"
+  ReCaptchaForm
+} from "./validation/form-contactElement";
 
 //custom form construct
 export const contactForm = props => {
@@ -18,8 +18,8 @@ export const contactForm = props => {
     handleReset,
     isSubmitting,
     actionSubmit,
-    setFieldValue,
-  } = props
+    setFieldValue
+  } = props;
   return (
     <form
       onSubmit={handleSubmit}
@@ -51,8 +51,8 @@ export const contactForm = props => {
           value={values.city}
           onChange={handleChange}
           onBlur={handleBlur}
-        />
- */}
+        /> */}
+
         <TextInput
           name="phone"
           id="phone"
@@ -77,11 +77,11 @@ export const contactForm = props => {
           onBlur={handleBlur}
         />
 
-        <ReCaptcha
-          /* label="recaptcha" */
+        <ReCaptchaForm
+          label="ReCaptchaForm"
           error={errors.recaptcha}
           value={values.recaptcha}
-          setFieldValue={setFieldValue}
+          // setfieldvalue={setFieldValue}
           onChange={handleChange}
           onBlur={handleBlur}
         />
@@ -118,5 +118,5 @@ export const contactForm = props => {
         </button>
       </div>
     </form>
-  )
-}
+  );
+};
