@@ -31,10 +31,10 @@ class Footer extends Component {
             <div className="col contacts">
               <a href="tel:+442081331821">+44 20 3773 8945</a>
               <div>
-                <a href="mailto:hi@sparkybit.com">hi@sparkybit.com</a>
-                {/* <span onClick={() => this.setModalState(true)}>
+                {/* <a href="mailto:hi@sparkybit.com">hi@sparkybit.com</a> */}
+                <span onClick={() => this.setModalState(true)}>
                   hi@sparkybit.com
-                </span> */}
+                </span>
                 {/* <span>hi@sparkybit.com</span> */}
               </div>
             </div>

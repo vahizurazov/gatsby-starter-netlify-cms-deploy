@@ -5,6 +5,8 @@ import Img from "gatsby-image/withIEPolyfill";
 import Content, { HTMLContent } from "../../components/Content";
 import ModalContact from "../../components/modal-contact";
 
+import SEO from "../../components/seo/index";
+
 import "./styles/index.scss";
 
 export class IndexPageTemplate extends Component {
@@ -50,132 +52,139 @@ export class IndexPageTemplate extends Component {
     const MainPageContent = contentComponent || Content;
 
     return (
-      <main id="main">
-        <div className="page-main">
-          <section className="container">
-            <div className="section-greeter">
-              <div className="content">
-                <h1 className="heading uppercase">{section_1_title}</h1>
-                <h4 className="heading">{section_1_subheading}</h4>
-                <MainPageContent
-                  className="description-wrap"
-                  content={content}
-                />
-                <div>
-                  <button
-                    className="btn btn-primary trigger"
-                    onClick={() => this.setModalState(true)}
-                  >
-                    {section_1_btn_text}
-                  </button>
-                </div>
-              </div>
-              <div className="circle circle-1" />
-              <div className="circle circle-3" />
-              {!!section_1_image.childImageSharp ? (
-                <Img
-                  className="main_background"
-                  fluid={section_1_image.childImageSharp.fluid}
-                  objectFit="cover"
-                  objectPosition="50% 50%"
-                  alt="Greetings from Sparkybit team"
-                />
-              ) : (
-                <img src={section_1_image} alt="" className="main_background" />
-              )}
-
-              <div className="circle circle-7" />
-            </div>
-          </section>
-          <section className="section-services">
-            <div className="container">
-              <h1 className="striped uppercase">{section_2_title}</h1>
-              <div className="services">
-                <div className="service salesforce">
-                  <div className="circle circle-1">
-                    {!!section_2_1_image.childImageSharp ? (
-                      <Img
-                        fixed={section_2_1_image.childImageSharp.fixed}
-                        alt={section_2_right_subheading}
-                        fadeIn={true}
-                      />
-                    ) : (
-                      <img
-                        src={section_2_1_image}
-                        alt={section_2_right_subheading}
-                      />
-                    )}
-                  </div>
-                  <div className="circle circle-2" />
-                  <div className="content pull-right">
-                    <h5 className="heading uppercase">
-                      {section_2_right_subheading}
-                    </h5>
-                    <p>{section_2_right_text}</p>
-                    <div className="more-holder">
-                      <Link to="/services" className="link-more pull-right">
-                        Learn more
-                      </Link>
-                    </div>
+      <>
+        <SEO title="Home" />
+        <main id="main">
+          <div className="page-main">
+            <section className="container">
+              <div className="section-greeter">
+                <div className="content">
+                  <h1 className="heading uppercase">{section_1_title}</h1>
+                  <h4 className="heading">{section_1_subheading}</h4>
+                  <MainPageContent
+                    className="description-wrap"
+                    content={content}
+                  />
+                  <div>
+                    <button
+                      className="btn btn-primary trigger"
+                      onClick={() => this.setModalState(true)}
+                    >
+                      {section_1_btn_text}
+                    </button>
                   </div>
                 </div>
-                <div className="service bespoke">
-                  <div className="circle circle-1">
-                    {!!section_2_2_image.childImageSharp ? (
-                      <Img
-                        fixed={section_2_2_image.childImageSharp.fixed}
-                        alt={section_2_left_subheading}
-                        fadeIn={false}
-                      />
-                    ) : (
-                      <img
-                        src={section_2_2_image}
-                        alt={section_2_left_subheading}
-                      />
-                    )}
-                  </div>
-                  <div className="content pull-left">
-                    <h5 className="heading uppercase">
-                      {section_2_left_subheading}
-                    </h5>
-                    <p>{section_2_left_text}</p>
-                    <div className="more-holder">
-                      <Link
-                        to="/services#bespoke"
-                        className="link-more pull-right"
-                      >
-                        Learn more
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="container">
-            <div className="section-technologies">
-              <h1 className="striped uppercase">{section_3_title}</h1>
-              <p>{section_3_text}</p>
-              <div className="technologies">
-                {!!section_3_image_desktop.childImageSharp ? (
+                <div className="circle circle-1" />
+                <div className="circle circle-3" />
+                {!!section_1_image.childImageSharp ? (
                   <Img
-                    fluid={section_3_image_desktop.childImageSharp.fluid}
-                    alt={section_3_title}
-                    fadeIn={true}
+                    className="main_background"
+                    fluid={section_1_image.childImageSharp.fluid}
+                    objectFit="cover"
+                    objectPosition="50% 50%"
+                    alt="Greetings from Sparkybit team"
                   />
                 ) : (
-                  <img src={section_3_image_desktop} alt={section_3_title} />
+                  <img
+                    src={section_1_image}
+                    alt=""
+                    className="main_background"
+                  />
                 )}
+
+                <div className="circle circle-7" />
               </div>
-            </div>
-          </section>
-        </div>
-        <ModalContact
-          isModalOpen={isModalOpen}
-          setModalState={setModalState}
-          handleFormSubmit={handleFormSubmit}
-        />
-      </main>
+            </section>
+            <section className="section-services">
+              <div className="container">
+                <h1 className="striped uppercase">{section_2_title}</h1>
+                <div className="services">
+                  <div className="service salesforce">
+                    <div className="circle circle-1">
+                      {!!section_2_1_image.childImageSharp ? (
+                        <Img
+                          fixed={section_2_1_image.childImageSharp.fixed}
+                          alt={section_2_right_subheading}
+                          fadeIn={true}
+                        />
+                      ) : (
+                        <img
+                          src={section_2_1_image}
+                          alt={section_2_right_subheading}
+                        />
+                      )}
+                    </div>
+                    <div className="circle circle-2" />
+                    <div className="content pull-right">
+                      <h5 className="heading uppercase">
+                        {section_2_right_subheading}
+                      </h5>
+                      <p>{section_2_right_text}</p>
+                      <div className="more-holder">
+                        <Link to="/services" className="link-more pull-right">
+                          Learn more
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="service bespoke">
+                    <div className="circle circle-1">
+                      {!!section_2_2_image.childImageSharp ? (
+                        <Img
+                          fixed={section_2_2_image.childImageSharp.fixed}
+                          alt={section_2_left_subheading}
+                          fadeIn={false}
+                        />
+                      ) : (
+                        <img
+                          src={section_2_2_image}
+                          alt={section_2_left_subheading}
+                        />
+                      )}
+                    </div>
+                    <div className="content pull-left">
+                      <h5 className="heading uppercase">
+                        {section_2_left_subheading}
+                      </h5>
+                      <p>{section_2_left_text}</p>
+                      <div className="more-holder">
+                        <Link
+                          to="/services#bespoke"
+                          className="link-more pull-right"
+                        >
+                          Learn more
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="container">
+              <div className="section-technologies">
+                <h1 className="striped uppercase">{section_3_title}</h1>
+                <p>{section_3_text}</p>
+                <div className="technologies">
+                  {!!section_3_image_desktop.childImageSharp ? (
+                    <Img
+                      fluid={section_3_image_desktop.childImageSharp.fluid}
+                      alt={section_3_title}
+                      fadeIn={true}
+                    />
+                  ) : (
+                    <img src={section_3_image_desktop} alt={section_3_title} />
+                  )}
+                </div>
+              </div>
+            </section>
+          </div>
+          <ModalContact
+            isModalOpen={isModalOpen}
+            setModalState={setModalState}
+            handleFormSubmit={handleFormSubmit}
+          />
+        </main>
+      </>
     );
   }
 }

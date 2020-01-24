@@ -2,13 +2,18 @@ import * as Yup from "yup";
 import { withFormik } from "formik";
 //import { changeKeyName } from "../../../utils/helpers" //piperdrive
 const axios = require("axios");
-const protocol = `http://`;
-//const host = process.env.GATSBY_TRIGGER || null
+// const protocol = `http://`;
+// const host = process.env.GATSBY_TRIGGER || null;
 const host = `loalhst`;
-const endpoint = `/mailto`;
-const hostport = process.env.WEBHOOK_SERVER_PORT || 5454;
-const url = `${protocol}${host}:${hostport}${endpoint}`;
+const endpoint_contact = `/contact`;
+const endpoint_vacancy = `/vacancy`;
+
+const url_contact = `${host}${endpoint_contact}`;
+const url_vacancy = `${host}${endpoint_vacancy}`;
 const authToken = process.env.GATSBY_AUTHORIZATION_KEY || null;
+
+// const hostport = process.env.WEBHOOK_SERVER_PORT || 5454;
+// const url = `${protocol}${host}:${hostport}${endpoint}`;
 
 //validation schemes
 const phoneRegExp = /([+(\d]{1})(([\d+() -.]){5,16})([+(\d]{1})/;
@@ -27,15 +32,22 @@ const formikEnhancer = withFormik({
       .required("Phone number is required!"),
     email: Yup.string()
       .email("*Invalid email address")
-      .required("*Email is required!")
-    // recaptcha: Yup.string().required("*recaptcha is a required field")
+      .required("*Email is required!"),
+    recaptcha: Yup.string().required("*recaptcha is a required field")
   }),
-  mapPropsToValues: ({ contactFields }) => ({
-    ...contactFields
-  }),
-
+  mapPropsToValues: ({ contactFields }) => ({ ...contactFields }),
   //submit for mailgun
   handleSubmit: (payload, { setSubmitting }) => {
+    // console.log("payload", payload);
+    function isCareersUrl() {
+      if (window.location.pathname.search("careers") !== -1) {
+        return url_vacancy;
+      } else {
+        return url_contact;
+      }
+    }
+    const url = isCareersUrl();
+    console.log("url", url);
     const { closeHandler } = payload;
     let data = /* JSON.stringify */ payload;
     if (data) {
@@ -49,7 +61,6 @@ const formikEnhancer = withFormik({
         }
       });
     }
-
     closeHandler();
   },
   displayName: "contactForm"

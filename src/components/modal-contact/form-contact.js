@@ -6,6 +6,7 @@ import {
 } from "./validation/form-contactElement";
 
 //custom form construct
+
 export const contactForm = props => {
   const {
     values,
@@ -20,6 +21,9 @@ export const contactForm = props => {
     actionSubmit,
     setFieldValue
   } = props;
+
+  // console.log("FORM CONTACT PROPS", props);
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -78,10 +82,9 @@ export const contactForm = props => {
         />
 
         <ReCaptchaForm
-          label="ReCaptchaForm"
           error={errors.recaptcha}
           value={values.recaptcha}
-          // setfieldvalue={setFieldValue}
+          setFieldValue={setFieldValue}
           onChange={handleChange}
           onBlur={handleBlur}
         />

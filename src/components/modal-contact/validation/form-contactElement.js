@@ -35,7 +35,6 @@ export const TextInput = ({
     },
     className
   );
-
   return (
     <div className={classes}>
       <Label htmlFor={id} error={error}>
@@ -95,16 +94,15 @@ export const TextAreaInput = ({
 export class ReCaptchaForm extends Component {
   constructor(props) {
     super(props);
+    this.recaptcha = React.createRef();
   }
 
-  // render on captcha load
-  handleCaptchaLoad(event) {
-    console.log("handleCaptchaLoad");
-  }
-
-  // load on callback verify
-  verifyCallback(event) {
-    console.log("verifyCallback-->", event);
+  componentDidMount() {
+    // console.log("this.recaptcha", this.recaptcha);
+    if (this.recaptcha) {
+      console.log("started, just a second...");
+      this.recaptcha.reset();
+    }
   }
 
   render() {
@@ -124,7 +122,8 @@ export class ReCaptchaForm extends Component {
       },
       className
     );
-    console.log("onChange", onChange);
+    // console.log("PROPS IN RECAPCHA", onChange);
+
     return (
       <div className={classes}>
         <Label error={error}>{label}</Label>
@@ -133,25 +132,14 @@ export class ReCaptchaForm extends Component {
           className="modal-recaptcha"
           value={value}
           onChange={onChange}
-          {...this.props}
         >
           <ReCAPTCHA
-            // elementId="gf-recaptcha"
+            ref={el => (this.recaptcha = el)}
+            className="g-recaptcha"
             sitekey={recaptchaKey}
-            onChange={onChange}
+            onChange={res => setFieldValue("recaptcha", res)}
+            // asyncScriptOnLoad={this.onLoadRecaptcha}
           />
-          {/* <Recaptcha
-            elementID="gf-recaptcha"
-            sitekey={recaptchaKey}
-            render="explicit"
-            theme="white"
-            verifyCallback={this.verifyCallback}
-            onloadCallback={this.handleCaptchaLoad}
-            verifyCallback={response => {
-                setFieldValue("recaptcha", response);
-              }} 
-             onloadCallback={() => {}}
-          /> */}
           {/* <InputFeedback error={error} /> */}
         </div>
       </div>
