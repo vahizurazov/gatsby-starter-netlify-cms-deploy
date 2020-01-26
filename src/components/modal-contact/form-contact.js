@@ -7,6 +7,7 @@ import {
 
 //custom form construct
 
+
 export const contactForm = props => {
   const {
     values,
@@ -22,6 +23,13 @@ export const contactForm = props => {
     setFieldValue
   } = props;
 
+  const resetForm = () => {
+    handleReset()
+    if(window.grecaptcha) {
+      window.grecaptcha.reset()
+
+    }
+  }
   // console.log("FORM CONTACT PROPS", props);
 
   return (
@@ -107,7 +115,7 @@ export const contactForm = props => {
         <button
           type="button"
           className="heading btn btn-primary submitBtn"
-          onClick={handleReset}
+          onClick={resetForm}
           disabled={!dirty || isSubmitting}
         >
           Reset

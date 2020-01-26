@@ -73,6 +73,13 @@
         &:last-child {
           margin: 0;
         }
+        &:first-child {
+          cursor: pointer;
+          color: #878686;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
 
       a {

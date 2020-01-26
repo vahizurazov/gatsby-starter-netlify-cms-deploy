@@ -112,7 +112,6 @@ export class ReCaptchaForm extends Component {
       value,
       setFieldValue,
       onChange,
-      onBlur,
       className
     } = this.props;
     const classes = classnames(
