@@ -198,129 +198,94 @@ collections:
           - { label: section_2_image, name: section_2_image, widget: image }
 
           - { label: section_3_title, name: section_3_title, widget: string }
-          - { label: section_3_text, name: section_3_text, widget: string }
-
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+          - { label: section_3_text, name: section_3_text, widget: string } 
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "src/config/website.md"
+        label: "Settings"
+        name: "settings"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
+          -  {
+              label: "Config Key",
+              name: "configKey",
               widget: "hidden",
-              default: "about-page",
-            }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "product-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Description, name: description, widget: string }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Blurbs,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text },
-                      ],
-                  },
-                ],
+              default: "site-config",
             }
           - {
-              label: Main,
-              name: main,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image1,
-                    name: image1,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image2,
-                    name: image2,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image3,
-                    name: image3,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                ],
+              label: Site Title,
+              name: siteTitle,
+              widget: string,
             }
           - {
-              label: Testimonials,
-              name: testimonials,
-              widget: list,
-              fields:
-                [
-                  { label: Quote, name: quote, widget: string },
-                  { label: Author, name: author, widget: string },
-                ],
+              label: Site Title Short,
+              name: siteTitleShort,
+              widget: string,
             }
-          - { label: Full_image, name: full_image, widget: image }
           - {
-              label: Pricing,
-              name: pricing,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: string },
-                  {
-                    label: Plans,
-                    name: plans,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Plan, name: plan, widget: string },
-                        { label: Price, name: price, widget: string },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: string,
-                        },
-                        { label: Items, name: items, widget: list },
-                      ],
-                  },
-                ],
+              label: Site Title Alt,
+              name: siteTitleAlt,
+              widget: string,
             }
+          - {
+              label: Organization,
+              name: organization,
+              widget: string,
+            }
+          - {
+              label: Author,
+              name: author,
+              widget: string,
+            }
+          - {
+              label: Site Logo,
+              name: siteLogo,
+              widget: string,
+            }
+          - {
+              label: Site Url,
+              name: siteUrl,
+              widget: string,
+            }
+          - {
+              label: Path Prefix,
+              name: pathPrefix,
+              widget: string,
+            }
+          - {
+              label: Blog Prefix,
+              name: blogPrefix,
+              widget: string,
+            }
+          - {
+              label: Amp Prefix,
+              name: ampPrefix,
+              widget: string,
+            }
+          - {
+              label: Vacancy Prefix,
+              name: vacancyPrefix,
+              widget: string,
+            }
+          - {
+              label: Site Description,
+              name: siteDescription,
+              widget: string,
+            }
+          - {
+              label: Google Analytics ID,
+              name: googleAnalyticsID,
+              widget: string,
+            }
+          - {
+              label: Theme Color,
+              name: themeColor,
+              widget: string,
+            }
+          - {
+              label: Background Color,
+              name: backgroundColor,
+              widget: string,
+            }   
+          
+          
