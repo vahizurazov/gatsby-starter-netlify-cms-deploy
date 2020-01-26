@@ -52,12 +52,10 @@ export class ContactsPageTemplate extends Component {
             <Countries countries={countries} getCountry={this.getCountry} />
             <div className="contacts">
               <div className="email">
-                <img src={IconEnvelope} alt="contact email" />
-                <a>
-                  <span onClick={() => this.setModalState(true)}>
+                <img src={IconEnvelope} alt="contact email" />                
+                  <span onClick={() => this.setModalState(true)} onKeyPress={()=>{}} role="button" tabIndex={0}>
                     {contact_email}
                   </span>
-                </a>
               </div>
               <div className="tel">
                 <img src={IconTel} alt="phone number" />
@@ -68,6 +66,7 @@ export class ContactsPageTemplate extends Component {
               <button
                 className="heading btn btn-primary trigger"
                 onClick={() => this.setModalState(true)}
+                
               >
                 {btn_name}
               </button>
