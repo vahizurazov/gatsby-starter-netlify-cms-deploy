@@ -122,7 +122,7 @@ export class IndexPageTemplate extends Component {
                       <p>{section_2_right_text}</p>
                       <div className="more-holder">
                         <Link to="/services" className="link-more pull-right">
-                          Learn more
+                          Learn services
                         </Link>
                       </div>
                     </div>
@@ -152,7 +152,7 @@ export class IndexPageTemplate extends Component {
                           to="/services#bespoke"
                           className="link-more pull-right"
                         >
-                          Learn more
+                          Learn bespoke
                         </Link>
                       </div>
                     </div>
@@ -227,7 +227,7 @@ export const pageQuery = graphql`
         section_1_image {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1280) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -236,14 +236,14 @@ export const pageQuery = graphql`
         section_2_1_image {
           childImageSharp {
             fixed(quality: 90, width: 300, height: 300) {
-              ...GatsbyImageSharpFixed_noBase64
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }
         section_2_2_image {
           childImageSharp {
             fixed(quality: 90, width: 465, height: 465) {
-              ...GatsbyImageSharpFixed_noBase64
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }
@@ -256,15 +256,15 @@ export const pageQuery = graphql`
         section_3_text
         section_3_image_desktop {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 2048, quality: 80) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
         section_3_image_mobile {
           childImageSharp {
             fixed(quality: 60, width: 395, height: 1361) {
-              ...GatsbyImageSharpFixed_withWebp
+              ...GatsbyImageSharpFixed_tracedSVG
             }
           }
         }

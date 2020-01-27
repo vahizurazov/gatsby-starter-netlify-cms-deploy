@@ -271,12 +271,7 @@ collections:
               label: Site Description,
               name: siteDescription,
               widget: string,
-            }
-          - {
-              label: Google Analytics ID,
-              name: googleAnalyticsID,
-              widget: string,
-            }
+            }          
           - {
               label: Theme Color,
               name: themeColor,
