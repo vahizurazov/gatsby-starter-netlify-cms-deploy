@@ -3,21 +3,24 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Content, { HTMLContent } from "../../components/Content";
-
+import SEO from "../../components/seo/index";
 import "./styles/index.scss";
 
 export const BlogPostTemplate = ({ content, contentComponent, title }) => {
   const PostContent = contentComponent || Content;
   return (
-    <main id="main">
-      <div className="page-post">
-        <div className="container wp-container">
-          <h1 className="striped uppercase">{title}</h1>
-          <PostContent content={content} />
-          <hr />
+    <>
+      <SEO title={title} />
+      <main id="main">
+        <div className="page-post">
+          <div className="container wp-container">
+            <h1 className="striped uppercase">{title}</h1>
+            <PostContent content={content} />
+            <hr />
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 

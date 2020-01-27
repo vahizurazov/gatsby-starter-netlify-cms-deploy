@@ -53,7 +53,7 @@ export class IndexPageTemplate extends Component {
 
     return (
       <>
-        <SEO title="Home" />
+        <SEO title="Home" description={content} />
         <main id="main">
           <div className="page-main">
             <section className="container">

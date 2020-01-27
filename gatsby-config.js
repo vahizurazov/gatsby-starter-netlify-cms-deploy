@@ -25,8 +25,8 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: `minimal-ui`,
-        icon: `src/img/logo/logo-circle.png`, // This path is relative to the root of the site.
-      },
+        icon: `src/img/logo/logo-circle.png` // This path is relative to the root of the site.
+      }
     },
     "gatsby-plugin-offline",
     "gatsby-plugin-sitemap",
@@ -38,26 +38,25 @@ module.exports = {
         fonts: [
           {
             family: `Montserrat`,
-            variants: [`400`, `600`, `700`, `800`],
-          },
-        ],
-      },
+            variants: [`400`, `600`, `700`, `800`]
+          }
+        ]
+      }
     },
     {
       resolve: "gatsby-plugin-polyfill-io",
       options: {
-        features: [`Array.from`, `fetch`],
-      },
+        features: [`Array.from`, `fetch`]
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: config.googleAnalyticsID,
-      },
+        trackingId: config.googleAnalyticsID
+      }
     },
     "gatsby-plugin-remove-generator",
-    "gatsby-plugin-preload-link-crossorigin",
     {
       resolve: "gatsby-plugin-react-leaflet",
       options: {

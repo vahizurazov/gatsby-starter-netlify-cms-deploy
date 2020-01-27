@@ -3,14 +3,13 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Countries from "../../components/Countries";
-
 import IconEnvelope from "../../../src/img/icon-message.svg";
 import IconTel from "../../../src/img/icon-tel.svg";
 import LeafletMap from "../../components/leaflet-map/index.js";
+import ModalContact from "../../components/modal-contact";
+import SEO from "../../components/seo/index";
 
 import "./styles/index.scss";
-
-import ModalContact from "../../components/modal-contact";
 
 export class ContactsPageTemplate extends Component {
   constructor(props) {
@@ -45,49 +44,56 @@ export class ContactsPageTemplate extends Component {
       countries
     } = this.props;
     return (
-      <main id="main">
-        <div className="page-contacts container">
-          <div className="content">
-            <h1 className="h2 heading striped uppercase">{contact_title}</h1>
-            <Countries countries={countries} getCountry={this.getCountry} />
-            <div className="contacts">
-              <div className="email">
-                <img src={IconEnvelope} alt="contact email" />                
-                  <span onClick={() => this.setModalState(true)} onKeyPress={()=>{}} role="button" tabIndex={0}>
+      <>
+        <SEO title={contact_title} />
+        <main id="main">
+          <div className="page-contacts container">
+            <div className="content">
+              <h1 className="h2 heading striped uppercase">{contact_title}</h1>
+              <Countries countries={countries} getCountry={this.getCountry} />
+              <div className="contacts">
+                <div className="email">
+                  <img src={IconEnvelope} alt="contact email" />
+                  <span
+                    onClick={() => this.setModalState(true)}
+                    onKeyPress={() => {}}
+                    role="button"
+                    tabIndex={0}
+                  >
                     {contact_email}
                   </span>
+                </div>
+                <div className="tel">
+                  <img src={IconTel} alt="phone number" />
+                  <a href={`tel:${contact_phone}`}>{contact_phone}</a>
+                </div>
               </div>
-              <div className="tel">
-                <img src={IconTel} alt="phone number" />
-                <a href={`tel:${contact_phone}`}>{contact_phone}</a>
+              <div className="follow">
+                <button
+                  className="heading btn btn-primary trigger"
+                  onClick={() => this.setModalState(true)}
+                >
+                  {btn_name}
+                </button>
               </div>
             </div>
-            <div className="follow">
-              <button
-                className="heading btn btn-primary trigger"
-                onClick={() => this.setModalState(true)}
-                
-              >
-                {btn_name}
-              </button>
+            <div className="map">
+              <LeafletMap
+                countries={this.state.country}
+                getCountry={this.getCountry}
+              />
             </div>
+            <div className="circle circle-1" />
+            <div className="circle circle-2" />
+            <div className="circle circle-3" />
           </div>
-          <div className="map">
-            <LeafletMap
-              countries={this.state.country}
-              getCountry={this.getCountry}
-            />
-          </div>
-          <div className="circle circle-1" />
-          <div className="circle circle-2" />
-          <div className="circle circle-3" />
-        </div>
-        <ModalContact
-          isModalOpen={isModalOpen}
-          setModalState={setModalState}
-          handleFormSubmit={handleFormSubmit}
-        />
-      </main>
+          <ModalContact
+            isModalOpen={isModalOpen}
+            setModalState={setModalState}
+            handleFormSubmit={handleFormSubmit}
+          />
+        </main>
+      </>
     );
   }
 }

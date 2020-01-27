@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Content, { HTMLContent } from "../../components/Content";
 import Img from "gatsby-image/withIEPolyfill";
+import SEO from "../../components/seo/index";
 
 import "./styles/index.scss";
 
@@ -18,30 +19,33 @@ export const ServicesPageTemplate = ({
   const imageStyle = { borderRadius: "5px", width: "100%", height: "200px" };
 
   return (
-    <main id="main">
-      {!!image.childImageSharp ? (
-        <Img
-          className="service-background"
-          fluid={image.childImageSharp.fluid}
-          objectFit="contain"
-          objectPosition="50% 50%"
-          alt="Services"
-        />
-      ) : (
-        <img src={image} alt="" style={imageStyle} />
-      )}
-      <div className="page-services">
-        <div className="container">
-          <h1 className="h2 striped">{heading}</h1>
-          <h3>{subheading}</h3>
-          <hr />
-          <ServicesContent content={content} />
+    <>
+      <SEO title={heading} description={subheading} />
+      <main id="main">
+        {!!image.childImageSharp ? (
+          <Img
+            className="service-background"
+            fluid={image.childImageSharp.fluid}
+            objectFit="contain"
+            objectPosition="50% 50%"
+            alt="Services"
+          />
+        ) : (
+          <img src={image} alt="" style={imageStyle} />
+        )}
+        <div className="page-services">
+          <div className="container">
+            <h1 className="h2 striped">{heading}</h1>
+            <h3>{subheading}</h3>
+            <hr />
+            <ServicesContent content={content} />
+          </div>
+          <div className="circle circle-1" />
+          <div className="circle circle-2" />
+          <div className="circle circle-3" />
         </div>
-        <div className="circle circle-1" />
-        <div className="circle circle-2" />
-        <div className="circle circle-3" />
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 

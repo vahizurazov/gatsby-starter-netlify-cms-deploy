@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Img from "gatsby-image/withIEPolyfill";
-
+import SEO from "../../components/seo/index";
 import "./styles/index.scss";
 
 export const AboutUsPageTemplate = ({
@@ -15,51 +15,54 @@ export const AboutUsPageTemplate = ({
   section_2_image
 }) => {
   return (
-    <main id="main">
-      <div className="page-about-us">
-        <div className="container">
-          <h1 className="h2 striped uppercase">{section_1_title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: section_1_content }} />
-          <div className="main-visual">
-            {!!section_1_image.childImageSharp ? (
-              <Img
-                className="img-block"
-                fluid={section_1_image.childImageSharp.fluid}
-                objectFit="cover"
-                objectPosition="50% 50%"
-                alt="About Us"
-              />
-            ) : (
-              <img src={section_1_image} alt="" />
-            )}
-          </div>
-        </div>
-        <div className="section-blue ">
-          <div className="container-sm">
-            {!!section_2_image.childImageSharp ? (
-              <Img
-                className="visual img-rounded"
-                fixed={section_2_image.childImageSharp.fixed}
-                alt="About Us"
-              />
-            ) : (
-              <img src={section_2_image} alt="" />
-            )}
-            <div className="content">
-              <p>{section_2_text}</p>
+    <>
+      <SEO title={section_1_title} description={section_1_content} />
+      <main id="main">
+        <div className="page-about-us">
+          <div className="container">
+            <h1 className="h2 striped uppercase">{section_1_title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: section_1_content }} />
+            <div className="main-visual">
+              {!!section_1_image.childImageSharp ? (
+                <Img
+                  className="img-block"
+                  fluid={section_1_image.childImageSharp.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                  alt="About Us"
+                />
+              ) : (
+                <img src={section_1_image} alt="" />
+              )}
             </div>
-            <div className="circle circle-1" />
-            <div className="circle circle-2" />
+          </div>
+          <div className="section-blue ">
+            <div className="container-sm">
+              {!!section_2_image.childImageSharp ? (
+                <Img
+                  className="visual img-rounded"
+                  fixed={section_2_image.childImageSharp.fixed}
+                  alt="About Us"
+                />
+              ) : (
+                <img src={section_2_image} alt="" />
+              )}
+              <div className="content">
+                <p>{section_2_text}</p>
+              </div>
+              <div className="circle circle-1" />
+              <div className="circle circle-2" />
+            </div>
+          </div>
+          <div className="container-sm ">
+            <div className="content">
+              <h2>{section_3_title}</h2>
+              <p>{section_3_text}</p>
+            </div>
           </div>
         </div>
-        <div className="container-sm ">
-          <div className="content">
-            <h2>{section_3_title}</h2>
-            <p>{section_3_text}</p>
-          </div>
-        </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 

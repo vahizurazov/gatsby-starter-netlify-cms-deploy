@@ -48,19 +48,17 @@ function SEO({ description, lang, meta, keywords, title, pageMeta }) {
     `
   );
 
-  console.log(description, lang, meta, keywords, title, pageMeta);
-  console.log("description", description);
-  console.log("lang", lang);
-  console.log("meta", meta);
-  console.log("keywords", keywords);
-  console.log("title", title);
-  console.log("pageMeta", pageMeta);
+  // console.log(description, lang, meta, keywords, title, pageMeta);
+  // console.log("description", description);
+  // console.log("lang", lang);
+  // console.log("meta", meta);
+  // console.log("keywords", keywords);
+  // console.log("title", title);
+  // console.log("pageMeta", pageMeta);
 
   const metaDescription = description || site.siteMetadata.description;
 
   let image = urlJoin(config.siteUrl, config.pathPrefix, config.siteLogo);
-
-  console.log("site", image);
 
   if (pageMeta && pageMeta.featured_media) {
     image = urlJoin(
@@ -88,19 +86,19 @@ function SEO({ description, lang, meta, keywords, title, pageMeta }) {
             meta={[
               /* General tags */
               { name: `description`, content: metaDescription },
-              { name: `image`, content: image },
+              // { name: `image`, content: image },
               /* OpenGraph tags */
               { property: `og:url`, content: pageUrl },
               { property: `og:title`, content: title },
               { property: `og:description`, content: metaDescription },
-              { property: `og:image`, content: image },
-              { property: `og:type`, content: `website` },
+              // { property: `og:image`, content: image },
+              { property: `og:type`, content: `website` }
               /* Twitter Card tags */
-              { name: `twitter:card`, content: `summary_large_image` },
-              { name: `twitter:creator`, content: site.siteMetadata.author },
-              { name: `twitter:title`, content: title },
-              { name: `twitter:description`, content: metaDescription },
-              { name: `twitter:image`, content: image }
+              // { name: `twitter:card`, content: `summary_large_image` },
+              // { name: `twitter:creator`, content: site.siteMetadata.author },
+              // { name: `twitter:title`, content: title },
+              // { name: `twitter:description`, content: metaDescription },
+              // { name: `twitter:image`, content: image }
             ]
               .concat(
                 pageMeta ? { property: `og:type`, content: `article` } : []
