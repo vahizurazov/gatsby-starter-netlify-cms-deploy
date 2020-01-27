@@ -21,7 +21,6 @@ export default class Countries extends Component {
         {countries.map(c => {
           return (
             <li
-              // key={c.country}
               key={v4()}
               className={
                 this.state.country.country === c.country ? "active" : ""

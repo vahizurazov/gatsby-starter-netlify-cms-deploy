@@ -48,14 +48,6 @@ function SEO({ description, lang, meta, keywords, title, pageMeta }) {
     `
   );
 
-  // console.log(description, lang, meta, keywords, title, pageMeta);
-  // console.log("description", description);
-  // console.log("lang", lang);
-  // console.log("meta", meta);
-  // console.log("keywords", keywords);
-  // console.log("title", title);
-  // console.log("pageMeta", pageMeta);
-
   const metaDescription = description || site.siteMetadata.description;
 
   let image = urlJoin(config.siteUrl, config.pathPrefix, config.siteLogo);

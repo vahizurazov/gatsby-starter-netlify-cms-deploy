@@ -59,9 +59,6 @@ class CareerRoll extends React.Component {
                             </h4>
                             {career.frontmatter.description}
                           </div>
-                          {/* <Link className="button" to={career.fields.slug}>
-                          Keep Reading →
-                        </Link> */}
                         </div>
                       </div>
                     </div>

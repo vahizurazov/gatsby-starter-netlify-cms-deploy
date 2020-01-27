@@ -3,10 +3,9 @@ import { Helmet } from "react-helmet";
 
 import Header from "../components/header/";
 import Footer from "../components/footer/";
+import useSiteMetadata from "./SiteMetadata";
 
 import "../styles/index.scss";
-import useSiteMetadata from "./SiteMetadata";
-// import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();

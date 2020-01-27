@@ -7,7 +7,6 @@ import {
 
 //custom form construct
 
-
 export const contactForm = props => {
   const {
     values,
@@ -24,14 +23,11 @@ export const contactForm = props => {
   } = props;
 
   const resetForm = () => {
-    handleReset()
-    if(window.grecaptcha) {
-      window.grecaptcha.reset()
-
+    handleReset();
+    if (window.grecaptcha) {
+      window.grecaptcha.reset();
     }
-  }
-  // console.log("FORM CONTACT PROPS", props);
-
+  };
   return (
     <form
       onSubmit={handleSubmit}

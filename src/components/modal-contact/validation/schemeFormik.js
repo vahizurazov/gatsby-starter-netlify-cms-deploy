@@ -3,8 +3,8 @@ import { withFormik } from "formik";
 //import { changeKeyName } from "../../../utils/helpers" //piperdrive
 const axios = require("axios");
 // const protocol = `http://`;
-// const host = process.env.GATSBY_TRIGGER || null;
-const host = `loalhst`;
+const host = process.env.GATSBY_TRIGGER || null;
+/* const host = `localhost`; */
 const endpoint_contact = `/contact`;
 const endpoint_vacancy = `/vacancy`;
 
@@ -47,7 +47,6 @@ const formikEnhancer = withFormik({
       }
     }
     const url = isCareersUrl();
-    console.log("url", url);
     const { closeHandler } = payload;
     let data = /* JSON.stringify */ payload;
     if (data) {

@@ -98,9 +98,7 @@ export class ReCaptchaForm extends Component {
   }
 
   componentDidMount() {
-    // console.log("this.recaptcha", this.recaptcha);
     if (this.recaptcha) {
-      console.log("started, just a second...");
       this.recaptcha.reset();
     }
   }
@@ -121,23 +119,16 @@ export class ReCaptchaForm extends Component {
       },
       className
     );
-    // console.log("PROPS IN RECAPCHA", onChange);
 
     return (
       <div className={classes}>
         <Label error={error}>{label}</Label>
-        <div
-          // id="captcha-holder"
-          className="modal-recaptcha"
-          value={value}
-          onChange={onChange}
-        >
+        <div className="modal-recaptcha" value={value} onChange={onChange}>
           <ReCAPTCHA
             ref={el => (this.recaptcha = el)}
             className="g-recaptcha"
             sitekey={recaptchaKey}
             onChange={res => setFieldValue("recaptcha", res)}
-            // asyncScriptOnLoad={this.onLoadRecaptcha}
           />
           {/* <InputFeedback error={error} /> */}
         </div>
