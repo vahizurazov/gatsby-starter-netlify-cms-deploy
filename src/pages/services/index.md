@@ -6,8 +6,6 @@ subheading: >-
   We are a Salesforce Support Provider and work with clients around the world to
   optimise their Salesforce solution, including implementation and maintenance.
 ---
-<!--StartFragment-->
-
 #### Initial Setup
 
 Setting up your Salesforce application for the first time can be daunting. We assist clients in the initial design thinking of what they want the application to deliver to the business. Based on the design we will provide an implementation plan to illustrate what will be installed, what resources are required and how long it might take – this allows our clients to plan for and manage the implementation process successfully from within.
@@ -54,6 +52,4 @@ It comes as no surprise that poorly managed projects are likely to fall below th
 
 We know that by providing sound project management principles, we are able to drive the delivery forward, maintain good communication throughout and manage any obstacles that may arise with limited negative impact.
 
-All our project managers are trained in Agile methodologies with demonstrable experience in managing cross-functional and distributed teams. We take an individual approach to each client – tailoring the method and practise to suit your environment.
-
-<!--EndFragment-->
+All our project managers are trained in Agile methodologies with demonstrable experience in managing cross-functional and distributed teams. We take an individual approach to each client – tailoring the method and practise to suit your environment
