@@ -16,6 +16,8 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="msapplication-config" content="/static/browserconfig.xml" />
+        <link rel="canonical" href="http://sparkybit.com/"/>
         <link
           rel="icon"
           type="image/png"

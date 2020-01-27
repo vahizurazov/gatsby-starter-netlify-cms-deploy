@@ -15,7 +15,6 @@ siteDescription: >-
   Sparkybit is a leading Ukraine software development company, with a focus on
   fintech, open banking, banking technology, and SME IT planning.", // Website
   description used for RSS feeds/meta description tag.
-googleAnalyticsID: ${GA_ID}
 themeColor: '#271b55'
 backgroundColor: '#ffffff'
 ---

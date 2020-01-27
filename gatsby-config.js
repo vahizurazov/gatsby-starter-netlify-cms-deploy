@@ -16,6 +16,49 @@ module.exports = {
     },
     "gatsby-plugin-sass",
     {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        description: config.siteDescription,
+        start_url: ".",
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: `minimal-ui`,
+        icon: `src/img/logo/logo-circle.png`, // This path is relative to the root of the site.
+      },
+    },
+    "gatsby-plugin-offline",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-robots-txt",
+    "gatsby-plugin-remove-trailing-slashes",
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Montserrat`,
+            variants: [`400`, `600`, `700`, `800`],
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-polyfill-io",
+      options: {
+        features: [`Array.from`, `fetch`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: config.googleAnalyticsID,
+      },
+    },
+    "gatsby-plugin-remove-generator",
+    "gatsby-plugin-preload-link-crossorigin",
+    {
       resolve: "gatsby-plugin-react-leaflet",
       options: {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
